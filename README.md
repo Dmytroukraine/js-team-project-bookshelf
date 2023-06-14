@@ -7,7 +7,7 @@
 <b>Dmytro Kozlovskyi</b>  - `TeamLead` :smiling_imp:
 
 
-<b>Vitalina Shpir</b>:star:
+<b>Vitalina Shpir</b> - `ScrumMaster` :star:
 
 
 <b>Tatiana Khyzhniak</b>:smile:
