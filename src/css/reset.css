@@ -12,6 +12,7 @@ li {
   padding: 0;
 }
 
+div {display: inline;}
 
 ul,
 ol {
@@ -36,6 +37,7 @@ a {
 }
 body {
   background-color: #F6F6F6;
+  display: inline;
 }
 /* media rules */
 
