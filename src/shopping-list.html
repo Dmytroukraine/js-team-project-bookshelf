@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Shopping-list</title>
+  </head>
+  <body>
+    <header class="header-shoplist">
+      <load ="partials/header.html" />
+    </header>
+    <main>
+      <div class="container">
+        <aside class="shopping-list-aside" style="padding-top: 0px">
+          <div class="home-donate"><load ="partials/donate.html" /></div>
+        </aside>
+        <div class="container-shopping-list">
+          <h1 class="shoping-list-header">
+            Shopping <span class="shoping-list-part">List</span>
+          </h1>
+          <div class="shopping-list"></div>
+          <div class="empty-shopping-list">
+            <p class="shopping-list-text">
+              This page is empty, add some books and proceed to order.
+            </p>
+            <img
+              srcset="
+                ./images/shoping-list-empty-lg-2x.png,
+                ./images/shoping-list-empty-mobile-sm-2x.png,
+                ./images/shoping-list-empty-mobile-sm.png
+              "
+              src="./images/shoping-list-empty-lg.png"
+              alt="img of books"
+              class="shopping-list-book-img"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./shopping-list.js"></script>
+  </body>
+</html>
