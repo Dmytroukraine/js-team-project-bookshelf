@@ -21,4 +21,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  cursor: url('https://cdn.custom-cursor.com/db/9459/32/minimal-book-pointer.png'), auto;
+  
 }
