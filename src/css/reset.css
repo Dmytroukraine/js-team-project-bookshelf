@@ -1,34 +1,65 @@
 /* Reset styles */
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
-  margin: 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
+button {
+  border: none;
+  cursor: pointer;
 }
 
-button {  cursor: pointer;
-}
-
-img {
+img,
+picture,
+svg {
   display: block;
   max-width: 100%;
-  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background-color: #F6F6F6;
+}
+/* media rules */
+
+.container {
+  width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* @media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+} */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 24px;
+  }
 }
