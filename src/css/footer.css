@@ -1,0 +1,70 @@
+.footer {
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .footer__container {
+    flex-direction: row;
+  }
+}
+
+.footer__rights {
+}
+
+.footer__mobile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__dev {
+}
+
+.footer__btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__btn:hover,
+.footer__btn:focus {
+  color: blue;
+}
+
+.heart {
+  width: 20px;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer__students {
+  text-decoration: underline color(srgb 0 0 255);
+}
