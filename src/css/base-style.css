@@ -1,0 +1,95 @@
+
+:root {
+            /* light-theme */
+
+    --light-theme-header-bgcolor: #FFFFFF;
+    --light-theme-logo-bluecolor: #4F2EE8;
+    --light-theme-logo-lightcolor: #F6F6F6;
+    --light-theme-logo-textcolor: #000000;
+    --light-theme-menu-color: #111111;
+    
+    --light-theme-body-bgcolor: #D0D0D0;
+    --light-theme-letters-blackcolor: #111111;
+    --light-theme-letters-bluecolor: #4F2EE8;
+    --light-theme-categories-letters-greycolor: rgba(17, 17, 17, 0.6);
+    --light-theme-letters-greycolor: #B4AFAF;
+    --light-theme-support-color: #FFFFFF;
+
+            /* dark-theme */
+    
+    --dark-theme-header-bgcolor: #111111;
+    --dark-theme-logo-bluecolor: #4F2EE8;
+    --dark-theme-logo-lightcolor: #F6F6F6;
+    --dark-theme-logo-textcolor: #F3F3F3;
+    --dark-theme-menu-color: #FFFFFF;
+    
+    --dark-theme-body-bgcolor: #202024;
+    --dark-theme-letters-whitecolor: #FFFFFF;
+    --dark-theme-letters-bluecolor: #4F2EE8;
+    --dark-theme-categories-letters-greycolor: rgba(255, 255, 255, 0.6);
+    --dark-theme-categories-letters-goldcolor: #EAC645;
+    --dark-theme-letters-greycolor: #B4AFAF;
+    --dark-theme-support-color: #FFFFFF;
+    
+}
+
+body {
+    font-family: 'DM Sans';
+    font-style: normal;
+    background-color: var(--light-theme-body-bgcolor);
+    color: var(-light-theme-letters-blackcolor);
+    
+}
+
+.container {
+    min-width: 320px;
+    max-width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+}
+
+/* .categories-support-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .categories-support-section {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .categories-support-section {
+        padding-top: 40px;
+        padding-bottom: 940px;
+    }
+
+} */
+
