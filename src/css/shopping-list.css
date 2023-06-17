@@ -1,16 +1,47 @@
-.shoping-list-header {
-    /* font-family: var(--main-font);
-    color: var(--primary-text-color-light); */
-    font-family: DM Sans;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: calc(38/32);
-    color: #111111;
-
-
+.container-shopping-list {
+    margin-top: 40px;
+    /* margin-right: 20px; */
+    margin-left: 20px;
+    margin-bottom: 40px;
 }
-.shoping-list-part{
+
+.shoping-list-header {
+    width: 193px;
+    margin: 0px;
+
+    Font-family: "DM Sans";
+    Font-size: 32px;
+    Line-height: calc(38/32);
+    Line-height: 91%;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+.shoping-list-part {
     color: #4F2EE8;
+}
+
+@media screen and (min-width: 768px) {
+    .container-shopping-list{
+        margin-left: 32px;
+        /* margin-right: 32px; */
+    }
+    .shoping-list-header{
+        width: 292px;  
+        font-size: 48px;
+        font-weight: 700;
+        line-height:calc(52/48);  
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+   .container-shopping-list{
+    margin-left: 40px;
+   } 
+   .shoping-list-header{
+    font-size: 48px;
+   }
 }
 
 .delete-shopping-list-btn {
@@ -43,17 +74,72 @@
 
 /* emty shopping list */
 .empty-shopping-list {
-    margin-top: 120px;
-    margin-left: 55px;
+    height: 248px;
+    width: 265px;
+    border-radius: 0px;
+    
+    padding-top: 120px;
+    padding-left: 35px;
 }
+    
+    
 .shopping-list-text {
+    padding: 0px 10.5px 0px;
+    margin: 0px;
+    padding-bottom: 14px;
+
     width: 244px;
+    min-height: 36px;
     font-family: DM Sans;
     font-size: 14px;
     font-weight: 400;
     line-height: calc(18/14);
     text-align: center;
-
-    margin-bottom: 14px;
-
+    
+    color:#00000099;
 }
+    
+.shopping-list-book-img {
+    height: 198px;
+     width: 265px;
+    border-radius: 0px;
+}
+    
+@media screen and (min-width: 768px) {
+    .empty-shopping-list{
+        padding-top: 140px;
+        height: 309px;
+        padding-left: 178px;
+    }
+    .shopping-list-text{
+        font-size: 18px;
+        line-height: calc(24/18);
+
+        padding-bottom: 20px;
+        width: 349px;
+    }
+    .shopping-list-book-img{
+        padding: 0px 13.5px;
+        height: 241px;
+        width: 322px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .empty-shopping-list{
+        padding-top: 140px;
+        padding-left: 315px;
+    }
+    .shopping-list-text{
+         padding-bottom: 20px;
+    }
+    .shopping-list-book-img{
+        padding: 0px 13.5px;
+        height: 241px;
+        width: 322px;
+    }
+} 
+    
+.visuallyhidden{
+    display: none;
+    }
