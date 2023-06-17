@@ -1,0 +1,59 @@
+.shoping-list-header {
+    /* font-family: var(--main-font);
+    color: var(--primary-text-color-light); */
+    font-family: DM Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: calc(38/32);
+    color: #111111;
+
+
+}
+.shoping-list-part{
+    color: #4F2EE8;
+}
+
+.delete-shopping-list-btn {
+}
+.delete-shopping-list-icon {
+}
+.book-interface {
+}
+.shopping-list-book-title {
+}
+.shopping-list-book-about {
+}
+.shopping-list-book-author {
+}
+.shopping-list-trading {
+}
+.shopping-list-trading-item {
+}
+.shopping-list-trading-link {
+}
+.brightness {
+}
+.shopping-list-trading-icon-amazon {
+}
+.shopping-list-trading-icon-apple-book {
+}
+.shopping-list-trading-icon-book-shop {
+}
+
+
+/* emty shopping list */
+.empty-shopping-list {
+    margin-top: 120px;
+    margin-left: 55px;
+}
+.shopping-list-text {
+    width: 244px;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(18/14);
+    text-align: center;
+
+    margin-bottom: 14px;
+
+}
