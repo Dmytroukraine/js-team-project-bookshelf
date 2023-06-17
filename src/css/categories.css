@@ -1,0 +1,28 @@
+
+
+.book-category {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+}
+
+.category-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--accent-text-color-ligth);
+  margin-bottom: 24px;
+}
+
+.list_name{
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+letter-spacing: -0.02em;
+color: rgba(17, 17, 17, 0.6);
+}
