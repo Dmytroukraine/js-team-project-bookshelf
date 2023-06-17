@@ -1,17 +1,21 @@
 .btn_up{
     position: fixed;
-    right: 25px;
-    bottom: 145px;
-    width: 54px;
-    height: 54px;
+    right: 30px;
+    bottom: 47px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background-color: #4F2EE8;
-    transition: box-shadow 250ms var(--timing-function);
+    background-image: linear-gradient(
+  to top,
+  rgba(79, 46, 232, 1),
+  rgba(220, 220, 220, 1)
+);
+opacity: 1;
+    transition: box-shadow 300ms var(--timing-function),opacity 300ms var(--timing-function);
 }
 
 .btn_up:hover{
-box-shadow:0px 0px 0px 10px rgba(79, 46, 232, 0.3);
-;
+box-shadow:0px 0px 0px 6px rgba(79, 46, 232, 0.3);
 }
 
 
