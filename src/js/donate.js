@@ -95,12 +95,6 @@ const donateFunds = [
     img: found9,
     retinaImg: found9x,
   },
-  {
-    title: 'devHunt',
-    url: 'https://github.com/PetroShutak/devHunt-team-project-js',
-    img: found10,
-    retinaImg: found10,
-  },
 ];
 
 const container = document.querySelector('.donate-funds-list');
