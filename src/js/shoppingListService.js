@@ -42,7 +42,7 @@ function renderingShoppingList(){
         const book = loadFromLocalStorage(booksArray[i]._id);
         // додаємо розмітку картки книги
         bookList.insertAdjacentHTML('beforeend',
-        <div class = "shopping-list-thumb">
+        `<div class = "shopping-list-thumb">
             <button class="delete-shopping-list-btn" type="button" data-id= "${book._id}">
                 <svg class="delete-shopping-list-icon">
                     <use href="${trash}"></use>
@@ -74,6 +74,7 @@ function renderingShoppingList(){
                 </ul>
             </div>
         </div>
+        `
       );
     }
   }
