@@ -8,7 +8,22 @@
   margin-bottom: 16px;
 }
 
+@media screen and (min-width: 768px){
+  
+  .donate-funds-visible{
+    height: 292px;
+    margin-bottom: 32px;
+  }
+
+}
+
 .donate-title {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
   display: flex;
   color: var(--header-color-ligth);
   margin-bottom: 40px;
