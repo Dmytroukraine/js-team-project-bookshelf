@@ -1,5 +1,5 @@
 import { fetchingTopBooks } from './apiService';
-export async function getTopBooks(numCardsToRender) {
+export async function renderingHomePage(numCardsToRender) {
 
 let numCardsToRender = 1;
 if (window.innerWidth < 767) {
