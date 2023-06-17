@@ -5,14 +5,24 @@
   scroll-behavior: smooth;
   margin-bottom: 40px;
 }
+.home-categories::-webkit-scrollbar {
+  width: 8px;
+}
+.home-categories::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid rgba(125, 125, 125, 0.246);
+}
+
 
 .home-donate {
   background: radial-gradient(
-      183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    183.6% 183.01% at 59.76% -23.42%,
+    rgb(79, 46, 232) 18.03%,
+    #ffffff 100%
+  );
+  animation: colorChange 5s ease  2s infinite alternate;
+
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
   padding: 24px 40px 20px 40px;
@@ -20,8 +30,33 @@
   height: 352px;
 }
 
-.left-side{
-padding-top: 40px;
+
+@keyframes colorChange {
+  0% {
+    background: radial-gradient(
+      ellipse farthest-corner at left top,
+      #4f2ee8,
+      #ffffff
+    );
+  }
+  50% {
+    background: radial-gradient(
+      ellipse farthest-corner at top,
+      #4f2ee8,
+      #ffffff 
+    );
+  }
+  100% {
+    background: radial-gradient(
+      ellipse farthest-corner at right top,
+      #4f2ee8,
+      #ffffff 
+    );
+  }
+}
+
+.left-side {
+  padding-top: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -38,5 +73,22 @@ padding-top: 40px;
   .home-donate {
     width: 335px;
     height: 472px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .left-side {
+    display: block;
+  }
+
+  .home-categories {
+    width: 356px;
+    height: 472px;
+    margin-bottom: 86px;
+  }
+
+  .home-donate {
+    width: 356px;
+    height: 490px;
   }
 }

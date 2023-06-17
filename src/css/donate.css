@@ -1,6 +1,6 @@
 .donate-funds-visible {
   overflow-y: scroll;
-  width: 170px;
+
   /* height: 220px; */
   overflow: auto;
   scroll-behavior: smooth;
@@ -15,6 +15,10 @@
     margin-bottom: 32px;
   }
 
+}
+
+@media screen and (min-width: 1440px) {
+  
 }
 
 .donate-title {
@@ -94,3 +98,4 @@
   transform: rotate(180deg);
   transition: transform 1000ms ease-out;
 }
+
