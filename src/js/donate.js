@@ -16,7 +16,7 @@ import found8 from '../img/08-found-1.png';
 import found8x from '../img/08-found-2.png';
 import found9 from '../img/09-found-1.png';
 import found9x from '../img/09-found-2.png';
-import found10 from '../img/dh_2.png';
+
 
 function generateDonateFundsMarkup(donateFunds) {
   const isRetina = window.devicePixelRatio > 1.1; // Check if user has a retina display
