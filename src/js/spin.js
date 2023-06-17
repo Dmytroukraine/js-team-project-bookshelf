@@ -9,7 +9,7 @@ const options = {
 
 
 export function spinnerStart() {
-    Loading.circle('Wait please', options);
+    Loading.circle('Wait please', options)
 }
 
 export function spinnerStop() {
@@ -17,9 +17,10 @@ export function spinnerStop() {
 }
 
 export function spinnerStartForCategories() {
-    Loading.circle('Wait please', options);
+    Loading.circle('Wait please', options)
 }
 
 export function spinnerStopForCategories() {
-    Loading.circle('Wait please', options);
+    Loading.circle('Wait please', options)
 }
+
