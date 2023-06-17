@@ -1,5 +1,5 @@
 import Notiflix from 'notiflix';
-import{fetchByBook} from './apiService';
+import{fetchingByBook} from './apiService';
 import amazon from '../images/amazon.png';
 import appleBook from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
@@ -29,42 +29,45 @@ function renderingShoppingList(){
     const dataJSON = localStorage.getItem('books');
     if(dataJSON){
         // отримуємо валідне значення книги
-        bookCart = JSON.parse(dataJSON);
+        booksArray = JSON.parse(dataJSON);
     }
   }
    //   якщо є додані книги
-  if(bookCart !== null){
-    if(bookCart.length > 0){
+  if(booksArray !== null){
+    if(booksArray.length > 0){
          // якщо в корзину додана книга,ховаємо div empty
         emptyRef.classList.add('visuallyhidden');
     }
-    for (let i = 0; i < bookCart.length; i += 1) {
-        const book = loadFromLocalStorage(bookCart[i]._id);
+    for (let i = 0; i < booksArray.length; i += 1) {
+        const book = loadFromLocalStorage(booksArray[i]._id);
         // додаємо розмітку картки книги
         bookList.insertAdjacentHTML('beforeend',
-        <div class = "chopping-list-thumb">
+        <div class = "shopping-list-thumb">
             <button class="delete-shopping-list-btn" type="button" data-id= "${book._id}">
                 <svg class="delete-shopping-list-icon">
                     <use href="${trash}"></use>
                 </svg>
             </button>
+                <div class="cover-shopping-list" style="background-image: url('${book.book_image}'); background-size: cover;">
+      </div>
             <div class="book-interface">
                 <h2 class="shopping-list-book-title">${book.title}</h2>
+          <p class="shopping-list-book-category">${book.list_name}</p>
                 <p class=" shopping-list-book-about">${book.description}</p>
                 <p class="shopping-list-book-author">#{book.author}</p>
                 <ul class="shopping-list-trading">
                     <li class="shopping-list-trading-item">
-                        <a class="shopping-list-trading-link brightness" href="${book.buy_links[0].url}" target="_blunk" rel="noopener noreferrer">
+                        <a class="shopping-list-trading-link brightness" href="${book.buy_links[0].url}" target="_blank" rel="noopener noreferrer">
                             <img scr="${amazon}" class="shopping-list-trading-icon-amazon" alt="Amazon icon"/>
                         </a>
                     </li>
                     <li class="shopping-list-trading-item">
-                        <a class="shopping-list-trading-link" href="${book.buy_links[1].url}" target="_blunk" rel="noopener noreferrer">
-                            <img scr="${appleBook}" class="shopping-list-trading-icon-apple-book" alt="AppleBook icon"/>
+                        <a class="shopping-list-trading-link" href="${book.buy_links[1].url}" target="_blank" rel="noopener noreferrer">
+                            <img scr="${appleBook}" class="shopping-list-trading-icon-apple-books" alt="AppleBook icon"/>
                         </a>
                     </li>
                     <li class="shopping-list-trading-item">
-                        <a class="shopping-list-trading-link" href="${book.buy_links[2].url}" target="_blunk" rel="noopener noreferrer">
+                        <a class="shopping-list-trading-link" href="${book.buy_links[2].url}" target="_blank" rel="noopener noreferrer">
                             <img scr="${bookShop}" class="shopping-list-trading-icon-book-shop" alt="BookShop icon"/>
                         </a>
                     </li>
@@ -76,42 +79,44 @@ function renderingShoppingList(){
   }
    //   кнопка видалення книги
   const deleteBtnRefs = document.querySelectorAll('.delete-shopping-list-btn');
-  for (let i = 0; i < deleteBtnRefs.length; i += 1){
-    deleteBtnRefs[i].addEventListener('click', removeBook);
+  for (let i = 0; i < deleteBtnRefs.length; i++){
+    deleteBtnRefs[i].addEventListener('click', removingBookFromShoppingList);
   }
   
 }
 
-export function removeBook(event) {
-const id = event.currentTarget.dataset.id;
-const index = bookCart.findIndex(book=> book._id === id);
+export async function addToShopList(e) {
+    const book = await fetchingByBook(e.target.dataset.id);
+     
+    saveToLocalStorage(book);
+    Notiflix.Notify.success('book added to shoping list');
+
+}
+
+export function removingBookFromShoppingList(event) {
+const id = e.currentTarget.dataset.id;
+const index = booksArray.findIndex(book=> book._id === id);
 if (index !== -1){
-    bookCart.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(bookCart));
+    booksArray.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(booksArray));
     Notiflix.Notify.info('Book removed from shopping list');
    }   
    renderingShoppingList();
 
- if (bookCart.length === 0 ) {
+ if (booksArray.length === 0 ) {
     emptyRef.classList.remove('visuallyhidden')
  }
 }
 
-export async function addToShopList(event) {
-    const book = await fetchByBook(event.target.dataset.id);
-     
-    saveToLocalStorage(book);
-    Notiflix.Notify.success('book added to shoping list');
-    
-}
+
  
 function saveToLocalStorage(book) {
     try{
-        if(bookCart === null){
-            bookCart = [];
+        if(booksArray === null){
+            booksArray = [];
         }
-        bookCart.push(book);
-        const dataJSON = JSON.stringify(bookCart);
+        booksArray.push(book);
+        const dataJSON = JSON.stringify(booksArray);
         localStorage.setItem('books', dataJSON);
     } catch(error){
         console.log(error)
@@ -123,8 +128,8 @@ function loadFromLocalStorage(id) {
     try{
         const dataJSON = localStorage.getItem('books');
         if(dataJSON){
-            const bookCart = JSON.parse(dataJSON);
-             return bookCart.find(book => book._id === id);
+            const booksArray = JSON.parse(dataJSON);
+             return booksArray.find(book => book._id === id);
         } else{
             return null
         }
