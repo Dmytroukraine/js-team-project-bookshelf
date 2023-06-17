@@ -10,7 +10,16 @@
   padding: 24px 40px 20px 40px;
   width: 335px;
 height: 352px;
-overflow-y: scroll;
+}
+
+.donate-funds-visible{
+  overflow-y: scroll;
+  width: 170px;
+  /* height: 220px; */
+  overflow: auto;
+  scroll-behavior: smooth;
+height: 188px;
+margin-bottom: 16px;
 }
 
 .donate-title {
@@ -30,6 +39,7 @@ overflow-y: scroll;
 
 .donate-fund{
     display: flex;
+    gap: 16px;
     align-items: center;
 }
 
@@ -40,4 +50,46 @@ overflow-y: scroll;
     font-size: 14px;
     line-height: 18px;
     color: var(--header-color-ligth);
+}
+
+.donate-img{
+  height: 32px;
+  transition: transform 500ms ease-out;
+}
+
+.donate-img:hover {
+  transform: scale(1.15);
+}
+
+.donate-img:active,
+.donate-img:focus {
+  transform: scale(0.85);
+}
+
+.donate-funds-visible::-webkit-scrollbar {
+  width: 0%;
+  background-color: transparent;
+}
+
+.donate-funds-visible::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.use-donate{
+  fill: var(--accent-color-ligth);
+}
+.donate-button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.donate-button-up{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+ transform: rotate(180deg);
+  transition: transform 1000ms ease-out;
 }
