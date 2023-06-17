@@ -1,0 +1,1 @@
+import"./shopping-list-e046b1bf.js";const e=()=>fetch("https://books-backend.p.goit.global/books/category-list").then(t=>{if(!t.ok)throw new Error(t.status);return t.json()});console.log("hello");const n=document.querySelector(".book-category");e().then(t=>{r(t)}).catch(t=>{console.log(t)});function r(t){n.innerHTML=t.map(o=>`<li class="list_name">${o.list_name}</li>`).join("")}
