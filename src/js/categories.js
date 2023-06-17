@@ -1,4 +1,8 @@
-const fetchCategories = () => {
+import Notiflix from 'notiflix';
+import axios from 'axios';
+
+
+const  fetchCategories = () => {
     return fetch(`https://books-backend.p.goit.global/books/category-list`).then(response => {
       if (!response.ok) {
         throw new Error(response.status);
@@ -6,8 +10,6 @@ const fetchCategories = () => {
       return response.json();
     });
   };
-
-  console.log('hello')
 
   const categoryList = document.querySelector('.book-category');
   
