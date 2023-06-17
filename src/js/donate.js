@@ -46,13 +46,6 @@ const donateFunds = [
     img: found1,
     retinaImg: found1x,
   },
-
-  {
-    title: 'Project HOPE',
-    url: 'https://www.projecthope.org/country/ukraine/',
-    img: found2,
-    retinaImg: found2x,
-  },
   {
     title: 'UNITED24',
     url: 'https://u24.gov.ua/uk',
@@ -60,10 +53,10 @@ const donateFunds = [
     retinaImg: found3x,
   },
   {
-    title: 'International Medical   Corps',
-    url: 'https://internationalmedicalcorps.org/country/ukraine/',
-    img: found4,
-    retinaImg: found4x,
+    title: 'RAZOM',
+    url: 'https://www.razomforukraine.org/',
+    img: found6,
+    retinaImg: found6x,
   },
   {
     title: 'Medicins Sans   Frontieres',
@@ -72,11 +65,20 @@ const donateFunds = [
     retinaImg: found5x,
   },
   {
-    title: 'RAZOM',
-    url: 'https://www.razomforukraine.org/',
-    img: found6,
-    retinaImg: found6x,
+    title: 'Project HOPE',
+    url: 'https://www.projecthope.org/country/ukraine/',
+    img: found2,
+    retinaImg: found2x,
   },
+  
+  {
+    title: 'International Medical   Corps',
+    url: 'https://internationalmedicalcorps.org/country/ukraine/',
+    img: found4,
+    retinaImg: found4x,
+  },
+  
+  
   {
     title: 'Action against   hunger',
     url: 'https://www.actionagainsthunger.org/location/europe/ukraine/',
