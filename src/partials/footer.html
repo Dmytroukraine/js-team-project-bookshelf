@@ -1,12 +1,31 @@
-<footer class="footer">
-  <div class="footer__container">
-    <span class="footer__rights">© 2023 | All Rights Reserved |&nbsp;</span>
-    <div class="footer__mobile-container">
-      <span class="footer__dev"> Developed with&nbsp;</span>
-      <button type="button" class="footer__btn">
-        <div class="footer__heart heart">❤️</div>
-        <span class="footer__students">&nbsp;by GoIT Students</span>
-      </button>
+<body class="">
+  <footer class="footer">
+    <div class="footer__container">
+      <span class="footer__rights">© 2023 | All Rights Reserved |&nbsp;</span>
+      <div class="footer__mobile-container">
+        <span class="footer__dev"> Developed with&nbsp;</span>
+        <button
+          type="button"
+          class="footer__btn--open"
+          data-action="open-modal"
+        >
+          <div class="footer__heart heart">❤️</div>
+          <span class="footer__students">&nbsp;by GoIT Students</span>
+        </button>
+        <div class="backdrop" js-backdrop>
+          <div class="modal">
+            <h2>Modal window</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <button
+              type="button"
+              class="footer__btn--close"
+              data-action="close-modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</body>
