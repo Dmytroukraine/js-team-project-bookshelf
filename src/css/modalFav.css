@@ -1,3 +1,13 @@
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
 
 .backdrop{
     /* visibility: hidden;
@@ -15,11 +25,9 @@
     pointer-events: none; */
     margin-left: auto;
     margin-right: auto;
-    padding: 12px 24px 40px 24px;
+    padding: 10px 22px 38px 22px;
     max-width: 335px;
     height: 100%;
-    outline: 2px solid red;
-    outline-offset: -2px;
     background-color: #FFFFFF;
     border: 2px solid #111111;
     border-radius: 18px;
@@ -29,6 +37,7 @@
     display: block;
     padding: 6px;
     margin-left: auto;
+    margin-right: -12px;
     cursor: pointer;
     background-color: inherit;
 }
@@ -42,7 +51,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8px;
     font-weight: 700;
     font-size: 14px;
     line-height: calc( 18 / 14 );
@@ -66,5 +74,54 @@
     text-align: center;
     letter-spacing: -0.04em;
     color: rgba(17, 17, 17, 0.5);
+    margin-top: 8px;
 
+}
+
+.buy-label{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.buy-img{
+filter: grayscale(100%);
+}
+
+.modal-fav-image{
+    width: 287px;
+    /* height: 408px; */
+    border-radius: 8px;
+    margin-bottom: 14px;
+
+
+}
+
+.modal-fav-title{
+    font-family: 'DM Sans';
+    font-size: 16px;
+    line-height: calc( 18 / 16 );
+    letter-spacing: -0.04em;
+    color: #111111;
+    margin-bottom: 4px;
+}
+.modal-fav-author{
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: -0.04em;
+    color: #B4AFAF;
+    margin-bottom: 18px;
+}
+.modal-fav-descr{
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.04em;
+    color: #111111;
+    margin-bottom: 14px;
 }
