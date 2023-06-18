@@ -19,37 +19,101 @@
     left: 0;
     z-index: 200;
     overflow-y: scroll;
+    transition: opacity 300ms linear, visibility 300ms linear;
 }
 
 
-.modal-fav{
-   
+
+.modal-fav{   
     margin-left: auto;
     margin-right: auto;
-    
-    padding: 10px 22px 38px 22px;
+    padding: 38px 22px;
    max-width: 335px;
     background-color: #FFFFFF;
     border: 2px solid #111111;
     border-radius: 18px;
     position: relative;
     top: 2%;
-    z-index: 300;
-       
+    z-index: 300; 
+
+    transform: rotate(0) scale(1);
+    transition: transform 200ms linear 100ms;
+
 }
 
-.modal-fav-btn {
-    display: block;
-    padding: 6px;
-    margin-left: auto;
-    margin-right: -12px;
-    cursor: pointer;
-    background-color: inherit;
+.is-hidden .modal-fav {
+    transform: rotate(180deg) scale(0);
 }
+
+
+@media screen and (min-width: 768px) {
+    .modal-fav {
+            width: 579px;
+            max-width: 579px;
+            position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+            margin: 0;
+            padding: 38px;
+            
+        }
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .modal-fav-book {
+        display: flex;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .book-descr-wrapper{
+        display: block;
+    }
+}
+
+
+
+.modal-fav-close-btn {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px;
+    cursor: pointer;
+    background-color: inherit;   
+    
+}
+
+.modal-fav-close-btn:hover .close-modal-icon,
+.modal-fav-close-btn:focus .close-modal-icon {
+    stroke: #4F2EE8;
+    transform: rotate(180deg);
+}
+
+
+@media screen and (min-width: 768px) {
+    .modal-fav-btn {
+        top: 24px;
+        right: 24px;
+        }
+}
+
 
 .close-modal-icon{
-
     stroke: #111111;
+    width: 14px;
+    height: 14px;
+    transition: stroke 400ms, transform 400ms ;
+   
 }
 
 .fav-add-book-btn{
@@ -61,19 +125,40 @@
     line-height: calc( 18 / 14 );
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    font-family: 'DM Sans';
+    font-family: var(--main-font);
     color: #111111;
-  
-    padding: 14px 23px;
+    padding: 12px 26px;
     background-color: inherit;
     border: 2px solid #4F2EE8;
     border-radius: 40px;
+    transition: background-color 400ms, color 400ms;
 }
+
+.fav-add-book-btn:hover{
+    background-color: #4F2EE8;
+    color: #FFFFFF;
+}
+.fav-add-book-btn:focus{
+    background-color: #4F2EE8;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .fav-add-book-btn {
+        font-size: 18px;
+        line-height: calc(24 / 18);
+        padding: 18px 148px;
+    }
+}
+
 
 .add-book-notification{
     display: none;
     width: 242px;
-    font-family: 'DM Sans';
+    font-family: var(--main-font);
     font-size: 10px;
     line-height: calc( 12 / 10);
     text-align: center;
@@ -88,31 +173,66 @@
     gap: 20px;
     align-items: center;
     margin-bottom: 40px;
+    
 }
+
 
 .buy-img{
 filter: grayscale(100%);
+transition: transform 300ms;
+
 }
+
+.buy-img:hover,
+.buy-img:focus{
+    filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+    transform: scale(1.15);
+    
+   
+}
+
 
 .modal-fav-image{
     width: 287px;
     /* height: 408px; */
     border-radius: 8px;
     margin-bottom: 14px;
-
-
+    margin-right: 24px;
 }
 
+@media screen and (min-width: 768px) {
+    .modal-fav-image {
+            width: 192px;
+            margin-bottom: 0;
+            /* height: 408px; */
+           
+        }
+}
+
+
+
+
+
 .modal-fav-title{
-    font-family: 'DM Sans';
+    font-family: var(--main-font);
     font-size: 16px;
     line-height: calc( 18 / 16 );
     letter-spacing: -0.04em;
     color: #111111;
     margin-bottom: 4px;
 }
+
+@media screen and (min-width: 768px) {
+    .modal-fav-title {
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    margin-bottom: 8px;
+}
+}
+
+
 .modal-fav-author{
-    font-family: 'DM Sans';
+    font-family: var(--main-font);
     font-style: italic;
     font-weight: 400;
     font-size: 12px;
@@ -121,12 +241,27 @@ filter: grayscale(100%);
     color: #B4AFAF;
     margin-bottom: 18px;
 }
+
+@media screen and (min-width: 768px) {
+.modal-fav-author {
+        font-size: 14px;
+        line-height: calc(18 / 14);
+      
+    }
+}
+
+
 .modal-fav-descr{
-    font-family: 'DM Sans';
-    font-weight: 400;
+    font-family: var(--main-font);
     font-size: 14px;
     line-height: calc(18 / 14);
     letter-spacing: -0.04em;
     color: #111111;
     margin-bottom: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-fav-descr {
+    margin-bottom: 20px;   
+    }
 }

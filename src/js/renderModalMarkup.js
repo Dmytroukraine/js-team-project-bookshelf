@@ -30,7 +30,6 @@ function renderModalMarkup({
               type="image/jpeg"
             />
             <img
-              class="buyImg"
               src="../images/amazon.png"
               alt="amazon label"
             />
@@ -48,7 +47,6 @@ function renderModalMarkup({
               type="image/png"
             />
             <img
-              class="buyImg"
               src="../images/apple-books.png"
               alt="apple label"
       
@@ -68,7 +66,6 @@ function renderModalMarkup({
                 type="image/png"
               />
               <img
-                class="buyImg"
                 src="../images/book-shop.png"
                 alt="apple label"
 
@@ -81,13 +78,13 @@ function renderModalMarkup({
   });
 
 
-  const markup = `<img class="modal-fav-image" src="${book_image}" alt="book-cover" width="287" height: "408"/>
-   <h1 class="modal-fav-title">${title}</h1>
+  const markup = `<img class="modal-fav-image" src="${book_image}" alt="book-cover" width="287" />
+   <div class="book-descr-wrapper"><h1 class="modal-fav-title">${title}</h1>
 <h2 class="modal-fav-author">${author}</h2>
 <p class="modal-fav-descr">${description}</p>
-<div class="buy-label">${buyMarkup.join('')}</div>`;
-
-  bookRef.insertAdjacentHTML('beforeend', markup);
+<div class="buy-label">${buyMarkup.join('')}</div>
+</div>`;
+  bookRef.innerHTML = markup;
 }
 
 
