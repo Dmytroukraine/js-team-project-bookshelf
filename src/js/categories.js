@@ -19,12 +19,35 @@ const  fetchCategories = () => {
   })
   .catch(error => {
         console.log(error);
+        Notiflix.Notify.failure(
+          'Oops! Something went wrong! Try reloading the page!'
+        );
       });
 
 
 function renderCategoryList(categories){
 
     categoryList.innerHTML = categories.map(category => {
-        return `<li class="list_name">${category.list_name}</li>`;
+        return ` <li class="list_name">${category.list_name}</li>`;
       }).join('');
 }
+
+categoryList.addEventListener('click', onCategoryClick);
+
+function onCategoryClick(e){
+  if (e.target.nodeName !== 'LI') {
+    return;
+  }
+
+
+  if (e.target.classList.contains('active')) {
+    e.target.classList.remove('active');
+   
+} else {
+    const items = document.querySelectorAll('.list_name');
+    items.forEach((el) => el.classList.remove('active'));
+    e.target.classList.add('active');
+   
+}
+}
+
