@@ -40,3 +40,124 @@ body .show-modal .modal {
   transition: transform 200ms ease-in-out;
   margin: 20px;
 }
+
+/* ! team img styles ! */
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+* {
+  box-sizing: border-box;
+}
+
+.footer__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer__card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  /* margin: 0 50px; */
+}
+
+.footer__cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer__wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.footer__card:hover .footer__wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.footer__wrapper::before,
+.footer__wrapper::after {
+  content: '';
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.footer__wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.footer__wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.footer__card:hover .footer__wrapper::before,
+.footer__wrapper::after {
+  opacity: 1;
+}
+
+.footer__card:hover .footer__wrapper::after {
+  height: 120px;
+}
+.footer__title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.footer__card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.footer__character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.footer__card:hover .footer__character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+/* ! fix every charesters size ! */
+
+.footer__card:hover .footer__second-charester {
+  opacity: 1;
+  transform: translate3d(0%, -10%, 100px);
+}
+.footer__card:hover .footer__third-charester {
+  opacity: 1;
+  transform: translate3d(0%, -20%, 100px);
+}
