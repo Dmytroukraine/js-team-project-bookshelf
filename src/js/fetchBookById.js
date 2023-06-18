@@ -11,7 +11,6 @@ axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 async function fetchBookById() {
   try {
     const { data } = await axios.get('643282b1e85766588626a0b2');
-
     return data;
   } catch (error) {
     Notiflix.Notify.failure(
@@ -24,4 +23,6 @@ async function fetchBookById() {
 
 // const data = await fetchBookById();
 
-renderModalMarkup(await fetchBookById());
+// renderModalMarkup(data);
+
+export { fetchBookById };

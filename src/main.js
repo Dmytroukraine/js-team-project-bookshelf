@@ -9,3 +9,4 @@ import './js/footer';
 import './js/modalTeam';
 import './js/modal_autoriz';
 import './js/fetchBookById';
+import './js/onBookClick';

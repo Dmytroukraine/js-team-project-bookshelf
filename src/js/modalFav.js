@@ -1,9 +1,11 @@
-closeFavModal();
 
-function closeFavModal() {
+
+function FavModal() {
+
+
   const closeModalBtn = document.querySelector('[data-modal-close]');
   const modalFav = document.querySelector('[data-modal]');
-
+document.body.classList.add('modal-open');
   closeModalBtn.addEventListener('click', closeModal);
 
   function closeModal() {
@@ -31,3 +33,4 @@ function closeFavModal() {
   }
 
 }
+export {FavModal}

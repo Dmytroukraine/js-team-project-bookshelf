@@ -6,19 +6,27 @@ function renderModalMarkup({
   author,
   description,
   buy_links,
+  _id,
 }) {
 
   const bookRef = document.querySelector('.modal-fav-book');
   let buyMarkup = [];
     
+  // bookRef.addEventListener('click', onIdBookClick);
+  // function onIdBookClick(event) {
+  //   console.log(event.target, _id);
+  // }
+
+
+
   buy_links.forEach(link => {
-    console.log(link.name);
+   
     if (link.name === 'Amazon') {
-      console.log(link.url, '!');
+      
       const amazon = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
           <picture class="buy-img">
             <source
-              srcset="../images/amazon.png 1x, /src/images/amazon-2x.png 2x"
+              srcset="../images/amazon.png 1x, ../images/amazon-2x.png 2x"
               type="image/jpeg"
             />
             <img
@@ -52,7 +60,7 @@ function renderModalMarkup({
     }
 
     if (link.name === 'Barnes and Noble') {
-      console.log(link.url, '!');
+      
       const barnes = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
             <picture class="buy-img">
               <source
@@ -72,9 +80,6 @@ function renderModalMarkup({
     }
   });
 
-  console.log(buyMarkup);
-
-//   console.log(data);
 
   const markup = `<img class="modal-fav-image" src="${book_image}" alt="book-cover" width="287" height: "408"/>
    <h1 class="modal-fav-title">${title}</h1>

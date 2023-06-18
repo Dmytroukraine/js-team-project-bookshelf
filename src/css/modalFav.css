@@ -16,6 +16,11 @@
     width: 100%;
     height: 100%;
     background-color: rgba(17, 17, 17, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    overflow-y: scroll;
 }
 
 
@@ -25,12 +30,16 @@
     pointer-events: none; */
     margin-left: auto;
     margin-right: auto;
+    
     padding: 10px 22px 38px 22px;
-    max-width: 335px;
-    height: 100%;
+   max-width: 335px;
     background-color: #FFFFFF;
     border: 2px solid #111111;
     border-radius: 18px;
+    position: relative;
+    top: 2%;
+    z-index: 300;
+       
 }
 
 .modal-fav-btn {
