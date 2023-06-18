@@ -1,3 +1,4 @@
+
 .header {
   padding: 18px 20px;
   display: flex;
@@ -281,6 +282,4 @@ header.dark-header {
 .header .dark-header .nav-link:active {
   color: #0a0a0a;
 }
-
-
 

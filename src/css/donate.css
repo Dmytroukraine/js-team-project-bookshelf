@@ -1,0 +1,101 @@
+.donate-funds-visible {
+  overflow-y: scroll;
+
+  /* height: 220px; */
+  overflow: auto;
+  scroll-behavior: smooth;
+  height: 188px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px){
+  
+  .donate-funds-visible{
+    height: 292px;
+    margin-bottom: 32px;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  
+}
+
+.donate-title {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  display: flex;
+  color: var(--header-color-ligth);
+  margin-bottom: 40px;
+}
+.title-txt {
+  margin-right: 12px;
+}
+
+.donate-funds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donate-fund {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.donate-index {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--header-color-ligth);
+}
+
+.donate-img {
+  height: 32px;
+  transition: transform 500ms ease-out;
+}
+
+.donate-img:hover {
+  transform: scale(1.15);
+}
+
+.donate-img:active,
+.donate-img:focus {
+  transform: scale(0.85);
+}
+
+.donate-funds-visible::-webkit-scrollbar {
+  width: 0%;
+  background-color: transparent;
+}
+
+.donate-funds-visible::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.use-donate {
+  fill: var(--accent-color-ligth);
+}
+.donate-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.donate-button-up {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  transform: rotate(180deg);
+  transition: transform 1000ms ease-out;
+}
+

@@ -4,22 +4,24 @@
   | default @import url()
   |============================
 */
+
+@import url('./fonts.css');
+@import url('./modern-normalize.min.css');
+@import url('./normalize.css');
 @import url('./reset.css');
-@import url('./vite-promo.css');
+@import url('./variables.css');
 @import url('./header.css');
-
+@import url('./shopping-list.css');
+@import url('./home.css');
+@import url('./footer.css');
+@import url('./categories.css');
+@import url('./aside.css');
+@import url('./donate.css');
+@import url('./modalFav.css');
+@import url('./button_up.css');
+@import url('./light-dark-theme.css');
+@import url('./modal-team.css');
+/* @import url('./vite-promo.css'); */
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+    cursor: url('https://cdn.custom-cursor.com/db/9459/32/minimal-book-pointer.png'), auto;
+  }
