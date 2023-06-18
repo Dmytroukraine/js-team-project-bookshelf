@@ -38,4 +38,5 @@ body .show-modal .modal {
 
   transform: scale(1.1);
   transition: transform 200ms ease-in-out;
+  margin: 20px;
 }
