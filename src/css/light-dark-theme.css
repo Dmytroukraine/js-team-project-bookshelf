@@ -1,0 +1,113 @@
+.header-logo-nav {
+    display: flex;
+}
+
+body.dark-theme,
+.dark-theme .modal-fav {
+    background-color: var(--bgc-dark-theme);
+}
+
+.dark-theme .header {
+    background: var(--header-color-dark);
+}
+
+.dark-theme .nav-link .header-active {
+    color: var(--header-color-dark);
+}
+
+.dark-theme .nav-link,
+.dark-theme .close-modal-icon {
+    color: var(--header-color-ligth);
+    fill: var(--header-color-ligth);
+}
+
+.dark-theme .nav-link .header-active {
+    font-weight: 700;
+    color: var(--header-color-dark);
+}
+
+.dark-theme .nav-category-item {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .nav-icon,
+.dark-theme .header-logo-icon {
+    fill: var(--header-color-ligth);
+    
+}
+
+.dark-theme .nav-category-item.active,
+.dark-theme .nav-category-item:hover,
+.dark-theme .nav-category-item:active,
+.dark-theme .nav-category-item:focus {
+    color: var(--accent--text-color-dark);
+}
+
+.dark-theme .gallery-title,
+.dark-theme .gallery-book-name {
+    color: var(--secondary-text-color-dark);
+}
+
+.dark-theme .gallery-see-more-btn {
+    color: var(--secondary-text-color-dark);
+}
+
+.dark-theme .header-mobile-menu-icon,
+.dark-theme .header-burger-icon {
+    fill: var(--header-color-ligth);
+    stroke: var(--header-color-ligth);
+}
+
+.dark-theme .shoping-list-header,
+.dark-theme .description-info .title-name,
+.dark-theme .description-info .description-book,
+.dark-theme .choice-btn,
+.dark-theme .shopping-list-book-title,
+.dark-theme .shopping-list-book-about {
+    color: var(--secondary-text-color-dark);
+    
+}
+
+.dark-theme .congrats {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .choice-btn {
+    background: transparent;
+}
+
+.dark-theme .brightness {
+    filter: grayscale(100%) brightness(10);
+}
+
+.dark-theme .shopping-list-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .modal-autoriz-close,
+.dark-theme .header-modal-form-field,
+.dark-theme .header-form-input {
+    background: transparent;
+}
+
+.dark-theme .header-form-input {
+    color: #F6F6F6
+}
+
+.dark-theme .modal-autoriz-icon,
+.dark-theme .header-form-field,
+.dark-theme .header-form-input,
+.dark-theme .autoriz-icon {
+    fill: none;
+    stroke: #F6F6F6;
+    color: #F6F6F6
+}
+
+.dark-theme .header-form-btn {
+    background: #F6F6F6;
+    color: #111111;
+}
+
+.dark-theme .header-form-link {
+    color: rgba(246, 246, 246, 0.5);
+}
