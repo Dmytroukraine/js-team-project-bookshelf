@@ -9,7 +9,10 @@
   width: 8px;
 }
 .home-categories::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  background: linear-gradient( 45deg,
+    #502ee8c1 12.03%,
+    #ffffff 100%
+  );
   border-radius: 20px;
   border: 1px solid rgba(125, 125, 125, 0.246);
 }
