@@ -39,6 +39,15 @@ body .show-modal .footer__modal {
   transform: scale(1.1);
   transition: transform 200ms ease-in-out;
   margin: 20px;
+
+  position: relative;
+
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.footer__close-svg {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
 /* ! team img styles ! */
@@ -56,7 +65,8 @@ body .show-modal .footer__modal {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
+  padding: 30px;
 }
 
 .footer__card {
@@ -157,13 +167,4 @@ body .show-modal .footer__modal {
 
 .footer__card:hover .footer__volodymyr {
   transform: translate3d(-28%, -28px, 80px);
-}
-
-.footer__card:hover .footer__second-charester {
-  opacity: 1;
-  transform: translate3d(0%, -10%, 100px);
-}
-.footer__card:hover .footer__third-charester {
-  opacity: 1;
-  transform: translate3d(0%, -20%, 100px);
 }

@@ -86,9 +86,39 @@
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   -webkit-appearance: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px;
+
+  transition: transform 0.3s ease;
 }
 
-.footer__close-svg {
-  fill: #4f2ee8;
-  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+/* ! rotate part of footer__cross (modal) */
+
+.rotate-center {
+  -webkit-animation: rotate-center 1.6s ease-in-out infinite both;
+  animation: rotate-center 1.6s ease-in-out infinite both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
