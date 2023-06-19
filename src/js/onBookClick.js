@@ -3,9 +3,14 @@ import { fetchBookById } from './fetchBookById';
 import { FavModal } from './modalFav';
 
 
-onBookClick();
+
+// onBookClick();
 async function onBookClick(event) {
-    renderModalMarkup(await fetchBookById());
+    // ;
+    console.log(event.currentTarget.dataset.id);
+    renderModalMarkup(await fetchBookById(event.currentTarget.dataset.id));
     FavModal();
-// console.log(event.currentTarget.dataset.id);
+    
 }
+
+export { onBookClick };

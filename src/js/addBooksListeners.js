@@ -1,4 +1,4 @@
-import onBookClick from './onBookClick';
+import { onBookClick } from './onBookClick';
 
 export default function addBooksListeners() {
   const booksRefs = document.querySelectorAll('.gallery-book-home-link');

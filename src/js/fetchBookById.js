@@ -8,9 +8,9 @@ const bookRef = document.querySelector('.modal-fav-book');
 
 axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 
-async function fetchBookById() {
+async function fetchBookById(id) {
   try {
-    const { data } = await axios.get('643282b1e85766588626a0b2');
+    const { data } = await axios.get(id);
     return data;
   } catch (error) {
     Notiflix.Notify.failure(
