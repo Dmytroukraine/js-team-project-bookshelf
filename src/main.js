@@ -8,5 +8,5 @@ import './js/button_up';
 import './js/footer';
 import './js/modalTeam';
 import './js/modal_autoriz';
-// import './js/fetchBookById';
+import './js/fetchBookById';
 import './js/onBookClick';
