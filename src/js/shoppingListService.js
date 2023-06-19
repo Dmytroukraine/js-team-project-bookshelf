@@ -7,38 +7,36 @@ import trash from '../images/icon.svg#icon-trash';
 
 const emptyRef = document.querySelector('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
-
 export let booksArray = JSON.parse(localStorage.getItem('books'));
-
 renderingShoppingList();
-
 function renderingShoppingList() {
   // console.log('Rendering shopping list');
   if (!booksList) {
     return;
   }
 
-  // Checking if the shopplist is empty and rendering the empty-shopping-list-image and text
+  // Перевірка на пустоту
+
   const data = localStorage.getItem('books');
+
   const books = JSON.parse(data);
   if (books === null) {
     emptyRef.classList.remove('visuallyhidden');
   } else {
     booksList.innerHTML = '';
-
     const dataJSON = localStorage.getItem('books');
     if (dataJSON) {
-      booksArray = JSON.parse(dataJSON);
+        booksArray = JSON.parse(dataJSON);
     }
   }  
   
   if (booksArray !== null) { 
-    if (booksArray.length > 0) {
+     if (booksArray.length > 0) {
       emptyRef.classList.add('visuallyhidden');
     }
     for (let i = 0; i < booksArray.length; i++) {
-      const book = loadFromLocalStorage(booksArray[i]._id);
-      booksList.insertAdjacentHTML(
+       const book = loadFromLocalStorage(booksArray[i]._id);
+       booksList.insertAdjacentHTML(
         'beforeend',
         `<div class="shopping-list-thumb">
         <button class="delete-shopping-list-btn" type="button" data-id="${book._id}">
