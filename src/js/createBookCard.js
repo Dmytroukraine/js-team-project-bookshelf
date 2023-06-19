@@ -2,8 +2,7 @@
 export function createBookCard(book) {
   return `  <div class="gallery-book-link" data-id="${book._id}">
               <div class="gallery-book-card">
-                <div class="gallery-book-cover" style="background-image: url('${book.book_image}')">
-                </div>
+                <img class="gallery-book-cover" src="${book.book_image}" alt="book-image">
                 <p class="gallery-book-name">${book.title}</p>
                 <p class="gallery-author">${book.author}</p>
               </div>
