@@ -213,7 +213,7 @@
 }
 
 .add-book-notification{
-    display: none;
+    
     width: 242px;
     font-family: var(--main-font);
     font-size: 10px;
@@ -222,8 +222,14 @@
     letter-spacing: -0.04em;
     color: rgba(17, 17, 17, 0.5);
     margin-top: 8px;
-
 }
+
+.hidden {
+display: none;
+}
+
+
+
 
 .buy-label{
     display: flex;

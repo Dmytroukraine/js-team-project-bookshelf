@@ -5,7 +5,7 @@ import appleBooks from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
 import trash from '../images/icon.svg#icon-trash';
 
-const emptyRef = document.querySelector('.empty-shopping-list');
+export const emptyRef = document.querySelector('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
 export let booksArray = JSON.parse(localStorage.getItem('books'));
 renderingShoppingList();
@@ -122,7 +122,7 @@ export function removingBookFromShoppingList(e) {
   
 }
 
-function saveToLocalStorage(book) {
+export function saveToLocalStorage(book) {
   try {
     if (booksArray === null) {
       booksArray = [];
@@ -135,7 +135,7 @@ function saveToLocalStorage(book) {
   }
 }
 
-function loadFromLocalStorage(id) {
+export function loadFromLocalStorage(id) {
   try {
     const dataJSON = localStorage.getItem('books');
     if (dataJSON) {
@@ -148,3 +148,5 @@ function loadFromLocalStorage(id) {
     console.log(error);
   }
 }
+
+
