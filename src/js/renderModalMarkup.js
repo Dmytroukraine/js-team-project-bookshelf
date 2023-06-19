@@ -11,7 +11,10 @@ function renderModalMarkup({
 
   const bookRef = document.querySelector('.modal-fav-book');
   let buyMarkup = [];
-    
+  let markupImg;
+  let markupTitle;
+  let markupAuthor;
+  let markupDescription;
   // bookRef.addEventListener('click', onIdBookClick);
   // function onIdBookClick(event) {
   //   console.log(event.target, _id);
@@ -77,15 +80,54 @@ function renderModalMarkup({
     }
   });
 
+  if (book_image !== '') {
+     markupImg = `<img class="modal-fav-image" src="${book_image}" alt="book-cover"/>`
+  } else {
+      markupImg = `<img class="modal-fav-image" src="../images/Logotype.png" alt="book-cover"/>`;
+  };
+  
+  if (title !== '') {
+    markupTitle = `<h1 class="modal-fav-title">${title}</h1>`
+  } else {
+    markupTitle = `<h1 class="modal-fav-title">No title</h1>`
+  };
+ 
+  if (author !== '') {
+    markupAuthor = `<h2 class="modal-fav-author">${author}</h2>`
+  } else {
+    markupAuthor = `<h2 class="modal-fav-author">No author name</h2>`
+  };
+  
+  if (description !=='')
+  {
+    markupDescription = `<p class="modal-fav-descr">${description}</p>`
+  } else {
+    markupDescription = `<p class="modal-fav-descr">No description</p>`
+  };
+   
 
-  const markup = `<img class="modal-fav-image" src="${book_image}" alt="book-cover" width="287" />
-   <div class="book-descr-wrapper"><h1 class="modal-fav-title">${title}</h1>
-<h2 class="modal-fav-author">${author}</h2>
-<p class="modal-fav-descr">${description}</p>
+  const markup = `${markupImg}
+   <div class="book-descr-wrapper">${markupTitle}
+${markupAuthor}
+${markupDescription}
 <div class="buy-label">${buyMarkup.join('')}</div>
 </div>`;
   bookRef.innerHTML = markup;
 }
+
+
+
+
+
+
+//   const markup = `<img class="modal-fav-image" src="${book_image}" alt="book-cover" width="287" />
+//    <div class="book-descr-wrapper"><h1 class="modal-fav-title">${title}</h1>
+// <h2 class="modal-fav-author">${author}</h2>
+// <p class="modal-fav-descr">${description}</p>
+// <div class="buy-label">${buyMarkup.join('')}</div>
+// </div>`;
+//   bookRef.innerHTML = markup;
+// }
 
 
 export { renderModalMarkup };
