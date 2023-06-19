@@ -40,7 +40,6 @@ function currentTheme() {
 
 currentTheme();
 
-
 const headerNavLinks = document.querySelector('.header-nav-link').querySelectorAll('a');
 if (document.querySelector('.home-page') === null) {
   for (let index = 0; index < headerNavLinks.length; index++) {

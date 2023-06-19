@@ -59,7 +59,6 @@ body.dark-theme,
 .dark-theme .shopping-list-book-title,
 .dark-theme .shopping-list-book-about {
     color: var(--secondary-text-color-dark);
-    
 }
 
 .dark-theme .choice-btn {
