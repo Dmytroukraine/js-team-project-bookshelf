@@ -1,21 +1,22 @@
-
-export function createBookCard(books) {
-  const listCardCategory = books
-    .map(({ _id, book_image, author, title }) => {
-      return `
-        <li class="card-category-item">
-            <a href="" class="card-category-link js-card-link link" data-id="${_id}">
-                <div class="card-category-img-wrap">
-                  <img src="${book_image}" alt="${title}" class="card-category-img" loading="lazy">
-                  <p class="card-category-img-text">quick view</p>
+// Different markup for home page and for category filtered Page due to CSS issues.
+export function createBookCard(book) {
+  return `  <div class="gallery-book-link" data-id="${book._id}">
+              <div class="gallery-book-card">
+                <div class="gallery-book-cover" style="background-image: url('${book.book_image}')">
                 </div>
-                <p class="card-category-title">${title}</p>
-                <p class="card-category-author">${author}</p>
-            </a>
-      </li>
-        `;
-    })
-    .join('');
+                <p class="gallery-book-name">${book.title}</p>
+                <p class="gallery-author">${book.author}</p>
+              </div>
+            </div>`;
+}
 
-  return `<ul class="card-category-list list">${listCardCategory}</ul>`;
+export function createHomeBookCard(book) {
+  return `  <div class="gallery-book-home-link" data-id="${book._id}">
+              <div class="gallery-book-card">
+                <div class="gallery-book-cover" style="background-image: url('${book.book_image}')">
+                </div>
+                <p class="gallery-book-name">${book.title}</p>
+                <p class="gallery-author">${book.author}</p>
+              </div>
+            </div>`;
 }
