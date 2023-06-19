@@ -6,11 +6,11 @@ import addBooksListeners from './addBooksListeners';
 const { galleryRef, categoriesRef } = getRefs();
 
 export default function renderingByCategory(e) {
+
   // console.log('Rendering by category');
 
   galleryRef.innerHTML = '';
-
-  // Click on See-more button
+  // Тицяти на кнопку більше
   if (e.target.innerHTML === 'See more') {
     galleryRef.insertAdjacentHTML(
       'beforeend',
@@ -27,7 +27,6 @@ export default function renderingByCategory(e) {
     );
 
     const galleryListRef = document.querySelector('.gallery-list2');
-
     const query = e.target.dataset.category.split(' ').join('%20');
     fetchingByCategory(query).then(response => {
       response.map(book => {
@@ -36,31 +35,32 @@ export default function renderingByCategory(e) {
       addBooksListeners();
     });
 
-    // Switching class active to new category
+    // Активно до нової категорії
 
     categoriesRef.querySelector('.active').classList.remove('active');
     document
       .querySelector(`[data-id="${e.target.dataset.category}"]`)
       .classList.add('active');
 
-    // scrolling to top
+    // Скролимо ап
 
     window.scrollTo(0, 0);
+
     return;
   }
 
-  // Click on "All categories" in categories section
+  //Тицяємо на всі категорії
 
   if (e.target.innerHTML.trim() === 'All categories') {
     renderingHomePage();
 
-    // scrolling to top
+    // Знов скрол ап
 
     window.scrollTo(0, 0);
     return;
   }
 
-  // Header of the book section
+  // Заголовок секції книжок
 
   galleryRef.insertAdjacentHTML(
     'beforeend',
@@ -73,14 +73,15 @@ export default function renderingByCategory(e) {
       .split(' ')
       .pop()}</span></h2>`
   );
+
   galleryRef.insertAdjacentHTML(
     'beforeend',
     `<div class="gallery-list2"></div>`
   );
 
   const galleryListRef = document.querySelector('.gallery-list2');
-
   const query = e.target.innerHTML.trim().split(' ').join('%20');
+  
   fetchingByCategory(query).then(response => {
     response.map(book =>
       galleryListRef.insertAdjacentHTML('beforeend', createBookCard(book))
@@ -88,7 +89,7 @@ export default function renderingByCategory(e) {
     addBooksListeners();
   });
 
-  // scrolling to top
+  // Летимо вгору
   
   window.scrollTo(0, 0);
 }
