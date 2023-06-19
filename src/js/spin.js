@@ -1,26 +1,21 @@
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
-const options = {
-     className: 'notiflix-loading',
-            zindex: 4000,
-            fontFamily: 'DM Sans',
-            messageFontSize:'26px',
-            svgColor:'rgba(79, 46, 232, 0.5)',
-}
 
+export const spinnerStart = () => {
+  Loading.pulse('Wait please...', {
+    svgColor: '#4f2ee8',
+  });
+};
 
-export function spinnerStart() {
-    Loading.circle('Wait please', options)
-}
+export const spinnerStop = () => {
+  Loading.remove();
+};
 
-export function spinnerStop() {
-    Loading.remove();
-}
+export const spinnerStartForCategories = () => {
+  Loading.pulse('Wait please...', {
+    svgColor: '#4f2ee8',
+  });
+};
 
-export function spinnerStartForCategories() {
-    Loading.circle('Wait please', options)
-}
-
-export function spinnerStopForCategories() {
-    Loading.circle('Wait please', options)
-}
-
+export const spinerStopForCategories = () => {
+  Loading.remove();
+};
