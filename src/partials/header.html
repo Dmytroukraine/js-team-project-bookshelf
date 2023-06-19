@@ -3,15 +3,20 @@
   <div class="container header">
     <div class="header-logo-nav">
       <a class="header-logo" href="./index.html">
-        <svg class="header-svg" width="109" height="24">
-          <use href="../images/sprite.svg#icon-logo"></use>
+        <svg class="header-logo-icon1 logo" width="0" height="28">
+          <use href="../images/sprite.svg#icon-logo-1"></use>
         </svg></a>
+        <a class="header-logo" href="./index.html">
+          <svg class="header-logo-icon logo"  width="0" height="28">
+            <use href="../images/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
 
       <!-- Navigation to other pages -->
       <nav class="header-nav">
         <ul class="header-nav-link">
-          <li><a class="nav-link" href="./index.html">home</a></li>
-          <li><a class="nav-link nav-link-add" href="./shopping-list.html">shopping list
+          <li><a class="nav-link header-active" href="./index.html">home</a></li>
+          <li><a class="nav-link nav-link-add " href="./shopping-list.html">shopping list
               <svg class="" width="20" height="20">
                 <use href="../images/sprite.svg#icon-uil_cart"></use>
               </svg></a>
@@ -26,6 +31,7 @@
         <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
           aria-label="Переключить между тёмной и светлой темой">
         <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
+        <span class="span-theme"></span>
         </label>
         <div aria-hidden="true" class="theme-switch__marker">
         </div>
