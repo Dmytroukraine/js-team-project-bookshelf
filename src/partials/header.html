@@ -1,4 +1,3 @@
-
 <header>
   <div class="container header">
     <div class="header-logo-nav">
@@ -9,7 +8,8 @@
 
       <!-- Navigation to other pages -->
       <nav class="header-nav">
-        <ul class="header-nav-link">
+        <!-- <ul class="header-nav-link"> -->
+        <ul class="header-nav-link is-hidden">
           <li><a class="nav-link" href="./home.html">home</a></li>
           <li><a class="nav-link nav-link-add" href="../shopping-list.html">shopping list
               <svg class="" width="20" height="20">
@@ -19,7 +19,7 @@
         </ul>
       </nav>
     </div>
-    
+
     <!-- Dark/light theme -->
     <div class="toolbar">
       <div class="theme-switch__control">
@@ -31,67 +31,189 @@
         </div>
       </div>
 
-      <button class="btn-header" type="button">Welcome</button>
-     
-      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg 
-        width="29" 
-        height="19"
-        fill="none"
-        viewBox="16 0 25 25">
-        
-        <use href="../images/icon.svg#icon-align-left"></use>
-            <!-- <use href="./images/icons.svg#icon-charm_menu-hamburger"></use> -->
-            <!-- <use href="./images/icons.svg#url(#a)"></use> -->
-            <!-- <svg class="" width="32" height="24">
-              <use href="../images/icon.svg#icon-align-left"></use>-->
-            <!-- </svg>  -->
-
-            <g clip-path="url(#a)">
-                <path stroke="#2E2F42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                    d="M1.348 20.043h29.538M1.348 10.735h29.538M1.348 1.428h29.538" />
-            </g>
-            <defs>
-                <clipPath id="a">
-                    <path fill="none" d="M0 0h32v22H0z" />
-                </clipPath>
-            </defs>
+      <!-- Button Sign Up -->
+      <button class="btn-header" type="button">Sign Up
+        <svg class="btn-header-sign" width="20" height="20">
+          <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
         </svg>
-    </button>
+      </button>
+
+      <!-- Button Authorization -->
+      <button class="btn-header loginned is-hidden is-hidden-btn" type="button">
+        <svg class="" width="20" height="20">
+          <use href="../images/sprite.svg#icon-user-1"></use>
+        </svg>
+      </button>
+
+      <!-- Button Burger -->
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="29" height="19" fill="none" viewBox="16 0 25 25">
+          <use href="../images/icon.svg#icon-align-left"></use>
+          <g clip-path="url(#a)">
+            <path stroke="#2E2F42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              d="M1.348 20.043h29.538M1.348 10.735h29.538M1.348 1.428h29.538" />
+          </g>
+          <defs>
+            <clipPath id="a">
+              <path fill="none" d="M0 0h32v22H0z" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
     </div>
 
   </div>
 </header>
-=======
-<div class="header-logo-nav">
-    <div class="header-logo-container">
+
+<!-- Mobile menu -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <div class="header-mobile-menu">
+    <div class="header-logo-nav">
       <a class="header-logo" href="./index.html">
-        <svg class="header-logo-icon1 logo" height="28" width="0">
-          <use href="./images/sprite.svg#icon-logo-1"></use>
-        </svg>
-      </a>
-      <a class="header-logo" href="./index.html">
-        <svg class="header-logo-icon logo" height="28" width="0">
-          <use href="./images/sprite.svg#icon-logo"></use>
-        </svg>
-      </a>
+        <svg class="header-svg" width="109" height="24">
+          <use href="../images/sprite.svg#icon-logo"></use>
+        </svg></a>
     </div>
-    <nav class="header-nav">
-      <ul class="header-nav-item">
-        <li class="header-item">
-          <a class="header-link-item header-link-item-home heder-active" href="./index.html"
-            >Home
-          </a>
-        </li>
-        <li class="header-item">
-          <a class="header-link-item header-link-item-shopping" href="./shopping-list.html"
-          > Shopping list
-            <svg class="header-item-icon" height="20" width="20">
-              <use href="./images/sprite.svg#icon-uil_cart"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
+
+    <div class="toolbar">
+      <div class="theme-switch__control">
+        <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
+          aria-label="Переключить между тёмной и светлой темой">
+        <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
+        </label>
+        <div aria-hidden="true" class="theme-switch__marker">
+        </div>
+      </div>
+    </div>
+
+    <button class="menu-close-btn js-close-menu">
+      <svg class="header-svg" width="28" height="28">
+        <use href="../images/icon.svg#icon-x-close"></use>
+        <path fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
   </div>
 
+
+  <ul class="mobile-menu">
+    <li><a href="./home.html" class="mobile-link mobile-margin current">Home</a></li>
+    <li><a href="../shopping-list.html" class="mobile-link">shopping list
+        <svg class="" width="20" height="20">
+          <use href="../images/sprite.svg#icon-uil_cart"></use>
+        </svg>
+      </a></li>
+    <li>
+      <div class="mobile-set">
+        <ul class="mobile-set-list">
+          <li class="mobile-set-img mobile-one">
+            <img srcset="../images/image 13mob_head1@1x.png 1x, ./images/image 13mob_head1@2x.png 2x"
+              src="./images/image 13mob_head1@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img mobile-second">
+            <img srcset="../images/image 14mob_head2@1x.png 1x, ./images/image 14mob_head2@2x.png 2x"
+              src="./images/image 14mob_head2@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img">
+            <img srcset="../images/image 11mob_head3@1x.png 1x, ./images/image 11mob_head3@2x.png 2x"
+              src="./images/image 11mob_head3@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img mobile-third">
+            <img srcset="../images/image 15mob_head4@1x.png 1x, ./images/image 15mob_head4@2x.png 2x"
+              src="./images/image 15mob_head4@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+        </ul>
+
+        <ul class="mobile-set-list">
+          <li class="mobile-set-img mobile-one">
+            <img srcset="../images/image 18mob_head7@1x.png 1x, ./images/image 18mob_head7@2x.png 2x"
+              src="./images/image 18mob_head7@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img mobile-second">
+            <img srcset="../images/image 17mob_head5@1x.png 1x, ./images/image 17mob_head5@2x.png 2x"
+              src="./images/image 17mob_head5@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img">
+            <img srcset="../images/image 16mob_head6@1x.png 1x, ./images/image 16mob_head6@2x.png 2x"
+              src="./images/image 16mob_head6@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img mobile-third">
+            <img srcset="../images/image 12mob_headx@1x.png 1x, ./images/image 12mob_headx@2x.png 2x"
+              src="./images/image 12mob_headx@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+        </ul>
+
+        <ul class="mobile-set-list">
+          <li class="mobile-set-img mobile-one">
+            <img srcset="../images/image 18mob_head7@1x.png 1x, ./images/image 18mob_head7@2x.png 2x"
+              src="./images/image 18mob_head7@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img mobile-second">
+            <img srcset="../images/image 19mob_head9@1x.png 1x, ./images/image 19mob_head9@2x.png 2x"
+              src="./images/image 19mob_head9@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img">
+            <img srcset="../images/image 21mob_head10@1x.png 1x, ./images/image 21mob_head10@2x.png 2x"
+              src="./images/image 21mob_head10@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+
+          <li class="mobile-set-img mobile-third">
+            <img srcset="../images/image 18mob_head7@1x.png 1x, ./images/image 18mob_head7@2x.png 2x"
+              src="./images/image 18mob_head7@1x.png" alt="Photo of book" width="89.15" height="133.54">
+          </li>
+        </ul>
+      </div>
+
+    </li>
+  </ul>
+
+
+  <button class="btn-header-mobile" type="button">Log Out
+    <svg class="" width="20" height="20">
+      <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
+    </svg>
+  </button>
+</div>
+
+
+
+
+=======
+<div class="header-logo-nav">
+  <div class="header-logo-container">
+    <a class="header-logo" href="./index.html">
+      <svg class="header-logo-icon1 logo" height="28" width="0">
+        <use href="./images/sprite.svg#icon-logo-1"></use>
+      </svg>
+    </a>
+    <a class="header-logo" href="./index.html">
+      <svg class="header-logo-icon logo" height="28" width="0">
+        <use href="./images/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
+  </div>
+  <nav class="header-nav">
+    <ul class="header-nav-item">
+      <li class="header-item">
+        <a class="header-link-item header-link-item-home heder-active" href="./index.html">Home
+        </a>
+      </li>
+      <li class="header-item">
+        <a class="header-link-item header-link-item-shopping" href="./shopping-list.html"> Shopping list
+          <svg class="header-item-icon" height="20" width="20">
+            <use href="./images/sprite.svg#icon-uil_cart"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
