@@ -67,4 +67,4 @@ if (document.querySelector('.home-page') === null) {
     
   }
 }
-
+}
