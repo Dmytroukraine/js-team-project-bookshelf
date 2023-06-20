@@ -12,7 +12,6 @@ import {
   emptyRef,
 } from './shoppingListService';
 
-const addBookBtn = document.querySelector('.fav-add-book-btn');
 const addBookNotif = document.querySelector('.add-book-notification');
 let booksArray = [];
 
@@ -21,20 +20,22 @@ async function onBookClick(event) {
   const dataId = event.currentTarget.dataset.id;
   console.log(dataId);
   const book = await fetchBookById(event.currentTarget.dataset.id);
+  renderModalMarkup(book);
+  const addBookBtn = document.querySelector('.fav-add-book-btn');
   if (loadFromLocalStorage(dataId) == null) {
     addBookNotif.classList.add('hidden');
     addBookBtn.textContent = 'add to shopping list';
-
-
+    
+    
   } else {
     addBookNotif.classList.remove('hidden');
     addBookBtn.textContent = 'remove from the shopping list';
   }
-  renderModalMarkup(book);
   FavModal();
-
-
-
+  
+  
+  
+  
   
   addBookBtn.addEventListener('click', onAddBookBtn);
 
@@ -42,30 +43,40 @@ async function onBookClick(event) {
     if (loadFromLocalStorage(dataId) == null)
     
     {
+      try {
       console.log(dataId, 'add')
       booksArray.push(book);
-      // booksArray.splice(0, 0, book)
       console.log(booksArray, 'add');
       localStorage.setItem('books', JSON.stringify(booksArray));
       addBookNotif.classList.remove('hidden');
-      addBookBtn.textContent = 'remove from the shopping list';
+      addBookBtn.textContent = 'remove from the shopping list';  
+      } catch (error) {
+        console.log(error);
+      }
+      
     
     } else {
-      addBookNotif.classList.add('hidden');
+      try {
+           addBookNotif.classList.add('hidden');
       addBookBtn.textContent = 'add to shopping list';
       const index = booksArray.findIndex((book) => book._id == dataId);
       console.log(dataId, 'rem');
-      if (index !== -1) {
-        console.log(index, 'index')
-        booksArray.splice(index, 1);
-        console.log(booksArray, 'rem');
-        localStorage.setItem('books', JSON.stringify(booksArray));
-        // Notiflix.Notify.info('Book removed from shopping list');
+        if (index !== -1) {
+          // console.log(index, 'index')
+          booksArray.splice(index, 1);
+          console.log(booksArray, 'rem');
+          localStorage.setItem('books', JSON.stringify(booksArray));
+          // Notiflix.Notify.info('Book removed from shopping list');  
+        }
+        } catch (error) {
+        console.log(error);
+      }
+ 
        
       }
     }
   }
-}
+
 
 export { onBookClick };
 

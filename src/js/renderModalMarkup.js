@@ -10,6 +10,8 @@ function renderModalMarkup({
 }) {
 
   const bookRef = document.querySelector('.modal-fav-book');
+  const modalRef = document.querySelector('.modal-fav');
+  const btnWrap = document.querySelector('.btn-wrap');
   let buyMarkup = [];
   let markupImg;
   let markupTitle;
@@ -111,11 +113,13 @@ function renderModalMarkup({
 ${markupAuthor}
 ${markupDescription}
 <div class="buy-label">${buyMarkup.join('')}</div>
+
 </div>`;
   bookRef.innerHTML = markup;
+
+btnWrap.innerHTML = '<button class="fav-add-book-btn" data-id = ${_id} type="button">add to shopping list</button>';
+
 }
-
-
 
 
 
