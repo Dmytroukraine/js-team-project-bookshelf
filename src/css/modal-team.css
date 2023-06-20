@@ -92,6 +92,9 @@ body .show-modal .footer__modal {
   position: absolute;
   width: 100%;
   z-index: -1;
+  width: 200px;
+  height: 300px;
+  line-height: 200px;
 }
 
 .footer__card:hover .footer__wrapper {
@@ -165,6 +168,9 @@ body .show-modal .footer__modal {
 
 /* ! fix every charesters size ! */
 
-.footer__card:hover .footer__volodymyr {
+.footer__cover-image-dmytro {
+}
+
+.footer__card:hover .footer__title-volodymyr {
   transform: translate3d(-28%, -28px, 80px);
 }
