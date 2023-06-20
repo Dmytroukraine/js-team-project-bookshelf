@@ -54,9 +54,3 @@ async function onBookClick(event) {
 }
 
 export { onBookClick };
-
-
-
-
-
-export { onBookClick };
