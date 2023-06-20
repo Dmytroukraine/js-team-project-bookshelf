@@ -1,67 +1,78 @@
-.donate-funds-visible {
-  overflow-y: scroll;
-
-  /* height: 220px; */
-  overflow: auto;
-  scroll-behavior: smooth;
-  height: 188px;
-  margin-bottom: 16px;
+.donate-container {
+  width: 335px;
+  height: 352px;
+  padding-left: 40px;
+  padding-top: 24px;
+  background: var(--support-section-color);
+  box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+  border-radius: 16px;
 }
 
-@media screen and (min-width: 768px){
-  
-  .donate-funds-visible{
-    height: 292px;
-    margin-bottom: 32px;
-  }
-
-}
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-.donate-title {
+.donate-paragraph {
+  color: var(--header-color-ligth);
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;
   letter-spacing: -0.04em;
-  display: flex;
-  color: var(--header-color-ligth);
-  margin-bottom: 40px;
-}
-.title-txt {
-  margin-right: 12px;
 }
 
-.donate-funds-list {
+.donate-header {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.donate-fund {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .donate-index {
-  font-family: 'DM Sans';
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: var(--header-color-ligth);
+  letter-spacing: -0.04em;
+}
+
+.donate-funds-list {
+  width: 159px;
+}
+
+.donate-funds-visible {
+  width: 170px;
+  height: 220px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.donate-fund {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.donate-item-link {
+  margin-left: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .donate-img {
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
   height: 32px;
-  transition: transform 500ms ease-out;
+  object-fit: contain;
 }
 
+.donate-emblem {
+  width: 20px;
+  height: 32px;
+}
+.donate-img {
+  transition: transform 500ms ease-out;
+}
 .donate-img:hover {
   transform: scale(1.15);
 }
@@ -71,6 +82,7 @@
   transform: scale(0.85);
 }
 
+/*-------------------------- Scroll bar--------------------------------------- */
 .donate-funds-visible::-webkit-scrollbar {
   width: 0%;
   background-color: transparent;
@@ -79,23 +91,90 @@
 .donate-funds-visible::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+/*-------------------------- !Scroll bar!--------------------------------------- */
 
-.use-donate {
-  fill: var(--accent-color-ligth);
-}
+/*---------------------------- Arrow -------------------------------------------*/
 .donate-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: none;
   border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0 auto;
 }
 
+.donate-block-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate-arrow {
+  fill: var(--accent-color-ligth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transform: scale(0.7);
+}
+
+.donate-button:hover,
+.donate-arrow:focus {
+  background-color: var(--bgc-ligth-theme);
+}
+/* -----------------------! Arrow!--------------------------------- */
+
+/*---------------------------- Arrow up -------------------------------------------*/
 .donate-button-up {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-color-ligth);
+  border: none;
   border-radius: 50%;
-  transform: rotate(180deg);
-  transition: transform 1000ms ease-out;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  display: none;
 }
 
+.donate-arrow-up {
+  fill: var(--secondary-text-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg) scale(0.7);
+  width: 32px;
+  height: 32px;
+}
+
+.donate-button-up:focus,
+.donate-arrow-up:hover {
+  fill: var(--primary-text-color-dark);
+  border-radius: 50%;
+}
+/* -----------------------! Arrow up!--------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .donate-container {
+    height: 472px;
+  }
+  .donate-header {
+    margin-bottom: 25px;
+  }
+  .donate-funds-visible {
+    height: 320px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .donate-container {
+    width: 356px;
+    height: 490px;
+  }
+}

@@ -5,7 +5,8 @@ function FavModal() {
 
   const closeModalBtn = document.querySelector('[data-modal-close]');
   const modalFav = document.querySelector('[data-modal]');
-document.body.classList.add('modal-open');
+  document.body.classList.add('modal-open');
+  modalFav.classList.remove('is-hidden');
   closeModalBtn.addEventListener('click', closeModal);
 
   function closeModal() {
@@ -34,3 +35,4 @@ document.body.classList.add('modal-open');
 
 }
 export {FavModal}
+
