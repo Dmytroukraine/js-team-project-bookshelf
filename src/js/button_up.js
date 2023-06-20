@@ -28,7 +28,7 @@ function scrollToTop() {
   const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
  const clientHeight = document.documentElement.clientHeight || window.innerHeight;
   
-      const scrollThreshold = 100;
+      const scrollThreshold = 7500;
 
       const isNearBottom = scrollTop + clientHeight >= scrollHeight - scrollThreshold;
       
