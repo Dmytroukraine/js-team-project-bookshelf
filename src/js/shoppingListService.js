@@ -5,7 +5,7 @@ import appleBooks from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
 import trash from '../images/icon.svg#icon-trash';
 
-export const emptyRef = document.querySelector('.empty-shopping-list');
+export const emptyRef = document.querySelector ('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
 export let booksArray = JSON.parse(localStorage.getItem('books'));
 
