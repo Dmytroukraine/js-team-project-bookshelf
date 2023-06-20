@@ -52,27 +52,17 @@ body.dark-theme,
     color: var(--secondary-text-color-dark);
 }
 
-.dark-theme .header-mobile-menu-icon,
-.dark-theme .header-burger-icon {
-    fill: var(--header-color-ligth);
-    stroke: var(--header-color-ligth);
-}
-
 .dark-theme .shoping-list-header,
-.dark-theme .description-info .title-name,
-.dark-theme .description-info .description-book,
-.dark-theme .choice-btn,
+.dark-theme .modal-fav-book .modal-fav-title,
+.dark-theme .modal-fav-book .modal-fav-descr,
+.dark-theme .fav-add-book-btn,
 .dark-theme .shopping-list-book-title,
 .dark-theme .shopping-list-book-about {
     color: var(--secondary-text-color-dark);
     
 }
 
-.dark-theme .congrats {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.dark-theme .choice-btn {
+.dark-theme .fav-add-book-btn {
     background: transparent;
 }
 
@@ -82,32 +72,4 @@ body.dark-theme,
 
 .dark-theme .shopping-list-text {
     color: rgba(255, 255, 255, 0.6);
-}
-
-.dark-theme .modal-autoriz-close,
-.dark-theme .header-modal-form-field,
-.dark-theme .header-form-input {
-    background: transparent;
-}
-
-.dark-theme .header-form-input {
-    color: #F6F6F6
-}
-
-.dark-theme .modal-autoriz-icon,
-.dark-theme .header-form-field,
-.dark-theme .header-form-input,
-.dark-theme .autoriz-icon {
-    fill: none;
-    stroke: #F6F6F6;
-    color: #F6F6F6
-}
-
-.dark-theme .header-form-btn {
-    background: #F6F6F6;
-    color: #111111;
-}
-
-.dark-theme .header-form-link {
-    color: rgba(246, 246, 246, 0.5);
 }
