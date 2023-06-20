@@ -41,13 +41,10 @@ async function onBookClick(event) {
   function onAddBookBtn() {
     if (loadFromLocalStorage(dataId) == null)
     
-    
-    
-    
     {
       console.log(dataId, 'add')
-      // booksArray.push(book);
-      booksArray.splice(0, 0, book)
+      booksArray.push(book);
+      // booksArray.splice(0, 0, book)
       console.log(booksArray, 'add');
       localStorage.setItem('books', JSON.stringify(booksArray));
       addBookNotif.classList.remove('hidden');
