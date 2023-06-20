@@ -1,3 +1,4 @@
+import './js/modal_autoriz';
 import './js/shoppingListService';
 import './js/donate';
 import './js/headermodal';

@@ -57,6 +57,9 @@
         </svg>
       </button>
 
+
+
+
       <!-- Button Burger -->
       <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg width="29" height="19" fill="none" viewBox="16 0 25 25">
@@ -111,8 +114,8 @@
 
 
   <ul class="mobile-menu">
-    <li><a href="./home.html" class="mobile-link mobile-margin current">Home</a></li>
-    <li><a href="../shopping-list.html" class="mobile-link">shopping list
+    <li><a href="./home.html" class="mobile-link mobile-margin current is-hidden">Home</a></li>
+    <li><a href="../shopping-list.html" class="mobile-link js-link is-hidden">shopping list
         <svg class="" width="20" height="20">
           <use href="../images/sprite.svg#icon-uil_cart"></use>
         </svg>
@@ -190,7 +193,13 @@
   </ul>
 
 
-  <button class="btn-header-mobile" type="button">Log Out
+  <button class="btn-header-mobile is-hidden" type="button" >Log Out
+    <svg class="" width="20" height="20">
+      <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
+    </svg>
+  </button>
+
+  <button class="btn-header-mobile log-in-mob" type="button" >Sign In
     <svg class="" width="20" height="20">
       <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
     </svg>
