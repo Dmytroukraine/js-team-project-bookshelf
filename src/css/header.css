@@ -32,25 +32,6 @@
   align-items: center;
 }
 
-.header-logo-storage {
-  width: 109px;
-}
-
-.logo {
-  transition: all 0.3s ease-in-out;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  outline: none;
-}
-
-.logo:focus {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
-
 @media screen and (min-width: 768px) {
   .header-logo {
     display: flex;
@@ -110,7 +91,6 @@
     gap: 24px;
   }
 }
-
 
 .nav-link {
   font-family: 'DM Sans', sans-serif;
@@ -228,7 +208,6 @@ box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1); */
   display: none;
 }
 
-
 @media screen and (min-width: 768px) {
   .btn-header {
     display: flex;
@@ -241,7 +220,6 @@ box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1); */
     line-height: 18px;
     letter-spacing: -0.04em;
     color: #FFFFFF;
-
     padding: 15px 14px;
     border: 1.5px solid #111111;
     border-radius: 18px;
@@ -256,11 +234,6 @@ box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1); */
   margin-left: 90px;
 }
 
-   
-  
-
-
-
 /* БУРГЕР МЕНЮ */
 /* 480px <= phone screen <= infinity */
 .menu-toggle {
@@ -273,26 +246,6 @@ box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1); */
     display: none;
   }
 }
-
-
-
-/* 
-@media screen and (min-width: 1440px) {
-  .btn-header {
-    display: flex;
-    background-color: #4F2EE8;
-    border-radius: 36px;
-    font-family: 'DM Sans';
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 29px;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-  
-    padding: 8px 32px
-  }
-  } */
-
 
 /* body.dark {
   color: #FFFFFF;
@@ -315,7 +268,6 @@ header.dark-header {
   border: 1.5px solid #FFFFFF;
 }
 
-
 .dark-header {
   color: #FFFFFF;
   background-color: rgba(1, 1, 1, 1);
@@ -326,9 +278,7 @@ header .dark-header .nav-link:hover,
 header .dark-header .nav-link:focus,
 header .dark-header .nav-link:active {
   color: #0a0a0a;
-
 }
-
 
 
 
@@ -410,7 +360,6 @@ header .dark-header .nav-link:active {
   color: rgb(10, 10, 10);
 }
 
-
 .mobile-menu {
   padding-top: 80px;
   height: 100%;
@@ -442,7 +391,6 @@ header .dark-header .nav-link:active {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 100ms;
 }
-
 
 .mobile-menu .mobile-link:hover,
 .mobile-menu .mobile-link:focus {
@@ -530,6 +478,3 @@ header .dark-header .nav-link:active {
   background-color: #4D5AE5;
   color: #FFFFFF;
 }
-
-
-
