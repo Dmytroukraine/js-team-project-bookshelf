@@ -6,7 +6,7 @@ import getRefs from './homeRefs';
 import {
   addingToShopList,
   removingBookFromShoppingList,
-  booksArray,
+  // booksArray,
   saveToLocalStorage,
   loadFromLocalStorage,
   emptyRef,
@@ -14,13 +14,18 @@ import {
 
 const addBookBtn = document.querySelector('.fav-add-book-btn');
 const addBookNotif = document.querySelector('.add-book-notification');
+let booksArray = [];
+
 
 async function onBookClick(event) {
   const dataId = event.currentTarget.dataset.id;
+  console.log(dataId);
   const book = await fetchBookById(event.currentTarget.dataset.id);
   if (loadFromLocalStorage(dataId) == null) {
     addBookNotif.classList.add('hidden');
     addBookBtn.textContent = 'add to shopping list';
+
+
   } else {
     addBookNotif.classList.remove('hidden');
     addBookBtn.textContent = 'remove from the shopping list';
@@ -28,29 +33,72 @@ async function onBookClick(event) {
   renderModalMarkup(book);
   FavModal();
 
-  console.log(booksArray);
+
+
+  
   addBookBtn.addEventListener('click', onAddBookBtn);
 
   function onAddBookBtn() {
-    if (loadFromLocalStorage(dataId) == null) {
-      booksArray.push(book);
-      const dataJSON = JSON.stringify(booksArray);
-      localStorage.setItem('books', dataJSON);
-
+    if (loadFromLocalStorage(dataId) == null)
+    
+    
+    
+    
+    {
+      console.log(dataId, 'add')
+      // booksArray.push(book);
+      booksArray.splice(0, 0, book)
+      console.log(booksArray, 'add');
+      localStorage.setItem('books', JSON.stringify(booksArray));
       addBookNotif.classList.remove('hidden');
       addBookBtn.textContent = 'remove from the shopping list';
+    
     } else {
       addBookNotif.classList.add('hidden');
       addBookBtn.textContent = 'add to shopping list';
-
-      const index = booksArray.findIndex((book) => book._id === dataId);
+      const index = booksArray.findIndex((book) => book._id == dataId);
+      console.log(dataId, 'rem');
       if (index !== -1) {
+        console.log(index, 'index')
         booksArray.splice(index, 1);
+        console.log(booksArray, 'rem');
         localStorage.setItem('books', JSON.stringify(booksArray));
-        Notiflix.Notify.info('Book removed from shopping list');
+        // Notiflix.Notify.info('Book removed from shopping list');
+       
       }
     }
   }
 }
 
 export { onBookClick };
+
+
+// if (loadFromLocalStorage(dataId) == null)
+    
+    // {
+    //   console.log(dataId, 'add')
+    //   // booksArray.push(book);
+    // booksArray.splice(0, 0, book)
+    //   console.log(booksArray, 'add');
+    //   localStorage.setItem('books', JSON.stringify(booksArray));
+    //   addBookNotif.classList.remove('hidden');
+    //   addBookBtn.textContent = 'remove from the shopping list';
+    //   return
+    // }
+
+    
+    //   addBookNotif.classList.add('hidden');
+    //   addBookBtn.textContent = 'add to shopping list';
+
+    //   const index = booksArray.findIndex((book) => book._id == dataId);
+    //   console.log(dataId, 'rem');
+    //   if (index !== -1) {
+    //     console.log(index, 'index')
+    //     booksArray.splice(index, 1);
+    //     console.log(booksArray, 'rem');
+      
+
+    //     localStorage.setItem('books', JSON.stringify(booksArray));
+    //     // Notiflix.Notify.info('Book removed from shopping list');
+    //   }
+    
