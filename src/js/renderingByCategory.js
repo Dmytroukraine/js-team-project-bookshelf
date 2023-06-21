@@ -1,4 +1,4 @@
-import { getRefs } from './homeRefs';
+import getRefs from './homeRefs';
 import { createBookCard } from './createBookCard';
 import { fetchingByCategory } from './apiService';
 import { renderingHomePage } from './renderingHomePage';
@@ -28,7 +28,7 @@ export default function renderingByCategory(e) {
 
     const galleryListRef = document.querySelector('.gallery-list2');
     const query = e.target.dataset.category.split(' ').join('%20');
-    fetchingByCategory(query).then(response => {
+    fetchingByCategory(query).then((response) => {
       response.map(book => {
         galleryListRef.insertAdjacentHTML('beforeend', createBookCard(book));
       });
@@ -82,7 +82,7 @@ export default function renderingByCategory(e) {
   const galleryListRef = document.querySelector('.gallery-list2');
   const query = e.target.innerHTML.trim().split(' ').join('%20');
   
-  fetchingByCategory(query).then(response => {
+  fetchingByCategory(query).then((response) => {
     response.map(book =>
       galleryListRef.insertAdjacentHTML('beforeend', createBookCard(book))
     );
