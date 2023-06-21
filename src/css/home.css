@@ -105,9 +105,11 @@
     }
   }
   
-  span {
+  /* span {
     color: var(--accent-color-ligth);
-  }
+  } */
+
+
   .gallery-book-home-link {
     display: flex;
     flex-direction: column;

@@ -5,6 +5,26 @@ import appleBooks from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
 import trash from '../images/trashh.svg#icon-bin';
 
+Notiflix.Notify.init({
+  width: '370px',
+  position: 'center-top', // 'right-top' - 'right-bottom' - 'left-top' - 'left-bottom' - 'center-top' - 'center-bottom' - 'center-center'
+  distance: '10px',
+  opacity: 1,
+  borderRadius: '18px',
+  timeout: 4000,
+
+  ID: 'NotiflixNotify',
+  className: 'notiflix-notify',
+  fontFamily: 'DM Sans',
+  cssAnimationStyle: 'from-top', // 'fade' - 'zoom' - 'from-right' - 'from-top' - 'from-bottom' - 'from-left'
+
+  info: {
+    background: '#4F2EE8',
+    textColor: '#FFFFFF',
+    childClassName: 'notiflix-notify-info',
+  },
+});
+
 export const emptyRef = document.querySelector ('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
 export let booksArray
