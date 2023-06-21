@@ -81,9 +81,9 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .nav-categories-section {
+  /* .nav-categories-section {
     padding-bottom: 86px;
-  }
+  } */
   .nav-categories-list {
     width: 356px;
     height: 472px;
