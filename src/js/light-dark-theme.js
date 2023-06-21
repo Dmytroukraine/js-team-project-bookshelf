@@ -45,8 +45,8 @@ const headerNavLinks = document.querySelector('.header-nav-item').querySelectorA
 const headerNavLinksModal = document.querySelector('.header-nav-item-modal').querySelectorAll('a');
 if (document.querySelector('.home-page') === null) {
   for (let index = 0; index < headerNavLinks.length; index++) {
-    headerNavLinks[index].classList.toggle("heder-active"); 
-    headerNavLinksModal[index].classList.toggle("heder-active");
+    headerNavLinks[index].classList.toggle("header-active"); 
+    headerNavLinksModal[index].classList.toggle("header-active");
   }
 }
 
