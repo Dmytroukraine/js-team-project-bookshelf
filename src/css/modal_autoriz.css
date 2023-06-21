@@ -289,3 +289,57 @@ height: 19px;
     }
 }
 
+
+/* *Home */
+
+.is-none{
+    display: none;
+}
+
+.js-signed-home-btn{        
+    justify-content: start;
+    align-items: center;
+
+}
+
+.user-icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 9px;
+}
+
+
+
+
+.js-logout{
+    position: absolute;
+    transform: translateY(47px);    
+    background-color: #fff;
+    color: #111111;
+    width: 150px;
+    
+   
+  
+transition: transform 300ms var(--timing-function),opacity 300ms var(--timing-function);
+}
+
+
+.js-logout.hidden-log{
+transform: translateY(0px); 
+
+
+
+}
+
+
+.header-btn-arrow-bottom{
+    display: flex;
+    justify-content: center;
+    fill: white;
+    stroke: #fff;
+}
+
+.icon-btn_up{
+fill:#fff;
+stroke: #fff;
+}

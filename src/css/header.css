@@ -595,3 +595,8 @@
   border: 1.5px solid var(--header-color-dark);
   border-radius: 18px;
 }
+
+
+.z-ind{
+  z-index: 1;
+}

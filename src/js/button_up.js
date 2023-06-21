@@ -3,13 +3,13 @@ const btnRef=document.querySelector('.btn_up')
 
 
 
-window.addEventListener('scroll', () => {
-  
-    
-    isScrollAtBottom()
-          ? addBtnUp()
-          : removeBtnUp();
-})
+  window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 1000) {
+    addBtnUp();
+  } else {
+   removeBtnUp();
+  }
+});
  
 btnRef.addEventListener('click', scrollToTop)
 
@@ -21,19 +21,6 @@ function scrollToTop() {
   });
 }
 
-  
-
-  function isScrollAtBottom() {
-  const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-  const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
- const clientHeight = document.documentElement.clientHeight || window.innerHeight;
-  
-      const scrollThreshold = 7500;
-
-      const isNearBottom = scrollTop + clientHeight >= scrollHeight - scrollThreshold;
-      
-      return isNearBottom;
-  }
     
 
 function removeBtnUp() {
