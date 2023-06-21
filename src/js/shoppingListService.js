@@ -7,7 +7,16 @@ import trash from '../images/icon.svg#icon-trash';
 
 export const emptyRef = document.querySelector ('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
-export let booksArray = JSON.parse(localStorage.getItem('books'));
+export let booksArray
+try {
+       booksArray = JSON.parse(localStorage.getItem('books'));    
+} catch (error) {
+  console.log(error)
+  }
+         if (booksArray === null) {
+           booksArray = [];
+         }
+
 
 renderingShoppingList();
 
