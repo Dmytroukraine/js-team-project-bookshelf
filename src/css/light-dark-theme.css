@@ -1,27 +1,32 @@
-.header-logo-nav {
+.header-logo-container {
     display: flex;
 }
 
 body.dark-theme,
-.dark-theme .modal-fav {
+.dark-theme .modal-fav,
+.dark-theme .heder-modal-autoriz {
     background-color: var(--bgc-dark-theme);
 }
 
-.dark-theme .header {
+.dark-theme .header-container {
     background: var(--header-color-dark);
 }
 
-.dark-theme .nav-link .header-active {
+.dark-theme .label-them {
+    background: linear-gradient(180deg, #4F2EE8 0%, #686868 100%);
+}
+
+.dark-theme .header-link-item .heder-active {
     color: var(--header-color-dark);
 }
 
-.dark-theme .nav-link,
-.dark-theme .close-modal-icon {
+.dark-theme .header-link-item,
+.dark-theme .modal-close-btn-icon {
     color: var(--header-color-ligth);
     fill: var(--header-color-ligth);
 }
 
-.dark-theme .nav-link .header-active {
+.dark-theme .header-link-item .heder-active {
     font-weight: 700;
     color: var(--header-color-dark);
 }
@@ -30,10 +35,9 @@ body.dark-theme,
     color: rgba(255, 255, 255, 0.6);
 }
 
-.dark-theme .nav-icon,
+.dark-theme .header-item-icon,
 .dark-theme .header-logo-icon {
     fill: var(--header-color-ligth);
-    
 }
 
 .dark-theme .nav-category-item.active,
@@ -52,17 +56,26 @@ body.dark-theme,
     color: var(--secondary-text-color-dark);
 }
 
+.dark-theme .header-mobile-menu-icon,
+.dark-theme .header-burger-icon {
+    fill: var(--header-color-ligth);
+    stroke: var(--header-color-ligth);
+}
+
 .dark-theme .shoping-list-header,
-.dark-theme .modal-fav-book .modal-fav-title,
-.dark-theme .modal-fav-book .modal-fav-descr,
-.dark-theme .fav-add-book-btn,
+.dark-theme .description-info .title-name,
+.dark-theme .description-info .description-book,
+.dark-theme .choice-btn,
 .dark-theme .shopping-list-book-title,
 .dark-theme .shopping-list-book-about {
     color: var(--secondary-text-color-dark);
-    
 }
 
-.dark-theme .fav-add-book-btn {
+.dark-theme .congrats {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .choice-btn {
     background: transparent;
 }
 
@@ -72,4 +85,32 @@ body.dark-theme,
 
 .dark-theme .shopping-list-text {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .modal-autoriz-close,
+.dark-theme .header-modal-form-field,
+.dark-theme .header-form-input {
+    background: transparent;
+}
+
+.dark-theme .header-form-input {
+    color: #F6F6F6
+}
+
+.dark-theme .modal-autoriz-icon,
+.dark-theme .header-form-field,
+.dark-theme .header-form-input,
+.dark-theme .autoriz-icon {
+    fill: none;
+    stroke: #F6F6F6;
+    color: #F6F6F6
+}
+
+.dark-theme .header-form-btn {
+    background: #F6F6F6;
+    color: #111111;
+}
+
+.dark-theme .header-form-link {
+    color: rgba(246, 246, 246, 0.5);
 }
