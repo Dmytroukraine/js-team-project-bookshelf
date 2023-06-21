@@ -70,7 +70,7 @@
     display: flex;
     gap: 14px;
 
-    animation: boom 1500ms 700ms alternate both;  
+    background: transparent; 
 }
 @media screen and (min-width: 768px) {
     .shopping-list-thumb{
@@ -91,10 +91,11 @@
 .cover-shopping-list{
     width: 100px;
     height: 142px;
+    border-radius: 8px;
 }
 @media screen and (min-width: 768px) {
     .cover-shopping-list{
-        width: 116px;
+        width: 109px;
         height: 165px;
     }
 }
@@ -113,7 +114,7 @@
     width: 166px;
 
     font-family:' DM Sans';
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     line-height: calc(18/16);
     overflow: hidden;
@@ -123,12 +124,23 @@
     margin-bottom: 4px;
 
 }
+@media screen and (min-width: 768px) {
+    .shopping-list-book-title{
+        width: auto;
+    }
+}
 .shopping-list-book-category{
     font-family: 'DM Sans';
     font-size: 12px;
     font-weight: 400;
     line-height: calc(14/12);
     
+    width: 165px;
+    height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
     margin-bottom: 8px;
     
     color: #B4AFAF;
@@ -136,6 +148,7 @@
 @media screen and (min-width: 768px) {
     .shopping-list-book-category{
         margin-bottom: 14px;
+        width: auto;
     }
 }
 .delete-shopping-list-btn{
@@ -152,6 +165,13 @@
     background-color: #4F2EE8;
 
    margin-left: auto;
+   padding-left: 5px;
+}
+.delete-shopping-list-btn :hover, .delete-shopping-list-btn :focus{
+    transform: rotate(360deg);
+    transition: all 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+   
 }
 @media screen and (min-width: 768px) {
     .delete-shopping-list-btn{
@@ -180,7 +200,7 @@
     font-family:' DM Sans';
     font-size: 14px;
     font-weight: 400;
-    line-height: calc(18/14);
+    line-height: 1.2;
 
     height: 68px;
     width: 193px;
@@ -220,7 +240,19 @@
     font-weight: 400;
     line-height: calc(14/12);
 
+    width: 97px;
+    height: 14px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
     color: #B4AFAF;
+}
+@media screen and (min-width: 768px) {
+    .shopping-list-book-author{
+        width: auto ;
+    }
 }
 .shopping-list-trading{
     margin-left: auto;
@@ -279,6 +311,12 @@ transform: scale(1.15);
 }
 
 /* emty shopping list */
+@keyframes boom{
+    0%{ scale: 0; transform: translateX(0px); }
+    50%{scale: 0,3;}
+    100%{scale: 1;transform: translateX(0px)}
+ }
+
 .empty-shopping-list {
     margin-top: 120px;
     margin-left: 55px;
