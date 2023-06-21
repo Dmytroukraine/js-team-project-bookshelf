@@ -26,9 +26,9 @@ onresize = throttle(e => {
       screenSize = currentScreenSize;
     }
   }
-  if (!document.querySelector('[data-modal]').classList.contains('is-hidden')) {
-    renderingModal();
-  }
+  // if (!document.querySelector('[data-modal]').classList.contains('is-hidden')) {
+  //   renderingModal();
+  // }
 }, 100);
 
 function reloadingHomePage() {
