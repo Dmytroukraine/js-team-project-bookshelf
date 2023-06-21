@@ -320,3 +320,17 @@ body .show-modal .footer__modal {
 .footer__card:hover .footer__charester-volodymyr {
   transform: translate3d(-1%, -33%, 100px);
 }
+
+.footer__cover-image-anya {
+  object-position: right;
+}
+.footer__title-anya {
+}
+.footer__charester-anya {
+}
+.footer__card:hover .footer__title-anya {
+  transform: translate3d(-7%, -56px, 500px);
+}
+.footer__card:hover .footer__charester-anya {
+  transform: translate3d(1%, -29%, 50px);
+}
