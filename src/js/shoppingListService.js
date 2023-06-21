@@ -3,7 +3,7 @@ import Notiflix from 'notiflix';
 import amazon from '../images/amazon.png';
 import appleBooks from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
-import trash from '../images/icon.svg#icon-trash';
+import trash from '../images/trashh.svg#icon-bin';
 
 export const emptyRef = document.querySelector ('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
@@ -57,7 +57,7 @@ function renderingShoppingList() {
             </div>
           <button class="delete-shopping-list-btn" type="button" data-id="${book._id}">
             <svg class="delete-shopping-list-icon">
-              <use href="${trash}"></use>
+              <use href="../images/trashh.svg#icon-bin"></use>
             </svg>
           </button>
           </div>
