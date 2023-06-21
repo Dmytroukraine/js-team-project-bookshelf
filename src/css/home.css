@@ -37,13 +37,14 @@
   .gallery {
     display: flex;
     flex-direction: column;
-  
-    padding-top: 40px;
+/*   
+    padding-top: 40px; */
   }
   @media screen and (min-width: 1440px) {
     .gallery {
       width: 996px;
       margin-left: 40px;
+      padding-top: 40px; 
     }
   }
   
@@ -60,9 +61,35 @@
       gap: 24px;
     }
   }
+  .gallery-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    margin-top: 40px;
+
+
+  }
+  @media screen and (min-width: 768px) {
+    .gallery-list2 {
+      flex-direction: row;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .gallery-list2 {
+      gap: 24px;
+    }
+  }
+
+
   .gallery-title {
     display: flex;
+   /* overflow-x: hidden; */
     position: absolute;
+
+    /* max-width: 335px; */
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 32px;
@@ -99,6 +126,12 @@
     }
   }
   
+  @media screen and (min-width: 768px) {
+    .gallery-book-card {
+      max-width: 218px;
+      gap: 25px;
+    }
+  }
   @media screen and (min-width: 1440px) {
     .gallery-book-card {
       max-width: 180px;
@@ -173,7 +206,7 @@
     margin-top: 14px;
   
     height: 18px;
-    overflow-y: hidden;
+    overflow: hidden;
   }
   
   .gallery-author {
