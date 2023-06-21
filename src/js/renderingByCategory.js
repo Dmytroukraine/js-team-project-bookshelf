@@ -1,4 +1,4 @@
-import getRefs from './homeRefs';
+import { getRefs } from './homeRefs';
 import { createBookCard } from './createBookCard';
 import { fetchingByCategory } from './apiService';
 import { renderingHomePage } from './renderingHomePage';
@@ -16,7 +16,7 @@ export default function renderingByCategory(e) {
       'beforeend',
       `<h2 class="gallery-title">${e.target.dataset.category
         .split(' ')
-        .slice(0, length - 1)
+        .slice(0, e.target.innerHTML.length - 1)
         .join(' ')} <span>${e.target.dataset.category
         .split(' ')
         .pop()}</span></h2>`
@@ -67,7 +67,7 @@ export default function renderingByCategory(e) {
     `<h2 class="gallery-title">${e.target.innerHTML
       .trim()
       .split(' ')
-      .slice(0, length - 1)
+      .slice(0, e.target.innerHTML.length - 1)
       .join(' ')} <span>${e.target.innerHTML
       .trim()
       .split(' ')

@@ -531,7 +531,7 @@
   position: absolute;
   top: 185px;
 }
-.header-form-input {
+/* .header-form-input {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -545,7 +545,7 @@
   font-size: 18px;
   line-height: 24px;
   color: rgba(17, 17, 17, 1);
-}
+} */
 .header-form-field:not(:last-child) {
   margin-top: 28px;
 }
