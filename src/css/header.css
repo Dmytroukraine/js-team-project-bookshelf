@@ -672,6 +672,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   padding-right: 12px;
   border: 1.5px solid var(--header-color-dark);
   border-radius: 18px;
+  /* outline: 2px solid red; */
 }
 
 .header-link-trans {
