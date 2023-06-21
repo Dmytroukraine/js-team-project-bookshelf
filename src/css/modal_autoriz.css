@@ -1,0 +1,291 @@
+
+.is-hidden{
+    display: none;
+}
+
+
+.form{
+  margin-bottom: 20px;
+  
+}
+
+
+.backdrop-auth{
+     position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+   align-items: center;
+   z-index: 9999;
+
+    top: 0;
+    left: 0;
+
+    padding: auto;
+
+    opacity: 1;
+
+
+    background-image: radial-gradient(
+    circle at top left,
+      rgba(204, 236, 231) -200%,
+      rgba(79, 46, 232)
+    );
+
+}
+
+.backdrop-auth.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+
+
+}
+
+.modal-auth{
+    position: absolute;
+    /* top: 127px; */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 80px 40px 40px;
+
+    width:580px;
+    /* height:516px; */
+
+    border: 2px solid #111111;
+border-radius: 18px;
+
+    background:#fff;
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .modal-auth{
+         width:335px;
+         padding: 40px 20px 72px;
+    }
+}
+
+.modal-auth-close-btn{
+     display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    
+    cursor: pointer;
+    background-color: inherit; 
+    width: 28px;
+    height: 28px;
+}
+
+@media screen and (max-width: 767px) {
+    .modal-auth-close-btn{
+         top: 14px;
+    right: 14px;
+    }
+}
+
+.modal-auth-close-btn:hover .close-auth-icon,
+.modal-auth-close-btn:focus .close-auth-icon {
+    stroke: #4F2EE8;
+    transform: rotate(180deg);
+}
+
+.close-auth-icon{
+    stroke: #111111;
+    transition: stroke 400ms, transform 400ms ;
+
+}
+
+
+
+.label{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+    pointer-events: none;
+
+    text-transform: uppercase;
+
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.01em;
+
+    letter-spacing: -0.01em;
+
+    scale: 1;
+    transform-origin: top left;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.input-login{
+    padding:20px 40px;
+    width: 100%;
+    height: 64px;
+   
+    border: 2px solid #111111;
+border-radius: 40px;
+
+font-family: var(--main-font);
+font-weight: 700;
+font-size: 18px;
+line-height: 1.33;
+letter-spacing: -0.01em;
+    
+}
+
+@media screen and (max-width: 767px) {
+    .input-login{
+       padding: 16px 20px;
+       height: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .label{
+       top: 16px;
+       left: 20px;
+       font-size: 14px;
+line-height: 1.29;
+
+    }
+}
+
+
+.input-login:focus + .label{
+transform: translate(2px,-17px) scale(0.5);
+}
+
+.input-filled {
+ transform: translate(2px,-17px) scale(0.5);
+}
+
+@media screen and (max-width:767px) {
+    .input-login:focus + .label{
+        transform: translate(2px,-13px) scale(0.5);
+    }
+    
+}
+
+
+.input-grope{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.submit-btn{
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 211px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color:rgba(17, 17, 17, 1);
+  color:rgba(243, 243, 243, 1);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  font-family: var(--main-font);
+font-weight: 700;
+font-size: 18px;
+line-height: 1.33;
+letter-spacing: -0.01em;
+}
+
+@media screen and (max-width:767px) {
+    .submit-btn{
+padding: 16px 116px;
+font-size: 15px;
+line-height: 1.2;
+    }
+}
+
+.submit-btn:hover,
+.submit-btn:focus{
+  background-color: rgba(79, 46, 232, 1);
+}
+
+.form-menu{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 153px;
+  
+  text-transform: uppercase;
+}
+
+
+.btn-form-link{
+  position: relative;
+text-decoration: none;
+
+font-family: var(--main-font);
+font-weight: 700;
+font-size: 18px;
+line-height: 1.33;
+letter-spacing: -0.01em;
+
+  color:rgba(79, 46, 232, 1);
+}
+
+
+@media screen and (max-width: 767px) {
+    .btn-form-link{
+        font-size: 14px;
+line-height: 1.29;
+    }
+}
+
+.btn-form-link:not(:last-child){
+    margin-right: 20px;
+}
+
+.btn-form-link::after{
+  content: '';
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+  background: rgba(79, 46, 232, 1);
+  transition: width 0.1s, left 0.2s;
+}
+
+.btn-form-link:hover::after{
+  width: 100%;
+  left: 0;
+}
+
+
+
+
+.sign-icon{
+position: absolute;
+right: 20px;
+top: 24px;
+
+width: 24px;
+height: 19px;
+
+    stroke: #111111;
+    fill: #fff;
+}
+
+@media screen and (max-width:767px) {
+    .sign-icon{
+        right: 25px;
+        top: 19px;
+      
+        width: 15px;
+        height: 12px;
+        
+    }
+}
+
