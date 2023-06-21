@@ -39,7 +39,8 @@ const mobileSignInREf = document.querySelector('.log-in-mob')
 const mobileNavLinks1 = document.querySelector('.mobile-link.mobile-margin')
 const mobileNavLinks2 = document.querySelector('.js-link')
 
-// **
+// **Fav Modal
+const addToShoppingLishBtn=document.querySelector('.fav-add-book-btn')
 
 
 
@@ -112,7 +113,8 @@ onAuthStateChanged(auth, (user) => {
       mobileSignInREf.classList.add('is-hidden')
       
        mobileNavLinks1.classList.remove('is-hidden')
-      mobileNavLinks2.classList.remove('is-hidden')
+    mobileNavLinks2.classList.remove('is-hidden')
+    addToShoppingLishBtn.classList.remove('is-hidden')
 
    
   } else {
@@ -123,7 +125,8 @@ onAuthStateChanged(auth, (user) => {
       mobileNavLinks2.classList.add('is-hidden')
 
       mobileSignInREf.classList.remove('is-hidden')
-      logOutBtn.classList.add('is-hidden')
+    logOutBtn.classList.add('is-hidden')
+    addToShoppingLishBtn.classList.add('is-hidden')
       
   }
 });

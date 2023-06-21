@@ -264,7 +264,7 @@ line-height: 1.29;
 }
 
 
-/* *Header */
+
 
 .sign-icon{
 position: absolute;
@@ -289,6 +289,3 @@ height: 19px;
     }
 }
 
-.user-icon{
-    margin-right: 9px;
-}
