@@ -1,6 +1,10 @@
 .header-logo-container {
     display: flex;
   }
+
+body, .header-container {
+      transition: all 0.3s ease-in-out;
+    }
   
   body.dark-theme,
   .dark-theme .modal-fav,
@@ -54,6 +58,7 @@
   
   .dark-theme .gallery-see-more-btn {
     color: var(--secondary-text-color-dark);
+    background-color: var(--bgc-dark-theme);
   }
   
   .dark-theme .header-mobile-menu-icon,
