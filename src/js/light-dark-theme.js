@@ -1,8 +1,7 @@
-const inputTheme = document.querySelector('.theme-switch__control');
+const inputTheme = document.querySelector('.div-theme');
 const spanTheme = document.querySelector('.span-theme');
+
 const body = document.querySelector('body');
-const logoIcon = document.querySelector('.header-logo-icon');
-const logoIcon1 = document.querySelector('.header-logo-icon1');
 let indexTheme = false;
 
 inputTheme.addEventListener('change', () => {
@@ -17,24 +16,6 @@ inputTheme.addEventListener('change', () => {
   currentTheme();
 });
 
-
-function addDarkClassToHTML(){
-    try {
-        if (localStorage.getItem('theme') ==='dark') {
-            document.querySelector('body').classList.add('dark');
-            document.querySelector('header').classList.add('dark-header');
-            document.querySelector('.header-mobile-menu').classList.add('dark-header');
-            document.querySelector('#theme-switch-toggle').setAttribute('checked', true);
-        }
-        else {
-            document.querySelector('body').classList.remove('dark');
-            document.querySelector('header').classList.remove('dark-header');
-            document.querySelector('.header-mobile-menu').classList.remove('dark-header');
-            document.getElementById('.theme-switch__marker').checked = true;
-        }
-    } catch(error) { console.log(error.message);
-    }
-
 function currentTheme() {
   try {
     indexTheme = localStorage.getItem('userTheme') === 'dark' ? true : false;
@@ -42,29 +23,31 @@ function currentTheme() {
     indexTheme = false;
   }
 
-  
+  const logo = document.querySelector('.header-logo-icon');
+  const logo1 = document.querySelector('.header-logo-icon1');
   if (indexTheme) {
     body.classList.add('dark-theme');
     spanTheme.style.left = '20px';
-    logoIcon.style.width = '0px';
-    logoIcon1.style.width = '109px';
+    logo.style.width = '0px';
+    logo1.style.width = '109px';
   } else {
     body.classList.remove('dark-theme');
     spanTheme.style.left = '2px';
-    logoIcon1.style.width = '0px';
-    logoIcon.style.width = '109px';
+    logo1.style.width = '0px';
+    logo.style.width = '109px';
   }
-
 }
 
 currentTheme();
 
 
-const headerNavLinks = document.querySelector('.header-nav-link').querySelectorAll('a');
+const headerNavLinks = document.querySelector('.header-nav-item').querySelectorAll('a');
+const headerNavLinksModal = document.querySelector('.header-nav-item-modal').querySelectorAll('a');
 if (document.querySelector('.home-page') === null) {
   for (let index = 0; index < headerNavLinks.length; index++) {
-    headerNavLinks[index].classList.toggle("header-active"); 
-    
+    headerNavLinks[index].classList.toggle("heder-active"); 
+    headerNavLinksModal[index].classList.toggle("heder-active");
   }
 }
-}
+
+
