@@ -9,9 +9,9 @@
     
     
    
-    <script type="module" crossorigin src="/js-team-project-bookshelf/assets/index-0e9550d0.js"></script>
-    <link rel="modulepreload" crossorigin href="/js-team-project-bookshelf/assets/shopping-list-e42d28d5.js">
-    <link rel="stylesheet" href="/js-team-project-bookshelf/assets/shopping-list-a30319ba.css">
+    <script type="module" crossorigin src="/js-team-project-bookshelf/assets/index-1d538bd7.js"></script>
+    <link rel="modulepreload" crossorigin href="/js-team-project-bookshelf/assets/shopping-list-f74133dd.js">
+    <link rel="stylesheet" href="/js-team-project-bookshelf/assets/shopping-list-0d9378f1.css">
   </head>
   <body class="home-page">
     <div class="wrapper-body"> 
@@ -33,7 +33,7 @@
           </a>
         </div>
         <nav class="header-nav">
-          <ul class="header-nav-item">
+          <ul class="header-nav-item is-hidden">
             <li class="header-item">
               <a class="header-link-item header-link-item-home heder-active" href="./index.html"
                 >Home
@@ -77,12 +77,21 @@
           </button>
         </div>
 
-        <button class="header-user js-modal-autoriz-open">
+        <button class="header-user js-modal-autoriz-open z-ind">
           Sign Up
           <svg class="header-icon arrow-to-right-sign" width="20" height="20">
             <use href="/js-team-project-bookshelf/assets/sprite-84dba2d7.svg#icon-arrow-narrow-right"></use>
           </svg>
         </button>
+         <button class="header-user js-signed-home-btn is-none z-ind">
+        </button>
+        <button class="header-user js-modal-autoriz-open js-logout hidden-log">
+          Log Out
+          <svg class="header-icon arrow-to-right-sign" width="20" height="20">
+            <use href="/js-team-project-bookshelf/assets/sprite-84dba2d7.svg#icon-arrow-narrow-right"></use>
+          </svg>
+        </button>
+        
       </div>
     </div>
 
@@ -130,11 +139,11 @@
       </div>
     </div>
 
-    <div class="heder-backdrop is-hidden">
-      <div class="heder-modal-autoriz js-modal-autoriz is-hidden">
+    <!-- <div class="heder-backdrop ">
+      <div class="heder-modal-autoriz js-modal-autoriz ">
         <button class="modal-autoriz-close js-modal-autoriz-close">
           <svg class="modal-autoriz-icon" width="28" height="28">
-            <use href="/js-team-project-bookshelf/assets/icon-5114f144.svg#icon-x-close"></use>
+            <use href="./images/icon.svg#icon-x-close"></use>
           </svg>
         </button>
         <form class="modal-autoriz-form">
@@ -161,7 +170,7 @@
               width="28px"
               height="28"
             >
-              <use href="/js-team-project-bookshelf/assets/sprite-84dba2d7.svg#icon-mail-02"></use>
+              <use href="./images/sprite.svg#icon-mail-02"></use>
             </svg>
           </div>
           <div class="header-form-field">
@@ -177,7 +186,7 @@
               width="28"
               height="28"
             >
-              <use href="/js-team-project-bookshelf/assets/sprite-84dba2d7.svg#icon-lock-02"></use>
+              <use href="./images/sprite.svg#icon-lock-02"></use>
             </svg>
           </div>
           <button class="header-form-btn">Sign up</button>
@@ -189,17 +198,83 @@
 
         <button class="btn-autoriz-user">
           <svg class="autoriz-user-icon" width="37" height="37">
-            <use href="/js-team-project-bookshelf/assets/sprite-84dba2d7.svg#icon-user-1"></use>
+            <use href="./images/sprite.svg#icon-user-1"></use>
           </svg>
           Stephen
           <svg class="autoriz-user-icon" width="23" height="26">
-            <use href="/js-team-project-bookshelf/assets/sprite-84dba2d7.svg#icon-fi-ss-caret-down-2"></use>
+            <use href="./images/sprite.svg#icon-fi-ss-caret-down-2"></use>
           </svg>
         </button>
       </div>
     </div>
   </div>
+</div> -->
+
+
+<!--  -->
+
+<div class="backdrop-auth is-hidden">
+    <div class="modal-auth">
+
+         <button class="modal-auth-close-btn" data-modal-close type="button">
+        <svg class="close-auth-icon" width="28" height="28">
+          <use href="/js-team-project-bookshelf/assets/icon-5114f144.svg#icon-x-close"></use>
+        </svg>
+    </button>
+
+<form class="sign-up form">
+    
+    <div class="input-grope" role="group">
+        <input class="input-login" type="text" name="userName" required>
+         <label class="label" for="name">name</label>
+    </div>
+
+    <div class="input-grope" role="group">
+        <input class="input-login" type="email" name="userEmail" required>
+        <label class="label" for="email">email</label>
+        <svg class="sign-icon" >
+          <use href="../images/icon.svg#icon-letter"></use>
+        </svg>
+    </div>
+
+    <div class="input-grope" role="group">
+        <input class="input-login" type="password" name="userPassword" required>
+         <label class="label" for="password">password</label>
+          <svg class="sign-icon " >
+          <use href="../images/icon.svg#icon-lock"></use>
+        </svg>
+    </div>
+
+    <button class="submit-btn" type="submit">sign up</button>
+</form>
+ 
+
+<form class="sign-in is-hidden form">
+    <div class="input-grope" role="group">  
+        <input class="input-login" type="email" name="userEmail" placeholder=" " required>
+         <label class="label" for="email">email</label>
+          <svg class="sign-icon " >
+          <use href="../images/icon.svg#icon-letter"></use>
+        </svg>
+    </div>
+
+    <div class="input-grope" role="group">
+        <input class="input-login" type="password" name="userPassword" required>
+        <label class="label label-password" for="password">password</label>
+        <svg class="sign-icon" >
+          <use href="../images/icon.svg#icon-lock"></use>
+        </svg>
+    </div>
+
+     <button class="submit-btn" type="submit">sign in</button>
+</form>
+
+<div class="form-menu">
+        <a class="btn-form-link sing-up-link" href="">sign up</a>
+        <a class="btn-form-link sing-in-link" href="">sign in</a>
+    </div>
 </div>
+</div>  
       </header>
       <main class="main-wrapper container">
         <aside>
@@ -302,9 +377,8 @@
         </div>
         
 <button class="btn_up hide-btn_up">
-    <svg class="icon-btn_up" width="16" height="16">
-      <use href="../images/icon.svg#icon-arrow_top"></use>
-    </svg>
+    <img src="../images/btn-up.svg" class="icon-btn_up" width="16" height="16" >
+      
 </button>
 
       </main>
@@ -342,6 +416,68 @@
 </div>
 
     
+    <!-- <div class="backdrop-auth is-hidden" data-modal>
+    <div class="modal-auth">
+
+         <button class="modal-auth-close-btn" data-modal-close type="button">
+        <svg class="close-auth-icon" width="28" height="28">
+          <use href="/images/icon.svg#icon-x-close"></use>
+        </svg>
+    </button>
+
+<form class="sign-up form">
+    
+    <div class="input-grope" role="group">
+        <input class="input-login" type="text" name="userName" required>
+         <label class="label" for="name">name</label>
+    </div>
+
+    <div class="input-grope" role="group">
+        <input class="input-login" type="email" name="userEmail" required>
+        <label class="label" for="email">email</label>
+        <svg class="sign-icon" >
+          <use href="../images/icon.svg#icon-letter"></use>
+        </svg>
+    </div>
+
+    <div class="input-grope" role="group">
+        <input class="input-login" type="password" name="userPassword" required>
+         <label class="label" for="password">password</label>
+          <svg class="sign-icon " >
+          <use href="../images/icon.svg#icon-lock"></use>
+        </svg>
+    </div>
+
+    <button class="submit-btn" type="submit">sign up</button>
+</form>
+ 
+
+<form class="sign-in is-hidden form">
+    <div class="input-grope" role="group">  
+        <input class="input-login" type="email" name="userEmail" placeholder=" ">
+         <label class="label" for="email">email</label>
+          <svg class="sign-icon " >
+          <use href="../images/icon.svg#icon-letter"></use>
+        </svg>
+    </div>
+
+    <div class="input-grope" role="group">
+        <input class="input-login" type="password" name="userPassword">
+        <label class="label label-password" for="password">password</label>
+        <svg class="sign-icon" >
+          <use href="../images/icon.svg#icon-lock"></use>
+        </svg>
+    </div>
+
+     <button class="submit-btn" type="submit">sign in</button>
+</form>
+
+<div class="form-menu">
+        <a class="btn-form-link sing-up-link" href="">sign up</a>
+        <a class="btn-form-link sing-in-link" href="">sign in</a>
+    </div>
+</div>
+</div>   -->
     
   </body>
 </html>
