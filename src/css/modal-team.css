@@ -66,7 +66,21 @@ body .show-modal .footer__modal {
   align-items: center;
   justify-content: center;
   gap: 50px;
-  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .footer__cards {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer__cards {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .footer__card {
@@ -76,7 +90,7 @@ body .show-modal .footer__modal {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 0 36px;
+  /* padding: 0 36px; */
   perspective: 2500px;
   /* margin: 0 50px; */
 }
@@ -148,6 +162,7 @@ body .show-modal .footer__modal {
   transition: transform 0.5s;
   font-family: 'Akaya Kanadaka', cursive;
   color: #fff;
+  text-align: center;
 }
 .footer__card:hover .footer__title {
   transform: translate3d(0%, -50px, 100px);
@@ -168,9 +183,156 @@ body .show-modal .footer__modal {
 
 /* ! fix every charesters size ! */
 
-.footer__cover-image-dmytro {
+/* ! dmytrok ! */
+
+.footer__cover-image-dmytrok {
+  object-position: top;
+}
+.footer__title-dmytrok {
+}
+.footer__charester-dmytrok {
+}
+.footer__card:hover .footer__title-dmytrok {
+  transform: translate3d(0%, -52px, 500px);
+}
+.footer__card:hover .footer__charester-dmytrok {
+  transform: translate3d(0%, -35%, 150px);
 }
 
+/* ! dmytrokk ! */
+
+.footer__cover-image-dmytrokk {
+  object-position: top;
+}
+.footer__title-dmytrokk {
+}
+.footer__charester-dmytrokk {
+}
+.footer__card:hover .footer__title-dmytrokk {
+  transform: translate3d(0%, -52px, 500px);
+}
+.footer__card:hover .footer__charester-dmytrokk {
+  transform: translate3d(0%, -35%, 150px);
+}
+
+/* ! vitalina ! */
+
+.footer__cover-image-vitalina {
+}
+.footer__title-vitalina {
+}
+.footer__charester-vitalina {
+}
+.footer__card:hover .footer__title-vitalina {
+  transform: translate3d(0%, -53px, 500px);
+}
+.footer__card:hover .footer__charester-vitalina {
+  transform: translate3d(0%, -28%, -100px);
+}
+
+/* ! dmytro ! */
+.footer__cover-image-dmytro {
+  object-position: top;
+}
+.footer__title-dmytro {
+}
+.footer__charester-dmytro {
+}
+.footer__card:hover .footer__title-dmytro {
+  transform: translate3d(-5%, -58px, 500px);
+}
+.footer__card:hover .footer__charester-dmytro {
+  transform: translate3d(0%, -28%, -50px);
+}
+
+/* ! tetiana ! */
+
+.footer__cover-image-tetiana {
+  object-fit: none;
+}
+.footer__title-tetiana {
+}
+.footer__charester-tetiana {
+}
+.footer__card:hover .footer__title-tetiana {
+  transform: translate3d(0%, -48px, 500px);
+}
+.footer__card:hover .footer__charester-tetiana {
+  transform: translate3d(0%, -25%, 10px);
+}
+
+/* ! pavlo ! */
+
+.footer__cover-image-pavlo {
+}
+.footer__title-pavlo {
+}
+.footer__charester-pavlo {
+}
+.footer__card:hover .footer__title-pavlo {
+  transform: translate3d(-13%, -50px, 500px);
+}
+.footer__card:hover .footer__charester-pavlo {
+  transform: translate3d(-1.5%, -40%, 150px);
+}
+
+/* ! khrystyna ! */
+
+.footer__cover-image-khrystyna {
+}
+.footer__title-khrystyna {
+}
+.footer__charester-khrystyna {
+}
+.footer__card:hover .footer__title-khrystyna {
+  transform: translate3d(-3%, -60px, 500px);
+}
+.footer__card:hover .footer__charester-khrystyna {
+  transform: translate3d(-1.5%, -20%, -500px);
+}
+
+/* ! evgeniya ! */
+
+.footer__cover-image-evgeniya {
+}
+.footer__title-evgeniya {
+}
+.footer__charester-evgeniya {
+}
+.footer__card:hover .footer__title-evgeniya {
+  transform: translate3d(-2%, -60px, 500px);
+}
+.footer__card:hover .footer__charester-evgeniya {
+  transform: translate3d(-1.5%, -27%, -200px);
+}
+
+/* ! daniil ! */
+
+.footer__cover-image-daniil {
+}
+.footer__title-daniil {
+}
+.footer__charester-daniil {
+}
+.footer__card:hover .footer__title-daniil {
+  transform: translate3d(-2%, -60px, 500px);
+}
+.footer__card:hover .footer__charester-daniil {
+  transform: translate3d(-1.5%, -27%, -200px);
+}
+
+/* ! volodymyr ! */
+
+.footer__cover-image-volodymyr {
+  object-position: right;
+}
+.footer__title-volodymyr {
+}
+.footer__charester-volodymyr {
+}
 .footer__card:hover .footer__title-volodymyr {
-  transform: translate3d(-28%, -28px, 80px);
+  transform: translate3d(-10%, -48px, 500px);
+}
+.footer__card:hover .footer__charester-volodymyr {
+  transform: translate3d(-1%, -33%, 100px);
 }
