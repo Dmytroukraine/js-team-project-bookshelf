@@ -5,11 +5,11 @@
   body.dark-theme,
   .dark-theme .modal-fav,
   .dark-theme .heder-modal-autoriz {
-    background-color: var(--bgc-dark-theme);  /* #202020 */
+    background-color: var(--bgc-dark-theme);  
   }
   
   .dark-theme .header-container {
-    background: var(--header-color-dark);  /* #111111 */
+    background: var(--header-color-dark); 
   }
   
   .dark-theme .label-them {
@@ -37,7 +37,7 @@
   
   .dark-theme .header-item-icon,
   .dark-theme .header-logo-icon {
-    fill: var(--header-color-ligth);  /* #FFFFFF; */
+    fill: var(--header-color-ligth); 
   }
   
   .dark-theme .nav-category-item.active,
@@ -58,8 +58,8 @@
   
   .dark-theme .header-mobile-menu-icon,
   .dark-theme .header-burger-icon {
-    fill: var(--header-color-ligth);    /* #FFFFFF; */ 
-    stroke: var(--header-color-ligth);  /* #FFFFFF; */ 
+    fill: var(--header-color-ligth);    
+    stroke: var(--header-color-ligth); 
   }
   
   .dark-theme .shoping-list-header,
@@ -68,7 +68,7 @@
   .dark-theme .choice-btn,
   .dark-theme .shopping-list-book-title,
   .dark-theme .shopping-list-book-about {
-    color: var(--secondary-text-color-dark);  /* #FFFFFF; */
+    color: var(--secondary-text-color-dark);  
   }
   
   .dark-theme .congrats {
