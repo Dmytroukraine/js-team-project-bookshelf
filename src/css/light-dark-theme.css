@@ -120,3 +120,30 @@ body, .header-container {
     color: rgba(246, 246, 246, 0.5);
   }
   
+  .dark-theme .modal-fav-title{
+      color: var(--secondary-text-color-dark);
+    }
+
+  .dark-theme .modal-fav-author{
+      color: var(--secondary-text-color-ligth);
+    }
+
+  .dark-theme .modal-fav-descr{
+        color: var(--secondary-text-color-dark);
+        }
+
+  .dark-theme .amaz{
+    filter: grayscale(100%) brightness(10);
+  }
+
+  .dark-theme .fav-add-book-btn{
+    color: var(--secondary-text-color-dark);
+  }
+
+  .dark-theme .close-modal-icon{
+      stroke: var(--secondary-text-color-dark);
+    }
+
+  .dark-theme .add-book-notification{
+    color: rgba(255, 255, 255, 0.50);
+  }
