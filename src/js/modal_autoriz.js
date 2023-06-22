@@ -34,6 +34,38 @@ import Notiflix from "notiflix";
     const menuMobileRef = document.querySelector('.js-modal')
     
 
+    // **Inputs for addnig icons
+const emailSignUp = document.querySelector('.email-sign-up')
+const passSignUp = document.querySelector('.pass-sign-up')
+const emailLogIn=document.querySelector('.email-sign-in')
+const passLogIn = document.querySelector('.pass-sign-in')
+    
+// .sign-icon
+
+
+   let emeilSignUpIcon = document.createElement('img');
+              emeilSignUpIcon.classList='sign-icon'
+              emeilSignUpIcon.src = new URL('../images/letter.svg', import.meta.url);
+              emailSignUp.appendChild(emeilSignUpIcon);
+              
+    
+
+   let passSignUpIson = document.createElement('img');
+              passSignUpIson.classList='sign-icon'
+              passSignUpIson.src = new URL('../images/password.svg', import.meta.url);
+              passSignUp.appendChild(passSignUpIson);
+              
+
+    let passLoginIcon = document.createElement('img');
+              passLoginIcon.classList='sign-icon'
+              passLoginIcon.src = new URL('../images/password.svg', import.meta.url);
+              passLogIn.appendChild(passLoginIcon);
+
+
+    let emeilLogInIcon = document.createElement('img');
+              emeilLogInIcon.classList='sign-icon'
+              emeilLogInIcon.src = new URL('../images/letter.svg', import.meta.url);
+              emailLogIn.appendChild(emeilLogInIcon);
     
 
     // **header
