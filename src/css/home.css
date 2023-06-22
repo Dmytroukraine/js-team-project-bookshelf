@@ -126,7 +126,7 @@
 .gallery-book-cover:active,
 .gallery-book-cover:hover,
 .gallery-book-cover:focus {
-  transform: scale(1);
+  transform: scale(1.20);
 }
 .gallery-category {
   font-family: var(--main-font);

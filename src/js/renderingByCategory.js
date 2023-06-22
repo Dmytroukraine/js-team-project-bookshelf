@@ -17,7 +17,7 @@ export default function renderingByCategory(e) {
       `<h2 class="gallery-title">${e.target.dataset.category
         .split(' ')
         .slice(0, e.target.innerHTML.length - 1)
-        .join(' ')} <span>${e.target.dataset.category
+        .join(' ')} <span class = "gellery-title-akcent">${e.target.dataset.category
         .split(' ')
         .pop()}</span></h2>`
     );
@@ -68,7 +68,7 @@ export default function renderingByCategory(e) {
       .trim()
       .split(' ')
       .slice(0, e.target.innerHTML.length - 1)
-      .join(' ')} <span>${e.target.innerHTML
+      .join(' ')} <span class = "gellery-title-akcent">${e.target.innerHTML
       .trim()
       .split(' ')
       .pop()}</span></h2>`
