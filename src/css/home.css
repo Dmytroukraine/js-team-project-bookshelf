@@ -59,7 +59,7 @@
 
 @media screen and (min-width: 768px) {
   .gallery-title {
-modal-fav7
+
     display: flex;
    /* overflow-x: hidden; */
     position: absolute;
@@ -86,10 +86,10 @@ modal-fav7
 
 
 
-    font-size: 48px;
-    line-height: 1.083333;
+    /* font-size: 48px;
+    line-height: 1.083333; */
   }
-}
+
 
 .gellery-title-akcent {
   color: var(--accent-color-ligth);
