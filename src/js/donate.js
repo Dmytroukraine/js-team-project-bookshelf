@@ -17,6 +17,7 @@ import found8x from '../img/08-found-2.png';
 import found9 from '../img/09-found-1.png';
 import found9x from '../img/09-found-2.png';
 
+import Swiper from 'swiper';
 
 function generateDonateFundsMarkup(donateFunds) {
   const isRetina = window.devicePixelRatio > 1.1; // Check if user has a retina display
@@ -26,7 +27,7 @@ function generateDonateFundsMarkup(donateFunds) {
       const foundIndex = String(index + 1).padStart(2, '0');
       const foundImage = isRetina ? fund.retinaImg : fund.img;
       return `
-        <li class="donate-fund">
+        <li class="donate-fund swiper-slide">
           <span class="donate-index">${foundIndex}</span>
           <a href="${fund.url}" target="_blank" class='donate-item-link' crossorigin="anonymous" rel="noopener noreferrer nofollow" aria-label="${fund.title}">
           <img class="donate-img" src="${foundImage}" alt="${fund.title}" loading="lazy">
@@ -110,25 +111,77 @@ const donateButton = document.querySelector('.donate-button');
 const donateButtonUp = document.querySelector('.donate-button-up');
 const donateFound = document.querySelector('.donate-funds-visible');
 
-donateButton.addEventListener('click', function () {
-  donateButton.style.display = 'none';
-  donateButtonUp.style.display = 'block';
 
-    donateFound.scrollTo({
-    top: 10000,
-    behavior: 'smooth',
+const swiper = new Swiper('.my-swiper', {
+    direction: 'vertical',
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+  
+    navigation: {
+      nextEl: '.swiper-button-down',
+      prevEl: '.swiper-button-top',
+    },
+  
+    plugins: {
+      scrollContainer: true,
+    },
   });
-});
 
-donateButtonUp.addEventListener('click', function () {
-  donateButtonUp.style.display = 'none';
-  donateButton.style.display = 'block';
 
-  donateFound.scrollTo({
-    top: 0,
-    behavior: 'smooth',
+
+  let activeSwiperEl = 5;
+
+//   if (window.innerWidth >= 768) {
+//     activeSwiperEl = 3;
+//   } else {
+//     activeSwiperEl = 5;
+//   }
+donateButton.addEventListener('click', () => {
+    swiper.slideNext();
+  
+    if (
+        container.children[activeSwiperEl].classList.contains(
+        'swiper-slide-active'
+      )
+    ) {
+        donateButton.style.display = 'none';
+          donateButtonUp.style.display = 'block';
+    }
   });
-});
+  
+  donateButtonUp.addEventListener('click', () => {
+    swiper.slidePrev();
+    if (container.children[0].classList.contains('swiper-slide-active')) {
+        donateButtonUp.style.display = 'none';
+          donateButton.style.display = 'block';
+    }
+  });
+
+
+
+
+
+
+
+// donateButton.addEventListener('click', function () {
+//   donateButton.style.display = 'none';
+//   donateButtonUp.style.display = 'block';
+
+//     donateFound.scrollTo({
+//     top: 10000,
+//     behavior: 'smooth',
+//   });
+// });
+
+// donateButtonUp.addEventListener('click', function () {
+//   donateButtonUp.style.display = 'none';
+//   donateButton.style.display = 'block';
+
+//   donateFound.scrollTo({
+//     top: 0,
+//     behavior: 'smooth',
+//   });
+// });
 
 // Reverse button---------------------------------
 
