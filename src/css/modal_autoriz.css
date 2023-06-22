@@ -32,6 +32,7 @@
 .backdrop-auth.is-hidden {
   opacity: 0;
   pointer-events: none;
+
 }
 
 .modal-auth {
@@ -281,6 +282,8 @@
   letter-spacing: -0.02em;
 }
 
+
+
 .user-icon {
   width: 25px;
   height: 25px;
@@ -305,6 +308,9 @@
   transform: translateY(0px);
 }
 
+
+
+
 .header-btn-arrow-bottom {
   display: flex;
   justify-content: center;
@@ -316,25 +322,25 @@
   fill: #fff;
   stroke: #fff;
 }
-.js-modal-autoriz-open {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: -0.04em;
+.js-modal-autoriz-open{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
 }
 
-.user-icon-down {
+.user-icon-down{
   fill: #fff;
   margin-left: auto;
   width: 14px;
   height: 7px;
-
+  
   transition: transform 250ms var(--timing-function);
 }
 
-.up {
+.up{
   transform: rotateX(180deg);
 }
 
@@ -352,8 +358,6 @@
   left: 10px;
   position: absolute;
   align-items: center;
-  
 }
-.no-scroll{
-  overflow:hidden;
-}
+
+
