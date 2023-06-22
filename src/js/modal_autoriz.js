@@ -108,6 +108,7 @@ import Notiflix from "notiflix";
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
+          cleanMarkup()
     
           const uid = user.uid;
           isAuth(uid)
@@ -132,7 +133,7 @@ console.log('you in');
         mobileNavLinks.classList.add('is-hidden')
         
         //  
-
+               cleanMarkup()
           
           mobileSignInREf.classList.remove('is-hidden')
           logOutBtn.classList.add('is-hidden')
@@ -245,9 +246,48 @@ console.log('you in');
         localStorage.setItem('isAuthenticated', JSON.stringify(false))
         
         
-    };
+};
+    
+
+function cleanMarkup() {
+  signedBtnHeaderRef.innerHTML=''
+  mobileUserWellcome.innerHTML=''
+}
+
+function createSignedInBtnMarkuo(userName) {
+   let useUserIcon = document.createElement('img');
+              useUserIcon.classList='user-icon'
+              useUserIcon.width='30'
+              useUserIcon.height='30'
+              useUserIcon.src = new URL('../images/user.svg', import.meta.url);
+              signedBtnHeaderRef.appendChild(useUserIcon);
+
+              let userNameInBtn=document.createElement('p');
+              userNameInBtn.textContent=userName;
+              signedBtnHeaderRef.appendChild(userNameInBtn);
+
+              let arrDown=document.createElement('img')
+              arrDown.src=new URL('../images/arr-down-user.svg', import.meta.url);
+              arrDown.width='14'
+              arrDown.height='7'
+              arrDown.classList='user-icon-down'
+              signedBtnHeaderRef.appendChild(arrDown);
+}
 
 
+function mobSignedUserMarkup(userName) {
+ let useUserIconMob = document.createElement('img');
+              useUserIconMob.classList='user-icon'
+              useUserIconMob.width='30'
+              useUserIconMob.height='30'
+              useUserIconMob.src = new URL('../images/user.svg', import.meta.url);
+              mobileUserWellcome.appendChild(useUserIconMob);
+
+              let userNameInBtnMob=document.createElement('p');
+              userNameInBtnMob.textContent=userName;
+              mobileUserWellcome.appendChild(userNameInBtnMob);
+  
+}
 
 
     function isAuth(uid) {
@@ -258,17 +298,10 @@ console.log('you in');
             if (snapshot.exists()) {
               const userName = сutName(snapshot.val().username)
               
-
-                const markup = `<svg class="user-icon"><use href="./images/sprite.svg#icon-user-1"\></use></svg>${userName}<svg class="user-icon-down"><use href="./images/icon.svg#icon-arrow_down_user"\></use></svg>`;
-                
-              signedBtnHeaderRef.innerHTML = markup;
-
-
-              const mobMarkup=`<svg class="user-icon"><use href="./images/sprite.svg#icon-user-1"\></use></svg>${userName}`
-              mobileUserWellcome.innerHTML = mobMarkup;
-              
-
-
+              cleanMarkup()
+              createSignedInBtnMarkuo(userName)
+              mobSignedUserMarkup(userName)
+        
               const userIconDown = document.querySelector('.user-icon-down')
               signedBtnHeaderRef.addEventListener('click', showLogOut)
               
