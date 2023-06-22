@@ -3,7 +3,7 @@
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,signOut,onAuthStateChanged} from "firebase/auth";
     import { getDatabase, ref, set, child, get } from "firebase/database";
 import Notiflix from "notiflix";
-
+import userIcon from '../images/sprite.svg#icon-user-1';
 
 
 
@@ -257,7 +257,7 @@ console.log('you in');
               const userName = сutName(snapshot.val().username)
               
 
-                const markup = `<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}<svg class="user-icon-down"><use href="../images/icon.svg#icon-arrow_down_user"\></use></svg>`;
+                const markup = `<svg class="user-icon"><use href="${userIcon}"\></use></svg>${userName}<svg class="user-icon-down"><use href="../images/icon.svg#icon-arrow_down_user"\></use></svg>`;
                 
               signedBtnHeaderRef.innerHTML = markup;
 
