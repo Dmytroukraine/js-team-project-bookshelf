@@ -16,7 +16,6 @@ body .show-modal .footer__modal {
   top: 0;
   left: 0;
   width: 100vw;
-  /* height: 100vw; */
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
 
@@ -31,7 +30,6 @@ body .show-modal .footer__modal {
   min-width: 320px;
   max-width: 100%;
   width: 100%;
-  /* min-height: 320px; */
   background-color: #fff;
   box-shadow: 0px 1px 3px 0px rgba 0, 0, 0, 0.2,
     0px 1px 1px 0px rgba(0, 0, 0, 14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -90,9 +88,7 @@ body .show-modal .footer__modal {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* padding: 0 36px; */
   perspective: 2500px;
-  /* margin: 0 50px; */
 }
 
 .footer__cover-image {
@@ -188,10 +184,6 @@ body .show-modal .footer__modal {
 .footer__cover-image-dmytrok {
   object-position: top;
 }
-.footer__title-dmytrok {
-}
-.footer__charester-dmytrok {
-}
 .footer__card:hover .footer__title-dmytrok {
   transform: translate3d(0%, -55px, 500px);
 }
@@ -201,12 +193,6 @@ body .show-modal .footer__modal {
 
 /* ! vitalina ! */
 
-.footer__cover-image-vitalina {
-}
-.footer__title-vitalina {
-}
-.footer__charester-vitalina {
-}
 .footer__card:hover .footer__title-vitalina {
   transform: translate3d(0%, -53px, 500px);
 }
@@ -217,10 +203,6 @@ body .show-modal .footer__modal {
 /* ! dmytro ! */
 .footer__cover-image-dmytro {
   object-position: top;
-}
-.footer__title-dmytro {
-}
-.footer__charester-dmytro {
 }
 .footer__card:hover .footer__title-dmytro {
   transform: translate3d(-5%, -58px, 500px);
@@ -234,10 +216,6 @@ body .show-modal .footer__modal {
 .footer__cover-image-tetiana {
   object-fit: none;
 }
-.footer__title-tetiana {
-}
-.footer__charester-tetiana {
-}
 .footer__card:hover .footer__title-tetiana {
   transform: translate3d(0%, -48px, 500px);
 }
@@ -247,12 +225,6 @@ body .show-modal .footer__modal {
 
 /* ! pavlo ! */
 
-.footer__cover-image-pavlo {
-}
-.footer__title-pavlo {
-}
-.footer__charester-pavlo {
-}
 .footer__card:hover .footer__title-pavlo {
   transform: translate3d(-13%, -50px, 500px);
 }
@@ -262,12 +234,6 @@ body .show-modal .footer__modal {
 
 /* ! khrystyna ! */
 
-.footer__cover-image-khrystyna {
-}
-.footer__title-khrystyna {
-}
-.footer__charester-khrystyna {
-}
 .footer__card:hover .footer__title-khrystyna {
   transform: translate3d(-3%, -60px, 500px);
 }
@@ -277,12 +243,6 @@ body .show-modal .footer__modal {
 
 /* ! evgeniya ! */
 
-.footer__cover-image-evgeniya {
-}
-.footer__title-evgeniya {
-}
-.footer__charester-evgeniya {
-}
 .footer__card:hover .footer__title-evgeniya {
   transform: translate3d(-2%, -60px, 500px);
 }
@@ -292,12 +252,6 @@ body .show-modal .footer__modal {
 
 /* ! daniil ! */
 
-.footer__cover-image-daniil {
-}
-.footer__title-daniil {
-}
-.footer__charester-daniil {
-}
 .footer__card:hover .footer__title-daniil {
   transform: translate3d(-2%, -60px, 500px);
 }
@@ -309,10 +263,6 @@ body .show-modal .footer__modal {
 
 .footer__cover-image-anya {
   object-position: right;
-}
-.footer__title-anya {
-}
-.footer__charester-anya {
 }
 .footer__card:hover .footer__title-anya {
   transform: translate3d(-7%, -56px, 500px);
@@ -326,10 +276,6 @@ body .show-modal .footer__modal {
 .footer__cover-image-daniil {
   object-position: right;
 }
-.footer__title-daniil {
-}
-.footer__charester-daniil {
-}
 .footer__card:hover .footer__title-daniil {
   transform: translate3d(-14%, -48px, 500px);
 }
@@ -341,10 +287,6 @@ body .show-modal .footer__modal {
 
 .footer__cover-image-volodymyr {
   object-position: right;
-}
-.footer__title-volodymyr {
-}
-.footer__charester-volodymyr {
 }
 .footer__card:hover .footer__title-volodymyr {
   transform: translate3d(-10%, -48px, 500px);
