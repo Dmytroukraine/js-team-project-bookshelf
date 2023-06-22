@@ -179,6 +179,7 @@
   line-height: 18px;
   color: var(--primary-text-color-ligth);
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 .logo {
   transition: all 0.3s ease-in-out;
@@ -213,10 +214,10 @@
 .header-link-item-home {
   margin-left: 40px;
 }
-.header-link-item .heder-active {
+.header-link-item .header-active {
   font-weight: 700;
 }
-.heder-active {
+.header-active {
   background-color: rgba(234, 198, 69, 1);
 }
 .header-item {
@@ -274,6 +275,7 @@
 }
 .header-mobile-box {
   position: relative;
+  
 }
 .header-modal {
   position: absolute;
@@ -298,6 +300,7 @@
   justify-content: center;
   align-items: flex-start;
   border-top: 1.5px solid #111111;
+  
 }
 
 .header-modal-image {
@@ -373,7 +376,7 @@
   text-transform: uppercase;
 }
 
-.header-link-modal.heder-active {
+.header-link-modal.header-active {
   font-weight: 700;
 }
 
@@ -386,7 +389,7 @@
   line-height: 18px;
   letter-spacing: -0.04em;
 }
-.header-link-modal .heder-active {
+.header-link-modal .header-active {
   border-radius: 36px;
   padding: 8px 16px;
 }
@@ -466,7 +469,7 @@
   stroke: black;
   fill: #ffffff;
 }
-.heder-backdrop {
+.header-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -498,7 +501,7 @@
   position: absolute;
   right: 70px;
 }
-.heder-modal-autoriz {
+.header-modal-autoriz {
   position: fixed;
   top: 50%;
   left: 50%;
