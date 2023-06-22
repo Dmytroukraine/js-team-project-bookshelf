@@ -264,12 +264,12 @@
 /*------------------MODAL-----------------------------*/
 
 @keyframes slide-down {
-  0% {
-    transform: translateY(-100%);
-  }
-
   100% {
-    transform: translateY(0%);
+    transform: translateX(0%);
+  }
+ 
+  0% {
+    transform: translateX(100%);
   }
 }
 .header-mobile-box {
@@ -286,7 +286,7 @@
   display: none;
   z-index: 1;
   animation-name: slide-down;
-  animation-duration: 0.5s;
+  animation-duration: 0.7s;
   animation-timing-function: ease-out;
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
