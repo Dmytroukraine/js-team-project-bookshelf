@@ -1,4 +1,4 @@
-.wrapper-body{
+.main-wrapper{
   background-color: #F6F6F6;
 }
 @media screen and (min-width: 768px) and (max-width: 1439.9px) {
@@ -64,9 +64,9 @@
   }
 }
 
-/* span {
+.gellery-title-akcent {
   color: var(--accent-color-ligth);
-} */
+}
 .gallery-book-home-link {
   padding-bottom: 8px;
 }
@@ -101,7 +101,7 @@
 .gallery-book-cover {
   position: relative;
   overflow: hidden;
-  z-index: -1;
+  /* z-index: -1; */
   width: 335px;
   height: 485px;
   background-size: cover;
