@@ -44,7 +44,7 @@
   height: 220px;
   overflow: auto;
   scroll-behavior: smooth;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .donate-fund {
@@ -170,6 +170,7 @@
   }
   .donate-funds-visible {
     height: 320px;
+    margin-bottom: 24px;
   }
 }
 
@@ -178,4 +179,8 @@
     width: 356px;
     height: 490px;
   }
+  .donate-funds-visible {
+    margin-bottom: 40px;
+  }
+  
 }
