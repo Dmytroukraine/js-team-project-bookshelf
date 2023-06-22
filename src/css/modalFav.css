@@ -1,4 +1,4 @@
-.is-hidden {
+.is-hidden-fav {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -18,7 +18,7 @@
     overflow-y: scroll;
     z-index: 300; 
     transform: rotate(0) scale(1);
-    transition: opacity 300ms linear, visibility 300ms linear;
+    transition: opacity 100ms linear, visibility 100ms linear;
 
 }
 
@@ -36,7 +36,7 @@
 
 }
 
-.is-hidden .modal-fav {
+.is-hidden-fav .modal-fav {
     transform: rotate(270deg) scale(0);
 }
 
@@ -52,7 +52,7 @@
         margin: 0;
         padding: 38px;
     }
-    .is-hidden .modal-fav {
+    .is-hidden-fav .modal-fav {
         transform: translate(-50%, -65%) rotate(180deg) scale(0);
     }
 }

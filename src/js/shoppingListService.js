@@ -26,6 +26,15 @@ Notiflix.Notify.init({
     textColor: '#FFFFFF',
     childClassName: 'notiflix-notify-info',
   },
+  success: {
+    background: '#4F2EE8',
+    textColor: '#FFFFFF',
+    childClassName: 'notiflix-notify-success',
+    notiflixIconColor: 'rgba(0,0,0,0.2)',
+    fontAwesomeClassName: 'fas fa-check-circle',
+    fontAwesomeIconColor: 'rgba(0,0,0,0.2)',
+    backOverlayColor: 'rgba(50,198,130,0.2)',
+  },
 });
 
 export const emptyRef = document.querySelector ('.empty-shopping-list');
