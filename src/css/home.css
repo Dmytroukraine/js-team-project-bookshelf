@@ -1,11 +1,11 @@
-
+.wrapper-body{
+  background-color: #F6F6F6;
+}
 @media screen and (min-width: 768px) and (max-width: 1439.9px) {
   div > .nav-categories-section {
     padding-bottom: 0px;
   }
 }
-
-
 
 @media screen and (min-width: 1440px) {
   .gallery {
@@ -35,13 +35,13 @@
 @media screen and (min-width: 768px) {
   .gallery-list2 {
     flex-direction: row;
-    gap:  40px 25px;
+    gap: 40px 25px;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1440px) {
   .gallery-list2 {
-    gap:  40px 24px;
+    gap: 40px 24px;
   }
 }
 
@@ -69,7 +69,6 @@
 } */
 .gallery-book-home-link {
   padding-bottom: 8px;
- 
 }
 @media screen and (min-width: 768px) {
   .gallery-book-home-link {
@@ -85,7 +84,6 @@
     padding-bottom: 32px;
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .gallery-book-card {
@@ -129,7 +127,6 @@
 .gallery-book-cover:hover,
 .gallery-book-cover:focus {
   transform: scale(1);
-
 }
 .gallery-category {
   font-family: var(--main-font);
@@ -205,7 +202,7 @@
   font-size: 14px;
   line-height: 1.28571;
   letter-spacing: -0.01em;
-/* 
+  /* 
   width: 127px;
   height: 46px; */
   text-align: center;
@@ -218,9 +215,7 @@
   margin-left: auto;
 }
 
-.gallery-see-more-btn:hover
-.gallery-see-more-btn:focus {
+.gallery-see-more-btn:hover .gallery-see-more-btn:focus {
   color: var(--header-color-ligth);
   background-color: var(--accent-color-ligth);
 }
-
