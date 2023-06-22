@@ -2,7 +2,10 @@ import axios from 'axios';
 
 import Notiflix from 'notiflix';
 
-import { renderModalMarkup } from './renderModalMarkup';
+import {
+  spinnerStart,
+  spinnerStop,
+} from './spin';
 
 const bookRef = document.querySelector('.modal-fav-book');
 
@@ -10,7 +13,9 @@ axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 
 async function fetchBookById(id) {
   try {
+    spinnerStart();
     const { data } = await axios.get(id);
+    spinnerStop();
     return data;
   } catch (error) {
     Notiflix.Notify.failure(
@@ -19,10 +24,5 @@ async function fetchBookById(id) {
   }
 }
 
-// const bookRef = document.querySelector('.modal-fav-book');
-
-// const data = await fetchBookById();
-
-// renderModalMarkup(data);
 
 export { fetchBookById };

@@ -17,36 +17,45 @@
     left: 0;
     overflow-y: scroll;
     z-index: 300; 
-
     transform: rotate(0) scale(1);
-    transition: transform 200ms linear 100ms;
+    transition: opacity 300ms linear, visibility 300ms linear;
+
+}
+
+.modal-fav {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 38px 22px;
+    max-width: 335px;
+    background-color: #FFFFFF;
+    border: 2px solid #111111;
+    border-radius: 18px;
+    transform: rotate(0) scale(1);
+    transition: transform 400ms linear;
 
 }
 
 .is-hidden .modal-fav {
-    transform: rotate(180deg) scale(0);
+    transform: rotate(270deg) scale(0);
 }
 
 
 @media screen and (min-width: 768px) {
     .modal-fav {
-            width: 579px;
-            max-width: 579px;
-            position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-            margin: 0;
-            padding: 38px;
-
-        }
+        width: 579px;
+        max-width: 579px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 38px;
+    }
+    .is-hidden .modal-fav {
+        transform: translate(-50%, -65%) rotate(180deg) scale(0);
+    }
 }
-
-
-
-
-
 
 @media screen and (min-width: 768px) {
     .modal-fav-book {
@@ -54,6 +63,7 @@
         margin-bottom: 40px;
     }
 }
+
 
 
 @media screen and (min-width: 768px) {
@@ -77,13 +87,14 @@
 
 .modal-fav-close-btn:hover .close-modal-icon,
 .modal-fav-close-btn:focus .close-modal-icon {
-    stroke: #4F2EE8;
+    stroke: var(--accent-color-ligth);
     transform: rotate(180deg);
+   
 }
 
 
 @media screen and (min-width: 768px) {
-    .modal-fav-btn {
+    .modal-fav-close-btn {
         top: 24px;
         right: 24px;
         }
@@ -94,90 +105,47 @@
     stroke: #111111;
     width: 14px;
     height: 14px;
-    transition: stroke 400ms, transform 400ms ;
+    transition: transform ease-in 400ms, stroke 500ms;
 
 }
 
-.fav-add-book-btn{
-
-    line-height: calc( 18 / 14 );
+.fav-add-book-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(18 / 14);
     letter-spacing: -0.01em;
     text-transform: uppercase;
     font-family: var(--main-font);
-    color: #111111;
-    padding: 12px 26px;
+    color: var(--primary-text-color-ligth);
+    padding: 12px 22px;
     background-color: inherit;
     border: 2px solid #4F2EE8;
     border-radius: 40px;
     transition: background-color 400ms, color 400ms;
 }
 
-.fav-add-book-btn:hover{
-    background-color: #4F2EE8;
-    color: #FFFFFF;
-}
-.fav-add-book-btn:focus{
-    background-color: #4F2EE8;
-    color: #FFFFFF;
-    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
-}
-
-
-
 @media screen and (min-width: 768px) {
     .fav-add-book-btn {
         font-size: 18px;
         line-height: calc(24 / 18);
-        padding: 18px 148px;
+        width: 100%;
+        padding: 18px auto;
+      
     }
 }
 
-
-
-
-.modal-fav{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 38px 22px;
-    max-width: 335px;
-    
-    outline: 2px solid red;
-    outline-offset: -2px;
-    background-color: #FFFFFF;
-    border: 2px solid #111111;
-    border-radius: 18px;
-
-    transform: rotate(0) scale(1);
-    transition: transform 200ms linear 100ms;
-
+.fav-add-book-btn:focus{
+    background-color: var(--accent-color-ligth);
+    color: #FFFFFF;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
 }
-
-.is-hidden .modal-fav {
-    transform: rotate(180deg) scale(0);
-}
-
-
-@media screen and (min-width: 768px) {
-    .modal-fav {
-            width: 579px;
-            max-width: 579px;
-            position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-            margin: 0;
-            padding: 38px;
-
-        }
-}
-
-
-@media screen and (min-width: 768px) {
-    .modal-fav-book {
-        display: flex;
-        margin-bottom: 40px;
-    }
+.fav-add-book-btn:hover{
+    background-color: var(--accent-color-ligth);;
+    color: #FFFFFF;
 }
 
 .modal-fav-btn {
@@ -188,32 +156,9 @@
     background-color: inherit;
 }
 
-.close-modal-icon{
 
-    stroke: #111111;
-}
-
-.fav-add-book-btn{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc( 18 / 14 );
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    font-family: 'DM Sans';
-    color: #111111;
-
-    padding: 14px 23px;
-    background-color: inherit;
-    border: 2px solid #4F2EE8;
-    border-radius: 40px;
-}
 
 .add-book-notification{
-    
     width: 242px;
     font-family: var(--main-font);
     font-size: 10px;
@@ -223,6 +168,18 @@
     color: rgba(17, 17, 17, 0.5);
     margin-top: 8px;
 }
+
+@media screen and (min-width: 768px) {
+.add-book-notification {
+        width: 324px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        line-height: calc(14 / 12);
+      
+    }
+}
+
 
 .hidden {
 display: none;
@@ -269,21 +226,26 @@ transition: transform 300ms;
         }
 }
 
-@media screen and (min-width: 768px) {
-    .modal-fav-title {
-    font-size: 24px;
-    line-height: calc(28 / 24);
-    margin-bottom: 8px;
-}
-}
+
+
 .modal-fav-title{
     font-family: var(--main-font);
     font-size: 16px;
     line-height: calc( 18 / 16 );
     letter-spacing: -0.04em;
-    color: #111111;
+    color: var(--primary-text-color-ligth);
     margin-bottom: 4px;
 }
+
+@media screen and (min-width: 768px) {
+    .modal-fav-title {
+        font-size: 24px;
+        line-height: calc(28 / 24);
+        margin-bottom: 8px;
+    }
+}
+
+
 .modal-fav-author{
     font-family: var(--main-font);
     font-style: italic;
@@ -301,17 +263,22 @@ transition: transform 300ms;
     
         }
     }
+
 .modal-fav-descr{
+    max-height: 72px;
+    overflow-y: auto;
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
     line-height: calc(18 / 14);
     letter-spacing: -0.04em;
-    color: #111111;
+    color: var(--primary-text-color-ligth);
     margin-bottom: 14px;
 }	
+
 @media screen and (min-width: 768px) {
     .modal-fav-descr {
-    margin-bottom: 20px;   
+    margin-bottom: 20px;  
+    max-height: 130px;
     }
 }

@@ -59,6 +59,33 @@
 
 @media screen and (min-width: 768px) {
   .gallery-title {
+modal-fav7
+    display: flex;
+   /* overflow-x: hidden; */
+    position: absolute;
+
+    /* max-width: 335px; */
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.1875px;
+  
+    letter-spacing: -0.04em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .gallery-title {
+      font-size: 48px;
+      line-height: 1, 083333;
+    }
+  }
+  
+  /* span {
+    color: var(--accent-color-ligth);
+  } */
+
+
+
     font-size: 48px;
     line-height: 1.083333;
   }
@@ -71,6 +98,7 @@
   padding-bottom: 8px;
 }
 @media screen and (min-width: 768px) {
+
   .gallery-book-home-link {
     display: flex;
     flex-direction: column;

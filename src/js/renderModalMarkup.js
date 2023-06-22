@@ -29,16 +29,11 @@ function renderModalMarkup({
     if (link.name === 'Amazon') {
       
       const amazon = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
-          <picture class="buy-img">
-            <source
-              srcset="../images/amazon.png 1x, ../images/amazon-2x.png 2x"
-              type="image/jpeg"
-            />
             <img
-              src="../images/amazon.png"
-              alt="amazon label"
+            src="../images/amazon.png"
+            alt="amazon label"
+            class="buy-img"
             />
-          </picture>
         </a>`;
 
       buyMarkup.push(amazon);
@@ -46,17 +41,11 @@ function renderModalMarkup({
 
     if (link.name === 'Apple Books') {
       const apple = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
-          <picture class="buy-img">
-            <source
-              srcset="../images/apple-books.png 1x, ../images/apple-books-2x.png 2x"
-              type="image/png"
-            />
             <img
-              src="../images/apple-books.png"
-              alt="apple label"
-      
-            />
-          </picture>
+            src="../images/apple-books.png"
+            alt="apple label"
+            class="buy-img"
+                />
         </a>`;
 
       buyMarkup.push(apple);
@@ -65,18 +54,12 @@ function renderModalMarkup({
     if (link.name === 'Barnes and Noble') {
       
       const barnes = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
-            <picture class="buy-img">
-              <source
-                srcset="../images/book-shop.png 1x, ../images/book-shop-2x.png 2x"
-                type="image/png"
-              />
               <img
                 src="../images/book-shop.png"
                 alt="apple label"
-
+                class="buy-img"
               />
-            </picture>
-          </a>`;
+                </a>`;
 
       buyMarkup.push(barnes);
     }
