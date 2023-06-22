@@ -59,6 +59,8 @@ modalAuthCloseBtnRef.addEventListener('click', onModalAuthCloseBtn);
 
 // **HOME
 signUpHomeBtn.addEventListener('click', () => {
+  backdropRef.classList.remove('is-hidden')
+  document.body.classList.add('no-scroll')
   backdropRef.classList.remove('is-hidden');
 });
 logOutBtn.addEventListener('click', logOut);
@@ -80,6 +82,7 @@ inputElements.forEach((el, i) => {
 });
 
 function onModalAuthCloseBtn() {
+  document.body.classList.remove('no-scroll')
   backdropRef.classList.add('is-hidden');
   formLogRef.reset();
   formRegRef.reset();

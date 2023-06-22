@@ -352,4 +352,8 @@
   left: 10px;
   position: absolute;
   align-items: center;
+  
+}
+.no-scroll{
+  overflow:hidden;
 }
