@@ -1,4 +1,6 @@
-
+import amazonLink from '../images/amazon.png';
+import appleBooks from '../images/apple-books.png';
+import bookShop from '../images/book-shop.png';
 
 function renderModalMarkup({
   book_image,
@@ -30,7 +32,7 @@ function renderModalMarkup({
       
       const amazon = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
             <img
-            src="./images/amazon.png"
+            // src="${amazonLink}"
             alt="amazon label"
             class="buy-img"
             />
@@ -42,7 +44,7 @@ function renderModalMarkup({
     if (link.name === 'Apple Books') {
       const apple = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
             <img
-            src="./images/apple-books.png"
+            src="${appleBooks}"
             alt="apple label"
             class="buy-img"
                 />
@@ -55,7 +57,7 @@ function renderModalMarkup({
       
       const barnes = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
               <img
-                src="./images/book-shop.png"
+                src="${bookShop}"
                 alt="apple label"
                 class="buy-img"
               />
