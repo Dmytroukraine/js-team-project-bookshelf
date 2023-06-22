@@ -286,7 +286,7 @@
   display: none;
   z-index: 1;
   animation-name: slide-down;
-  animation-duration: 0.7s;
+  animation-duration: 0.9s;
   animation-timing-function: ease-out;
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
@@ -298,7 +298,12 @@
   justify-content: center;
   align-items: flex-start;
   border-top: 1.5px solid #111111;
+  transition: all 4s ease-in-out;
 }
+
+.opacity {animation-duration: 0.9s;
+  animation-timing-function: ease-out;}
+
 
 .header-modal-image {
   background-image: url(../images/Group1k.png);
