@@ -1,35 +1,32 @@
-.btn_up{
-    position: fixed;
-    display: inline-flex;
-     justify-content: center;
-    align-items: center;
-    right: 30px;
-    bottom: 47px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-image: linear-gradient(
-  to top,
-  rgba(79, 46, 232, 1),
-  rgba(220, 220, 220, 1)
-);
-opacity: 1;
-    transition: box-shadow 300ms var(--timing-function),opacity 300ms var(--timing-function);
+.btn_up {
+  position: fixed;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  right: 30px;
+  bottom: 47px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to top,
+    rgba(79, 46, 232, 1),
+    rgba(220, 220, 220, 1)
+  );
+  opacity: 1;
+  transition: box-shadow 300ms var(--timing-function),
+    opacity 300ms var(--timing-function);
 }
 
-.btn_up:hover{
-box-shadow:0px 0px 0px 6px rgba(79, 46, 232, 0.3);
+.btn_up:hover {
+  box-shadow: 0px 0px 0px 6px rgba(79, 46, 232, 0.3);
 }
 
-
-.hide-btn_up{
-    opacity: 0;
-    pointer-events: none;
+.hide-btn_up {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.icon-btn_up{
-    
-fill: aliceblue;
-
+.icon-btn_up {
+  fill: aliceblue;
 }
-

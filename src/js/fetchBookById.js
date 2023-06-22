@@ -2,10 +2,7 @@ import axios from 'axios';
 
 import Notiflix from 'notiflix';
 
-import {
-  spinnerStart,
-  spinnerStop,
-} from './spin';
+import { spinnerStart, spinnerStop } from './spin';
 
 const bookRef = document.querySelector('.modal-fav-book');
 
@@ -23,6 +20,5 @@ async function fetchBookById(id) {
     );
   }
 }
-
 
 export { fetchBookById };

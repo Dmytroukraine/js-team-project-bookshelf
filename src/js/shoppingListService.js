@@ -4,9 +4,7 @@ import amazon from '../images/amazon.png';
 import appleBooks from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
 // import trash from '../images/trashh.svg#icon-bin';
-const imageUrl = new URL('../images/trashh.svg#icon-bin',
-import.meta.url
-)
+const imageUrl = new URL('../images/trashh.svg#icon-bin', import.meta.url);
 
 Notiflix.Notify.init({
   width: '370px',
@@ -37,18 +35,17 @@ Notiflix.Notify.init({
   },
 });
 
-export const emptyRef = document.querySelector ('.empty-shopping-list');
+export const emptyRef = document.querySelector('.empty-shopping-list');
 const booksList = document.querySelector('.shopping-list');
-export let booksArray
+export let booksArray;
 try {
-       booksArray = JSON.parse(localStorage.getItem('books'));    
+  booksArray = JSON.parse(localStorage.getItem('books'));
 } catch (error) {
-  console.log(error)
-  }
-         if (booksArray === null) {
-           booksArray = [];
-         }
-
+  console.log(error);
+}
+if (booksArray === null) {
+  booksArray = [];
+}
 
 renderingShoppingList();
 
@@ -133,7 +130,7 @@ export async function addingToShopList(e) {
 
 export function removingBookFromShoppingList(e) {
   const id = e.currentTarget.dataset.id;
-  const index = booksArray.findIndex((book) => book._id === id);
+  const index = booksArray.findIndex(book => book._id === id);
   if (index !== -1) {
     booksArray.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(booksArray));
@@ -164,7 +161,7 @@ export function loadFromLocalStorage(id) {
     const dataJSON = localStorage.getItem('books');
     if (dataJSON) {
       const booksArray = JSON.parse(dataJSON);
-      return booksArray.find((book) => book._id === id);
+      return booksArray.find(book => book._id === id);
     } else {
       return null;
     }
@@ -172,6 +169,3 @@ export function loadFromLocalStorage(id) {
     console.log(error);
   }
 }
-
-
-

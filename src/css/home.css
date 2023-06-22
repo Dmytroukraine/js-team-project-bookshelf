@@ -126,7 +126,7 @@
 .gallery-book-cover:active,
 .gallery-book-cover:hover,
 .gallery-book-cover:focus {
-  transform: scale(1.20);
+  transform: scale(1.2);
 }
 .gallery-category {
   font-family: var(--main-font);
@@ -215,7 +215,8 @@
   margin-left: auto;
 }
 
-.gallery-see-more-btn:hover, .gallery-see-more-btn:focus {
+.gallery-see-more-btn:hover,
+.gallery-see-more-btn:focus {
   color: var(--header-color-ligth);
   background-color: var(--accent-color-ligth);
 }

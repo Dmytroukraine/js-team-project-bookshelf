@@ -5,7 +5,6 @@ import bookShop from '../images/book-shop.png';
 let isAuth;
 let isAuthSrt;
 
-
 function renderModalMarkup({
   book_image,
   title,
@@ -22,22 +21,14 @@ function renderModalMarkup({
   let markupTitle;
   let markupAuthor;
   let markupDescription;
-  // bookRef.addEventListener('click', onIdBookClick);
-  // function onIdBookClick(event) {
-  //   console.log(event.target, _id);
-  // }
 
-  
-
-    isAuthSrt = localStorage.getItem('isAuthenticated');
+  isAuthSrt = localStorage.getItem('isAuthenticated');
 
   try {
     isAuth = JSON.parse(isAuthSrt);
   } catch (error) {
     console.log(error);
   }
-
-
 
   buy_links.forEach(link => {
     if (link.name === 'Amazon') {
@@ -117,20 +108,4 @@ ${markupDescription}
   }
 }
 
-
-
-
-//   const markup = `<img class="modal-fav-image" src="${book_image}" alt="book-cover" width="287" />
-//    <div class="book-descr-wrapper"><h1 class="modal-fav-title">${title}</h1>
-// <h2 class="modal-fav-author">${author}</h2>
-// <p class="modal-fav-descr">${description}</p>
-// <div class="buy-label">${buyMarkup.join('')}</div>
-// </div>`;
-//   bookRef.innerHTML = markup;
-// }
-
-
 export { renderModalMarkup, isAuth };
-
-
-

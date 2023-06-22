@@ -6,7 +6,6 @@ import addBooksListeners from './addBooksListeners';
 const { galleryRef, categoriesRef } = getRefs();
 
 export default function renderingByCategory(e) {
-
   // console.log('Rendering by category');
 
   galleryRef.innerHTML = '';
@@ -18,7 +17,9 @@ export default function renderingByCategory(e) {
         .trim()
         .split(' ')
         .slice(0, e.target.innerHTML.length - 1)
-        .join(' ')} <span class = "gellery-title-akcent">${e.target.dataset.category
+        .join(
+          ' '
+        )} <span class = "gellery-title-akcent">${e.target.dataset.category
         .trim()
         .split(' ')
         .pop()}</span></h2>`
@@ -30,7 +31,7 @@ export default function renderingByCategory(e) {
 
     const galleryListRef = document.querySelector('.gallery-list2');
     const query = e.target.dataset.category.split(' ').join('%20');
-    fetchingByCategory(query).then((response) => {
+    fetchingByCategory(query).then(response => {
       response.map(book => {
         galleryListRef.insertAdjacentHTML('beforeend', createBookCard(book));
       });
@@ -83,8 +84,8 @@ export default function renderingByCategory(e) {
 
   const galleryListRef = document.querySelector('.gallery-list2');
   const query = e.target.innerHTML.trim().split(' ').join('%20');
-  
-  fetchingByCategory(query).then((response) => {
+
+  fetchingByCategory(query).then(response => {
     response.map(book =>
       galleryListRef.insertAdjacentHTML('beforeend', createBookCard(book))
     );
@@ -92,6 +93,6 @@ export default function renderingByCategory(e) {
   });
 
   // Летимо вгору
-  
+
   window.scrollTo(0, 0);
 }

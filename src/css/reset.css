@@ -34,7 +34,7 @@ a {
   color: inherit;
 }
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 /* media rules */
 
@@ -43,12 +43,6 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* @media screen and (max-width: 480px) {
-  .container {
-    width: 100%;
-  }
-} */
 
 @media screen and (min-width: 768px) {
   .container {

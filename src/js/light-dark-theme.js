@@ -7,12 +7,12 @@ let indexTheme = false;
 inputTheme.addEventListener('change', () => {
   if (indexTheme) {
     indexTheme = false;
-    localStorage.setItem('userTheme', 'light'); 
+    localStorage.setItem('userTheme', 'light');
   } else {
     indexTheme = true;
-    localStorage.setItem('userTheme', 'dark'); 
+    localStorage.setItem('userTheme', 'dark');
   }
-  
+
   currentTheme();
 });
 
@@ -40,14 +40,15 @@ function currentTheme() {
 
 currentTheme();
 
-
-const headerNavLinks = document.querySelector('.header-nav-item').querySelectorAll('a');
-const headerNavLinksModal = document.querySelector('.header-nav-item-modal').querySelectorAll('a');
+const headerNavLinks = document
+  .querySelector('.header-nav-item')
+  .querySelectorAll('a');
+const headerNavLinksModal = document
+  .querySelector('.header-nav-item-modal')
+  .querySelectorAll('a');
 if (document.querySelector('.home-page') === null) {
   for (let index = 0; index < headerNavLinks.length; index++) {
-    headerNavLinks[index].classList.toggle("heder-active"); 
-    headerNavLinksModal[index].classList.toggle("heder-active");
+    headerNavLinks[index].classList.toggle('heder-active');
+    headerNavLinksModal[index].classList.toggle('heder-active');
   }
 }
-
-

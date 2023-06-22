@@ -20,13 +20,13 @@
   right: 0;
   bottom: 0;
   background-color: #239af5;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
 .span-theme:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 18px;
   width: 18px;
   border-radius: 20px;
@@ -34,7 +34,7 @@
   bottom: 0px;
   z-index: 2;
   background-color: #ffffff;
-  transition: .6s;
+  transition: 0.6s;
 }
 
 .sun svg {
@@ -56,12 +56,12 @@
   height: 18px;
 }
 
-/* .switch:hover */.sun svg {
+/* .switch:hover */
+.sun svg {
   animation: rotate 15s linear infinite;
 }
 
 @keyframes rotate {
- 
   0% {
     transform: rotate(0);
   }
@@ -71,12 +71,12 @@
   }
 }
 
-/* .switch:hover */.moon svg {
+/* .switch:hover */
+.moon svg {
   animation: tilt 1.5s linear infinite;
 }
 
 @keyframes tilt {
- 
   0% {
     transform: rotate(0deg);
   }
@@ -105,9 +105,6 @@
 .theme-toggle-js:checked + .span-theme:before {
   transform: translateX(0px);
 }
-
-
-
 
 .header-logo-container {
   width: 109px;
@@ -267,7 +264,7 @@
   100% {
     transform: translateX(0%);
   }
- 
+
   0% {
     transform: translateX(100%);
   }
@@ -301,9 +298,10 @@
   transition: all 4s ease-in-out;
 }
 
-.opacity {animation-duration: 0.9s;
-  animation-timing-function: ease-out;}
-
+.opacity {
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out;
+}
 
 .header-modal-image {
   background-image: url(../images/Group1k.png);
@@ -536,21 +534,7 @@
   position: absolute;
   top: 185px;
 }
-/* .header-form-input {
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 173px;
-  border: 2px solid rgba(17, 17, 17, 1);
-  border-radius: 40px;
-  width: 499px;
-  height: 64px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: rgba(17, 17, 17, 1);
-} */
+
 .header-form-field:not(:last-child) {
   margin-top: 28px;
 }
@@ -601,7 +585,6 @@
   border-radius: 18px;
 }
 
-
-.z-ind{
+.z-ind {
   z-index: 1;
 }

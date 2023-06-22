@@ -71,15 +71,14 @@ const donateFunds = [
     img: found2,
     retinaImg: found2x,
   },
-  
+
   {
     title: 'International Medical   Corps',
     url: 'https://internationalmedicalcorps.org/country/ukraine/',
     img: found4,
     retinaImg: found4x,
   },
-  
-  
+
   {
     title: 'Action against   hunger',
     url: 'https://www.actionagainsthunger.org/location/europe/ukraine/',
@@ -111,77 +110,41 @@ const donateButton = document.querySelector('.donate-button');
 const donateButtonUp = document.querySelector('.donate-button-up');
 const donateFound = document.querySelector('.donate-funds-visible');
 
-
 const swiper = new Swiper('.my-swiper', {
-    direction: 'vertical',
-    spaceBetween: 20,
-    slidesPerView: 'auto',
-  
-    navigation: {
-      nextEl: '.swiper-button-down',
-      prevEl: '.swiper-button-top',
-    },
-  
-    plugins: {
-      scrollContainer: true,
-    },
-  });
+  direction: 'vertical',
+  spaceBetween: 20,
+  slidesPerView: 'auto',
 
+  navigation: {
+    nextEl: '.swiper-button-down',
+    prevEl: '.swiper-button-top',
+  },
 
+  plugins: {
+    scrollContainer: true,
+  },
+});
 
-  let activeSwiperEl = 5;
+let activeSwiperEl = 5;
 
-//   if (window.innerWidth >= 768) {
-//     activeSwiperEl = 3;
-//   } else {
-//     activeSwiperEl = 5;
-//   }
 donateButton.addEventListener('click', () => {
-    swiper.slideNext();
-  
-    if (
-        container.children[activeSwiperEl].classList.contains(
-        'swiper-slide-active'
-      )
-    ) {
-        donateButton.style.display = 'none';
-          donateButtonUp.style.display = 'block';
-    }
-  });
-  
-  donateButtonUp.addEventListener('click', () => {
-    swiper.slidePrev();
-    if (container.children[0].classList.contains('swiper-slide-active')) {
-        donateButtonUp.style.display = 'none';
-          donateButton.style.display = 'block';
-    }
-  });
+  swiper.slideNext();
 
+  if (
+    container.children[activeSwiperEl].classList.contains('swiper-slide-active')
+  ) {
+    donateButton.style.display = 'none';
+    donateButtonUp.style.display = 'block';
+  }
+});
 
-
-
-
-
-
-// donateButton.addEventListener('click', function () {
-//   donateButton.style.display = 'none';
-//   donateButtonUp.style.display = 'block';
-
-//     donateFound.scrollTo({
-//     top: 10000,
-//     behavior: 'smooth',
-//   });
-// });
-
-// donateButtonUp.addEventListener('click', function () {
-//   donateButtonUp.style.display = 'none';
-//   donateButton.style.display = 'block';
-
-//   donateFound.scrollTo({
-//     top: 0,
-//     behavior: 'smooth',
-//   });
-// });
+donateButtonUp.addEventListener('click', () => {
+  swiper.slidePrev();
+  if (container.children[0].classList.contains('swiper-slide-active')) {
+    donateButtonUp.style.display = 'none';
+    donateButton.style.display = 'block';
+  }
+});
 
 // Reverse button---------------------------------
 
