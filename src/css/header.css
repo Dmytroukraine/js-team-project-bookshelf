@@ -183,6 +183,7 @@
 
 .header-link-item:hover, .header-link-item :focus {
   transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .logo {
   transition: all 0.3s ease-in-out;

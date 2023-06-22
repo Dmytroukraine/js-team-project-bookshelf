@@ -55,6 +55,7 @@
   color: var(--primary-text-color-ligth);
 
   margin-bottom: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -177,6 +178,7 @@
 
   height: 18px;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .gallery-author {
@@ -213,6 +215,7 @@
 
   margin-bottom: 40px;
   margin-left: auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .gallery-see-more-btn:hover,
