@@ -9,6 +9,7 @@ body,
 
 body.dark-theme,
 .dark-theme .modal-fav,
+.dark-theme .footer__modal,
 .dark-theme .heder-modal-autoriz {
   background-color: var(--bgc-dark-theme);
 }
