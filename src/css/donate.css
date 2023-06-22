@@ -8,6 +8,36 @@
   border-radius: 16px;
 }
 
+.gradient {
+  height: 352px; 
+  width: 335px; 
+  background: linear-gradient(149deg, rgb(207, 207, 207) 0%,#4F2EE8 42%, rgb(207, 207, 207) 72%, #4F2EE8 100%);
+  animation: gradient 10s infinite linear; 
+  background-size: 400%; 
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 80% 0%;
+  }
+  50% {
+      background-position: 20% 100%;
+  }
+  100% {
+      background-position: 80% 0%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 .donate-paragraph {
   color: var(--header-color-ligth);
   font-family: var(--main-font);
