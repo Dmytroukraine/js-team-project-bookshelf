@@ -26,7 +26,7 @@ body .show-modal .footer__modal {
   transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
 .footer__modal {
-  padding: 24px;
+  padding: 14px;
   border-radius: 4px;
   min-width: 320px;
   max-width: 1300px;
