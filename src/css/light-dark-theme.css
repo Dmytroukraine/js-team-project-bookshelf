@@ -9,9 +9,13 @@ body,
 
 body.dark-theme,
 .dark-theme .modal-fav,
-.dark-theme .footer__modal,
+/* .dark-theme .footer__modal, */
 .dark-theme .heder-modal-autoriz {
   background-color: var(--bgc-dark-theme);
+}
+
+.dark-theme .footer__modal {
+background-color: #282525;
 }
 
 .dark-theme .header-container {
