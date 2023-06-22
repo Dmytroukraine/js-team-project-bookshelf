@@ -15,9 +15,11 @@ export default function renderingByCategory(e) {
     galleryRef.insertAdjacentHTML(
       'beforeend',
       `<h2 class="gallery-title">${e.target.dataset.category
+        .trim()
         .split(' ')
         .slice(0, e.target.innerHTML.length - 1)
         .join(' ')} <span class = "gellery-title-akcent">${e.target.dataset.category
+        .trim()
         .split(' ')
         .pop()}</span></h2>`
     );

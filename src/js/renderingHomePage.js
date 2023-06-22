@@ -42,7 +42,7 @@ export function renderingHomePage() {
   } else if (document.documentElement.clientWidth < 1440) {
     galleryRef.insertAdjacentHTML(
       'beforeend',
-      '<h2 class="gallery-title">Best Sellers<span class="gellery-title-akcent">Books</span></h2>'
+      '<h2 class="gallery-title">Best Sellers <span class="gellery-title-akcent">Books</span></h2>'
     );
     fetchingTopBooks().then(response => {
       for (let elem of response) {
