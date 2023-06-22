@@ -215,7 +215,7 @@
   margin-left: auto;
 }
 
-.gallery-see-more-btn:hover .gallery-see-more-btn:focus {
+.gallery-see-more-btn:hover, .gallery-see-more-btn:focus {
   color: var(--header-color-ligth);
   background-color: var(--accent-color-ligth);
 }
