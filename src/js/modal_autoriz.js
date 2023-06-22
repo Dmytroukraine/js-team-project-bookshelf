@@ -284,12 +284,11 @@ console.log('you in');
     });
     
         headerNavLinks.classList.remove('is-hidden')
-        // mobileNavLinks1.classList.remove('is-hidden')
-        // mobileNavLinks2.classList.remove('is-hidden')
+        
 
         signUpHomeBtn.classList.add('is-hidden')
         signedBtnHeaderRef.classList.remove('is-none');
-        // signedBtnHeaderRef.classList.remove('is-hidden');
+        
         
     }
 
