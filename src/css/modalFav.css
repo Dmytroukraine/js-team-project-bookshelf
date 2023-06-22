@@ -18,7 +18,7 @@
     overflow-y: scroll;
     z-index: 300; 
     transform: rotate(0) scale(1);
-    transition: opacity 100ms linear, visibility 100ms linear;
+    transition: opacity 300ms linear, visibility 300ms linear;
 
 }
 
