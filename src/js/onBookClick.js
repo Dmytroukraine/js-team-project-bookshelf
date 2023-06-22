@@ -23,22 +23,21 @@ async function onBookClick(event) {
   const book = await fetchBookById(event.currentTarget.dataset.id);
   renderModalMarkup(book);
   const addBookBtn = document.querySelector('.fav-add-book-btn');
-  if (loadFromLocalStorage(dataId) == null) {
-    addBookNotif.classList.add('hidden');
-    addBookBtn.textContent = 'add to shopping list';
-    
-    
-  } else {
-    addBookNotif.classList.remove('hidden');
-    addBookBtn.textContent = 'remove from the shopping list';
-  }
+
+  if (addBookBtn) {
+   if (loadFromLocalStorage(dataId) == null) {
+     addBookNotif.classList.add('hidden');
+     addBookBtn.textContent = 'add to shopping list';
+   } else {
+     addBookNotif.classList.remove('hidden');
+     addBookBtn.textContent = 'remove from the shopping list';
+    }
+    addBookBtn.addEventListener('click', onAddBookBtn);
+}
+
   FavModal();
+    
   
-  
-  
-  
-  
-  addBookBtn.addEventListener('click', onAddBookBtn);
 
   function onAddBookBtn() {
     if (loadFromLocalStorage(dataId) == null)
