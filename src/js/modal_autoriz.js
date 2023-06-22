@@ -180,7 +180,9 @@ console.log('you in');
 
 
 
-        console.log('U a Loggined');
+          console.log('U a Loggined');
+          Notiflix.Notify.success('You successfuly LogedIn!');
+
         localStorage.setItem('isAuthenticated', JSON.stringify(true))
             backdropRef.classList.add('is-hidden')
             
