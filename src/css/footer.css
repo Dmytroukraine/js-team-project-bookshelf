@@ -1,0 +1,124 @@
+.footer {
+  /* position: relative; */
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .footer__container {
+    flex-direction: row;
+  }
+}
+
+.footer__rights {
+}
+
+.footer__mobile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__dev {
+}
+
+.footer__btn--open {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__btn:hover,
+.footer__btn:focus {
+  color: blue;
+}
+
+.heart {
+  width: 20px;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer__students {
+  text-decoration: underline color(srgb 0 0 255);
+}
+
+.footer__backdrop {
+}
+
+.footer__btn--close {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px;
+
+  transition: transform 0.3s ease;
+}
+
+/* ! rotate part of footer__cross (modal) */
+
+.rotate-center {
+  -webkit-animation: rotate-center 1.6s ease-in-out infinite both;
+  animation: rotate-center 1.6s ease-in-out infinite both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

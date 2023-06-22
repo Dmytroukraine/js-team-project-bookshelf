@@ -6,3 +6,4 @@ import './js/button_up';
 import './js/footer';
 import './js/modalTeam';
 import './js/fetchBookById';
+import './js/modal_autoriz';

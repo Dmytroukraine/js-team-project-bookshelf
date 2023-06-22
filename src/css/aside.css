@@ -1,8 +1,8 @@
 aside {
   float: none;
   display: block;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .main-wrapper {
@@ -11,16 +11,14 @@ aside {
 
 @media screen and (min-width: 768px) {
   aside {
-    padding-bottom: 100px;
+    margin-bottom: 100px;
+   
   }
   .left-side {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    align-items: flex-start;
 
-  .home-donate {
-    padding-left: 32px;
+    gap: 32px;
   }
 }
 

@@ -3,7 +3,10 @@ import Notiflix from 'notiflix';
 import amazon from '../images/amazon.png';
 import appleBooks from '../images/apple-books.png';
 import bookShop from '../images/book-shop.png';
-import trash from '../images/trashh.svg#icon-bin';
+// import trash from '../images/trashh.svg#icon-bin';
+const imageUrl = new URL('../images/trashh.svg#icon-bin',
+import.meta.url
+)
 
 Notiflix.Notify.init({
   width: '370px',
@@ -77,7 +80,7 @@ function renderingShoppingList() {
             </div>
           <button class="delete-shopping-list-btn" type="button" data-id="${book._id}">
             <svg class="delete-shopping-list-icon">
-              <use href="../images/trashh.svg#icon-bin"></use>
+              <use href="${imageUrl}"></use>
             </svg>
           </button>
           </div>
