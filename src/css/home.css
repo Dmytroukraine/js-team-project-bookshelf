@@ -107,7 +107,8 @@
   background-size: cover;
   margin-bottom: 14px;
   border-radius: 8px;
-  transition: transform var(--animation-duration);
+  /* transition: transform var(--animation-duration); */
+  transition: transform 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -213,10 +214,14 @@
 
   margin-bottom: 40px;
   margin-left: auto;
+
+  transition: all 0.4s ease-in-out;
+
 }
 
 .gallery-see-more-btn:hover,
 .gallery-see-more-btn:focus {
   color: var(--header-color-ligth);
   background-color: var(--accent-color-ligth);
+
 }
