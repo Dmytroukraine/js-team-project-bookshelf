@@ -30,7 +30,7 @@ function renderModalMarkup({
       
       const amazon = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
             <img
-            src="../images/amazon.png"
+            src="./images/amazon.png"
             alt="amazon label"
             class="buy-img"
             />
@@ -42,7 +42,7 @@ function renderModalMarkup({
     if (link.name === 'Apple Books') {
       const apple = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
             <img
-            src="../images/apple-books.png"
+            src="./images/apple-books.png"
             alt="apple label"
             class="buy-img"
                 />
@@ -55,7 +55,7 @@ function renderModalMarkup({
       
       const barnes = `<a href="${link.url}" target="_blank" rel="noreferrer noopener">
               <img
-                src="../images/book-shop.png"
+                src="./images/book-shop.png"
                 alt="apple label"
                 class="buy-img"
               />
