@@ -60,6 +60,12 @@ body, .header-container {
     color: var(--secondary-text-color-dark);
     background-color: var(--bgc-dark-theme);
   }
+
+  .dark-theme .gallery-see-more-btn:hover, 
+  .dark-theme .gallery-see-more-btn:focus {
+    color: var(--header-color-ligth);
+    background-color: var(--accent-color-ligth);
+  }
   
   .dark-theme .header-mobile-menu-icon,
   .dark-theme .header-burger-icon {
