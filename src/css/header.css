@@ -177,6 +177,13 @@
   color: var(--primary-text-color-ligth);
   text-transform: uppercase;
 }
+.header-link-item {
+  transition: transform 0.4s ease-in-out;
+}
+
+.header-link-item:hover, .header-link-item :focus {
+  transform: scale(1.1);
+}
 .logo {
   transition: all 0.3s ease-in-out;
 }
