@@ -282,6 +282,8 @@
   letter-spacing: -0.02em;
 }
 
+
+
 .user-icon {
   width: 25px;
   height: 25px;
@@ -306,6 +308,9 @@
   transform: translateY(0px);
 }
 
+
+
+
 .header-btn-arrow-bottom {
   display: flex;
   justify-content: center;
@@ -324,4 +329,33 @@
     font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.04em;
+}
+
+.user-icon-down{
+  fill: #fff;
+  margin-left: auto;
+  width: 14px;
+  height: 7px;
+  
+  transition: transform 250ms var(--timing-function);
+}
+
+.up{
+  transform: rotateX(180deg);
+}
+
+.mob-user-name {
+  display: flex;
+  width: 133px;
+  height: 37px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 14px 15px;
+  border-radius: 18px;
+  top: 20px;
+  left: 10px;
+  position: absolute;
+  align-items: center;
 }

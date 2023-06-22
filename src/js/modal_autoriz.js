@@ -31,7 +31,10 @@ import Notiflix from "notiflix";
     const inputElements = document.querySelectorAll('.input-login');
     const labelElement = document.querySelectorAll('.label');
     const modalAuthCloseBtnRef = document.querySelector('.modal-auth-close-btn')
-    const menuMobileRef=document.querySelector('.js-modal')
+    const menuMobileRef = document.querySelector('.js-modal')
+    
+
+    
 
     // **header
     const signedBtnHeaderRef=document.querySelector('.js-signed-home-btn')
@@ -43,7 +46,9 @@ import Notiflix from "notiflix";
     const headerDeskLogOut=document.querySelector('.header-user.js-modal-autoriz-open.js-logout')
     const headerLogOutBtn = document.querySelector('.js-logout')
     const burgerBtn = document.querySelector('.js-open-menu');
-
+    const mobileUserWellcome = document.querySelector('.mob-user-name')
+    
+   
 
 
 
@@ -63,9 +68,10 @@ import Notiflix from "notiflix";
     signUpHomeBtn.addEventListener('click', () => {
         backdropRef.classList.remove('is-hidden')
     })
+    logOutBtn.addEventListener('click', logOut)
+    headerLogOutBtn.addEventListener('click', logOut)
 
-logOutBtn.addEventListener('click', logOut)
-headerLogOutBtn.addEventListener('click', logOut)
+
     
     mobileSignInREf.addEventListener('click',() => {
         backdropRef.classList.remove('is-hidden')
@@ -90,14 +96,6 @@ headerLogOutBtn.addEventListener('click', logOut)
     });
 
 
-    signedBtnHeaderRef.addEventListener('click', showLogOut)
-
-    function showLogOut() { 
-        headerDeskLogOut.classList.toggle('hidden-log')
-
-    }
-
-
 
     function onModalAuthCloseBtn(){
          backdropRef.classList.add('is-hidden')
@@ -117,13 +115,15 @@ headerLogOutBtn.addEventListener('click', logOut)
     
           const uid = user.uid;
           isAuth(uid)
-        //   backdropRef.classList.add('is-hidden')
+
           logOutBtn.classList.remove('is-hidden')
           mobileSignInREf.classList.add('is-hidden')
         
-           mobileNavLinks.classList.remove('is-hidden')
-        /
-        // addToShoppingLishBtn.classList.remove('is-hidden')
+        mobileNavLinks.classList.remove('is-hidden')
+             
+    
+        
+        
 console.log('you in');
     
       } else {
@@ -257,10 +257,24 @@ console.log('you in');
             if (snapshot.exists()) {
                 const userName=сutName(snapshot.val().username)
 
-                const test = `<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}`;
+                const markup = `<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}<svg class="user-icon-down"><use href="../images/icon.svg#icon-arrow_down_user"\></use></svg>`;
                 
-                signedBtnHeaderRef.innerHTML = test;
+              signedBtnHeaderRef.innerHTML = markup;
 
+
+              const mobMarkup=`<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}`
+              mobileUserWellcome.innerHTML = mobMarkup;
+              
+
+
+              const userIconDown = document.querySelector('.user-icon-down')
+              signedBtnHeaderRef.addEventListener('click', showLogOut)
+              
+              function showLogOut() { 
+      headerDeskLogOut.classList.toggle('hidden-log')
+     userIconDown.classList.toggle('up')
+
+    }
         
       } else {
         console.log("No data available");
@@ -279,21 +293,28 @@ console.log('you in');
         
     }
 
-    function сutName(name) {
-      if (name.length > 7) {
+function сutName(name) {
+  const splitted = name.split("")
+
+
+const first = splitted[0].toUpperCase()
+
+const rest = [...splitted] 
+rest.splice(0, 1)
+
+const result = [first, ...rest].join("")    
+  
+      if (result.length > 7) {
         return name.substring(0, 7) + "...";
       } else {
-        return name;
+        return result;
       }
     }
 
 
-
-
-    function writeUserData(uid,name) {
+ function writeUserData(uid,name) {
     
       set(ref(database, 'users/' + uid), {
         username: name,
       });
     }
-
