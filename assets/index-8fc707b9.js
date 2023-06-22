@@ -14,19 +14,19 @@ import{g as Q,c as $,s as V,a as _,b as Z,d as ee,e as te,f as oe,l as O,h as k,
               </div>
             </div>`}function Se({book_image:e,title:t,author:o,description:r,buy_links:n,_id:a}){const s=document.querySelector(".modal-fav-book");document.querySelector(".modal-fav");const i=document.querySelector(".btn-wrap");let c=[],g,p,f,y;n.forEach(u=>{if(u.name==="Amazon"){const b=`<a href="${u.url}" target="_blank" rel="noreferrer noopener">
             <img
-            src="../images/amazon.png"
+            src="./images/amazon.png"
             alt="amazon label"
             class="buy-img"
             />
         </a>`;c.push(b)}if(u.name==="Apple Books"){const b=`<a href="${u.url}" target="_blank" rel="noreferrer noopener">
             <img
-            src="../images/apple-books.png"
+            src="./images/apple-books.png"
             alt="apple label"
             class="buy-img"
                 />
         </a>`;c.push(b)}if(u.name==="Barnes and Noble"){const b=`<a href="${u.url}" target="_blank" rel="noreferrer noopener">
               <img
-                src="../images/book-shop.png"
+                src="./images/book-shop.png"
                 alt="apple label"
                 class="buy-img"
               />
