@@ -257,12 +257,12 @@ console.log('you in');
               const userName = сutName(snapshot.val().username)
               
 
-                const markup = `<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}<svg class="user-icon-down"><use href="../images/icon.svg#icon-arrow_down_user"\></use></svg>`;
+                const markup = `<svg class="user-icon"><use href="./images/sprite.svg#icon-user-1"\></use></svg>${userName}<svg class="user-icon-down"><use href="./images/icon.svg#icon-arrow_down_user"\></use></svg>`;
                 
               signedBtnHeaderRef.innerHTML = markup;
 
 
-              const mobMarkup=`<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}`
+              const mobMarkup=`<svg class="user-icon"><use href="./images/sprite.svg#icon-user-1"\></use></svg>${userName}`
               mobileUserWellcome.innerHTML = mobMarkup;
               
 
@@ -284,12 +284,11 @@ console.log('you in');
     });
     
         headerNavLinks.classList.remove('is-hidden')
-        // mobileNavLinks1.classList.remove('is-hidden')
-        // mobileNavLinks2.classList.remove('is-hidden')
+        
 
         signUpHomeBtn.classList.add('is-hidden')
         signedBtnHeaderRef.classList.remove('is-none');
-        // signedBtnHeaderRef.classList.remove('is-hidden');
+        
         
     }
 
