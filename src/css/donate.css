@@ -105,6 +105,7 @@
   outline: none;
   padding: 0;
   margin: 0 auto;
+  transition: background-color 500ms ease-out;
 }
 
 .donate-block-arrow {
@@ -121,6 +122,7 @@
   width: 32px;
   height: 32px;
   transform: scale(0.7);
+  transition: transform 500ms ease-out;
 }
 
 .donate-button:hover,
@@ -142,6 +144,7 @@
   margin: 0 auto;
   display: block;
   display: none;
+  transition: background-color 500ms ease-out;
 }
 
 .donate-arrow-up {

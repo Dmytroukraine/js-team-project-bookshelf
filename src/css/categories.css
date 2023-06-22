@@ -37,6 +37,7 @@
   cursor: pointer;
   transform: scale(0.97);
   transform-origin: center left;
+  transition: transform 500ms ease-out, text-transform 500ms ease-out, font-weight 500ms ease-out;
 }
 
 .nav-category-item:not(:last-child) {
@@ -50,7 +51,7 @@
   font-size: 16px;
   text-transform: uppercase;
   transform: scale(1);
-
+  
   color: #4f2ee8;
 }
 
