@@ -176,6 +176,7 @@
   line-height: 18px;
   color: var(--primary-text-color-ligth);
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 .logo {
   transition: all 0.3s ease-in-out;
