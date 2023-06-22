@@ -10,25 +10,25 @@
 <b>Vitalina Shpir</b> - `ScrumMaster` :star:
 
 
-<b>Tatiana Khyzhniak</b>:smile:
+<b>Tatiana Khyzhniak</b> - Front End Developer :smile:
 
 
-<b>Evgeniya Pashenko</b>:boom:
+<b>Evgeniya Pashenko</b> - Front End Developer :boom:
 
 
-<b>Yuryi Mykhailyk</b>:sparkles:
+<b>Yuryi Mykhailyk</b> - Front End Developer :sparkles:
 
 
-<b>Pasha Bitelov</b>:muscle:
+<b>Pasha Bitelov</b> - Front End Developer :muscle:
 
 
-<b>Khrystyna Nahailo</b>:innocent:
+<b>Khrystyna Nahailo</b> - Front End Developer :innocent:
 
 
-<b>Dmytro Kyianov</b>:smirk:
+<b>Dmytro Kyianov</b> - Front End Developer :smirk:
 
 
-<b>Daniil Chernov</b>:sunglasses:
+<b>Daniil Chernov</b> - Front End Developer :sunglasses:
 
 
 <b>Volodymyr</b>:grin:
