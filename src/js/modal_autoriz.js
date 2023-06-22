@@ -154,10 +154,10 @@ function onModalAuthCloseBtn() {
     
         
         
-console.log('you in');
+
     
       } else {
-          console.log('you out');
+        
           
           signUpHomeBtn.classList.remove('is-hidden')
           signedBtnHeaderRef.classList.add('is-none')
@@ -211,9 +211,44 @@ console.log('you in');
             const userUid = userCregential.user.uid;
 
 
+onAuthStateChanged(auth, (user) => {
+      if (user) {
+          cleanMarkup()
+    
+          const uid = user.uid;
+          isAuth(uid)
 
+          logOutBtn.classList.remove('is-hidden')
+          mobileSignInREf.classList.add('is-hidden')
+        
+        mobileNavLinks.classList.remove('is-hidden')
+        mobileUserWellcome.classList.remove('is-hidden')
+             
+    
+        
+        
 
-          console.log('U a Loggined');
+    
+      } else {
+        
+          
+          signUpHomeBtn.classList.remove('is-hidden')
+          signedBtnHeaderRef.classList.add('is-none')
+          headerNavLinks.classList.add('is-hidden')
+        mobileNavLinks.classList.add('is-hidden')
+        
+        //  
+               cleanMarkup()
+          
+          mobileSignInREf.classList.remove('is-hidden')
+          logOutBtn.classList.add('is-hidden')
+        headerLogOutBtn.classList.add('hidden-log')
+        mobileUserWellcome.classList.add('is-hidden')
+        
+      }
+    });
+
+        
           Notiflix.Notify.success('You successfuly LogedIn!');
 
         localStorage.setItem('isAuthenticated', JSON.stringify(true))
@@ -247,17 +282,54 @@ console.log('you in');
               return
             }
         
+          
+          
             const userCregential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
             const userUid=userCregential.user.uid
             localStorage.setItem("userName", userFullName);
             localStorage.setItem('isAuthenticated', JSON.stringify(true))
-            console.log(userCregential.user);
+         onAuthStateChanged(auth, (user) => {
+      if (user) {
+          cleanMarkup()
+    
+          const uid = user.uid;
+          isAuth(uid)
+
+          logOutBtn.classList.remove('is-hidden')
+          mobileSignInREf.classList.add('is-hidden')
+        
+        mobileNavLinks.classList.remove('is-hidden')
+        mobileUserWellcome.classList.remove('is-hidden')
+             
+    
+        
+        
+
+    
+      } else {
+        
+          
+          signUpHomeBtn.classList.remove('is-hidden')
+          signedBtnHeaderRef.classList.add('is-none')
+          headerNavLinks.classList.add('is-hidden')
+        mobileNavLinks.classList.add('is-hidden')
+        
+        //  
+               cleanMarkup()
+          
+          mobileSignInREf.classList.remove('is-hidden')
+          logOutBtn.classList.add('is-hidden')
+        headerLogOutBtn.classList.add('hidden-log')
+        mobileUserWellcome.classList.add('is-hidden')
+        
+      }
+    });
 
             writeUserData(userUid, userFullName)
             
 
 
-            console.log('u a create acc!');
+            
             isAuth(userUid)
             backdropRef.classList.add('is-hidden')
             formRegRef.reset()
