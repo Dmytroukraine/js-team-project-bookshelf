@@ -2,8 +2,9 @@
   display: flex;
   gap: 40px;
 
-  padding-top: 40px;
+
   padding-bottom: 40px;
+  margin-top: 74px;
 }
 
 .shop-list-aside {
