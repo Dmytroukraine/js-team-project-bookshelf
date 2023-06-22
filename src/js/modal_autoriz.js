@@ -53,10 +53,6 @@ import Notiflix from "notiflix";
 
 
 
-  
-
-
-
     formRegRef.addEventListener('submit', createNewAcc);
     formLogRef.addEventListener('submit', loginInAcc);
     signInLink.addEventListener('click', showSignInForm);
@@ -120,6 +116,7 @@ import Notiflix from "notiflix";
           mobileSignInREf.classList.add('is-hidden')
         
         mobileNavLinks.classList.remove('is-hidden')
+        mobileUserWellcome.classList.remove('is-hidden')
              
     
         
@@ -132,13 +129,15 @@ console.log('you in');
           signUpHomeBtn.classList.remove('is-hidden')
           signedBtnHeaderRef.classList.add('is-none')
           headerNavLinks.classList.add('is-hidden')
-          mobileNavLinks.classList.add('is-hidden')
+        mobileNavLinks.classList.add('is-hidden')
+        
         //  
 
           
           mobileSignInREf.classList.remove('is-hidden')
           logOutBtn.classList.add('is-hidden')
-          headerLogOutBtn.classList.add('hidden-log')
+        headerLogOutBtn.classList.add('hidden-log')
+        mobileUserWellcome.classList.add('is-hidden')
         
       }
     });
@@ -255,7 +254,8 @@ console.log('you in');
     const dbRef = ref(getDatabase(app));
         get(child(dbRef, `users/${uid}`)).then((snapshot) => {
             if (snapshot.exists()) {
-                const userName=сutName(snapshot.val().username)
+              const userName = сutName(snapshot.val().username)
+              
 
                 const markup = `<svg class="user-icon"><use href="../images/sprite.svg#icon-user-1"\></use></svg>${userName}<svg class="user-icon-down"><use href="../images/icon.svg#icon-arrow_down_user"\></use></svg>`;
                 
