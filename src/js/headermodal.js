@@ -7,13 +7,15 @@ const modal = document.querySelector('.js-modal');
 const modalChannel = new BroadcastChannel('modal-channel');
 
 burgerBtn.addEventListener('click', function () {
-  modal.style.display = 'block';
+  // modal.style.display = 'block';
+  modal.classList.add('menu-is-open');
   burgerBtn.classList.add('hidden');
   modalChannel.postMessage({ action: 'openModal' });
 });
 
 closeBtn.addEventListener('click', function () {
-  modal.style.display = 'none';
+  // modal.style.display = 'none';
+  modal.classList.remove('menu-is-open');
   burgerBtn.classList.remove('hidden');
 });
 
