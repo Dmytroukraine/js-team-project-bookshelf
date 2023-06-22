@@ -62,7 +62,8 @@ import Notiflix from "notiflix";
 
     // **HOME
     signUpHomeBtn.addEventListener('click', () => {
-        backdropRef.classList.remove('is-hidden')
+      backdropRef.classList.remove('is-hidden')
+      document.body.classList.add('no-scroll')
     })
     logOutBtn.addEventListener('click', logOut)
     headerLogOutBtn.addEventListener('click', logOut)
@@ -93,7 +94,8 @@ import Notiflix from "notiflix";
 
 
 
-    function onModalAuthCloseBtn(){
+function onModalAuthCloseBtn() {
+      document.body.classList.remove('no-scroll')
          backdropRef.classList.add('is-hidden')
         formLogRef.reset()
         formRegRef.reset()

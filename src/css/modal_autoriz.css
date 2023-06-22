@@ -359,3 +359,8 @@
   position: absolute;
   align-items: center;
 }
+
+
+.no-scroll{
+  overflow:hidden;
+}
