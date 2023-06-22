@@ -42,8 +42,8 @@
 .donate-funds-visible {
   width: 170px;
   height: 220px;
-  overflow: auto;
-  scroll-behavior: smooth;
+  overflow: hidden;
+
   margin-bottom: 40px;
 }
 
