@@ -45,7 +45,7 @@ function renderModalMarkup({
             <img
             // src="${amazonLink}"
             alt="amazon label"
-            class="buy-img"
+            class="buy-img amaz"
             />
         </a>`;
 
