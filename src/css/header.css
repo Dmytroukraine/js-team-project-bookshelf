@@ -323,14 +323,16 @@
     #ffffff 100%
   );
 
-  opacity: 0;
+  transform: translateX(100%);
+  /* opacity: 0; */
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: transform 500ms linear, visibility 500ms linear;
 }
 
 .header-modal.menu-is-open {
-  opacity: 1;
+  transform: translateX(0%);
+  /* opacity: 1; */
   visibility: visible;
   pointer-events: auto;
 }
