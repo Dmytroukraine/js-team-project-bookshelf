@@ -16,13 +16,14 @@
   top: 0;
   left: 0;
   overflow-y: scroll;
-  z-index: 300;
+  z-index: 1000;
   transform: rotate(0) scale(1);
-  transition: opacity 300ms linear, visibility 300ms linear;
+  transition: opacity 400ms linear 200ms, visibility 400ms linear 200ms;
 }
 
 .modal-fav {
-  margin-top: 20px;
+
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 38px 22px;
@@ -31,7 +32,7 @@
   border: 2px solid #111111;
   border-radius: 18px;
   transform: rotate(0) scale(1);
-  transition: transform 400ms linear;
+  transition: transform 400ms linear 200ms;
 }
 
 .is-hidden-fav .modal-fav {
@@ -174,6 +175,14 @@
   align-items: center;
   margin-bottom: 40px;
 }
+
+@media screen and (min-width: 768px) {
+  .buy-label {
+   margin-bottom: 0px;
+  }
+}
+
+
 
 .buy-img {
   filter: grayscale(100%);
