@@ -73,6 +73,7 @@
 }
 .gallery-book-home-link {
   padding-bottom: 8px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .gallery-book-home-link {
