@@ -31,7 +31,7 @@
 <b>Daniil Chernov</b> - Front End Developer :sunglasses:
 
 
-<b>Volodymyr</b> - Front End Developer :grin:
+<b>Volodymyr Poliakov</b> - Front End Developer :grin:
 
 
 <b>Dyshliuk Anna</b> - Front End Developer :blush:
