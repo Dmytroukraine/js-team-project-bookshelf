@@ -24,6 +24,7 @@ aside {
 @media screen and (min-width: 1440px) {
   aside {
     float: left;
+    margin-top: 40px;
   }
 
   .left-side {
