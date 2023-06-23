@@ -163,7 +163,7 @@ body .show-modal .footer__modal {
   font-family: 'Akaya Kanadaka', cursive;
   color: #fff;
   text-align: center;
-  z-index: 1;
+  
 }
 .footer__card:hover .footer__title {
   transform: translate3d(0%, -50px, 100px);
