@@ -94,15 +94,15 @@
   }
 }
 
-.theme-toggle-js:checked+.span-theme {
+.theme-toggle-js:checked + .span-theme {
   background-color: #183153;
 }
 
-.theme-toggle-js:focus+.span-theme {
+.theme-toggle-js:focus + .span-theme {
   box-shadow: 0 0 1px #183153;
 }
 
-.theme-toggle-js:checked+.span-theme:before {
+.theme-toggle-js:checked + .span-theme:before {
   transform: translateX(0px);
 }
 
@@ -137,7 +137,6 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-
 }
 
 .header-logo {
@@ -153,12 +152,11 @@
   border: 1.5px solid #111111;
   border-radius: 0px 0px 8px 8px;
   position: fixed;
-  z-index: 999;
+  z-index: 10000;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
-
 }
 
 .switch {
@@ -301,43 +299,42 @@
 
 /*------------------MODAL-----------------------------*/
 
-@keyframes slide-down {
-  100% {
-    transform: translateX(0%);
-  }
 
-  0% {
-    transform: translateX(100%);
-  }
-}
-
-.header-mobile-box {
+/* .header-mobile-box {
   position: relative;
-}
+} */
 
 .header-modal {
-  position: absolute;
-  top: -45px;
-  right: -20.5px;
+  position: fixed;
   width: 100%;
-  width: 375px;
-  height: 750px;
-  margin-top: 59px;
-  display: none;
-  z-index: 1;
-  animation-name: slide-down;
-  animation-duration: 0.9s;
-  animation-timing-function: ease-out;
-  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%);
+  height: 100%;
+  top: 66px;
+  left: 0;
+
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border-top: 1.5px solid #111111;
-  transition: all 4s ease-in-out;
+
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #ffffff 100%
+  );
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms linear, visibility 500ms linear;
 }
+
+.header-modal.menu-is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 
 .opacity {
   animation-duration: 0.9s;
@@ -357,8 +354,8 @@
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
-screen and (min-resolution: 192dpi) and (max-width: 767px),
-screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .header-modal-image {
     background-image: url(../images/Group2k.png);
   }
@@ -392,7 +389,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 }
 
 .header-user-modal-out {
-  top: 680px;
+  top: 640px;
   z-index: 300;
   background-color: var(--header-color-ligth);
   color: var(--primary-text-color-ligth);
@@ -463,9 +460,9 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     display: none;
   }
 
-  .header-modal {
+  /* .header-modal {
     display: none;
-  }
+  } */
 
   .header-user {
     display: none;
@@ -480,7 +477,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     left: 0;
     right: 0;
     margin: 0 auto;
-
   }
 }
 
@@ -508,7 +504,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     left: 0;
     right: 0;
     margin: 0 auto;
-
   }
 
   .header-modal-container,
