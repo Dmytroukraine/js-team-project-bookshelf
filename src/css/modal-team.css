@@ -163,6 +163,7 @@ body .show-modal .footer__modal {
   font-family: 'Akaya Kanadaka', cursive;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 .footer__card:hover .footer__title {
   transform: translate3d(0%, -50px, 100px);
@@ -180,6 +181,29 @@ body .show-modal .footer__modal {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
 }
+
+/* ! manipulation with sosial-link when .footer__card:hover ! */
+
+.footer__card:hover .footer__social-link--github {
+  transform: translate3d(40%, -120%, 500px);
+  transition: transform 1s;
+}
+
+.footer__card .footer__social-link--github {
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s;
+}
+
+.footer__card:hover .footer__social-link--linkedin {
+  transform: translate3d(-40%, -120%, 500px);
+  transition: transform 1s;
+}
+
+.footer__card .footer__social-link--linkedin {
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s;
+}
+
 
 /* ! fix every charesters size ! */
 

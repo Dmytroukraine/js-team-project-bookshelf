@@ -3,6 +3,8 @@ const refs = {
   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
   backdrop: document.querySelector('.js-backdrop'),
   footer: document.querySelector('.footer'),
+  card: document.querySelector('.footer__card'),
+  link: document.querySelector('.footer__social-link'),
 };
 
 refs.openModalBtn.addEventListener('click', onOpenModal);
@@ -12,13 +14,13 @@ refs.backdrop.addEventListener('click', onBackdropClick);
 function onOpenModal() {
   window.addEventListener('keydown', onEscKeyPress);
   refs.footer.classList.add('show-modal');
-  //   rotateFooterCrossOn();
+  
 }
 
 function onCloseModal() {
   window.removeEventListener('keydown', onEscKeyPress);
   refs.footer.classList.remove('show-modal');
-  //   rotateFooterCrossOff();
+
 }
 
 function onBackdropClick(event) {
@@ -33,4 +35,3 @@ function onEscKeyPress(event) {
   }
 }
 
-// ! move footer__btn-close with modal, when modal scroll
